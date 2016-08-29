@@ -47,11 +47,6 @@ Spring Boot v1.3+ 开始提供, 进入IoC容器的ServiceImpl和Controller的修
 ## 开发环境
 
 1. hosts
-```
-192.168.0.151 elpdtgit
-192.168.0.152 elpdtman
-192.168.0.152 elpdtmvn
-```
 2. Install Gradle and IDEA (download from [ownCloud](http://elpdtman/owncloud/))
 3. Run `git clone -b dev git@elpdtgit:stp/stp-svr.git`
 4. Run `gradle idea`
