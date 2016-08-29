@@ -1,0 +1,229 @@
+<!-- Default panel contents start -->
+<div class="sm002">
+   <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="navbar-form navbar-left">
+        <div class="form-group  el-mr-15">
+          <label >印刷订单号</label>
+          <input type="text" class="form-control" id="sm002-soNo">
+        </div>
+        <div class="form-group el-mr-15">
+          <label >客户名称</label>
+          <input type="text" class="form-control" id="sm002-custName">
+        </div>
+        <div class="form-group">
+          <label>发货日期</label>
+          <div class="input-group date">
+            <div class="input-group-addon">
+              <i class="fa fa-calendar"></i>
+            </div>
+            <input type="text" class="form-control el-dtp" data-date-format="yyyy-mm-dd" value="" id="sm002-demandDeliDateFrom">
+          </div>
+          <label>-</label>
+          <div class="input-group date">
+            <div class="input-group-addon">
+              <i class="fa fa-calendar"></i>
+            </div>
+            <input type="text" class="form-control el-dtp" data-date-format="yyyy-mm-dd" value="" id="sm002-demandDeliDateTo">
+        </div>
+      </div>
+      </div>
+
+	  <div class="navbar-form navbar-left">
+      <div class="form-group  el-mr-15">
+       <label >&nbsp;&nbsp;&nbsp;&nbsp;产品名称</label>
+       <input type="text" class="form-control" id="sm002-prodName">
+     </div>
+            <button type="submit" class="btn btn-primary sm002-listView-searchBtn"> <i class="fa fa-search"></i>&nbsp;检索</button>
+        </div>
+        <div style="clear: both;"></div>
+       <div class="navbar-form navbar-left">
+        <div class="form-group  el-mr-15">
+          <input type="checkbox"  name="lineStatus" value="01">新建
+          <input type="checkbox" name="lineStatus" value="02">部分发货
+          <input type="checkbox"  name="lineStatus" value="03">已完成
+          <input type="checkbox"  name="lineStatus" value="04">已关闭
+        </div>
+      </div>
+    </div>
+     <!-- search panel end  -->
+
+    <div class="navbarbtn navbar-form">
+      <div class="form-group">
+        <button type="button" class="btn btn-primary" id="sm002-1-saveBtn">保存</button>
+      </div>
+    </div>
+
+      <div class="box-head sm002-listView-table">
+        <table class="table table-bordered">
+          <thead>
+          <tr>
+              <th class="t1"></th>
+              <th class="t2">行号</th>
+              <th class="t10 sorting" data-field="m.doc_no">发货通知单号</th>
+              <th class="t10 sorting" data-field="ou.ou_name">结算公司</th>
+              <th class="t6">印刷订单号</th>
+              <th class="t6">客户编码</th>
+              <th class="t6">客户名称</th>
+              <th class="t6">产品编号</th>
+              <th class="t6">产品名称</th>
+              <th class="t6">订单正数</th>
+              <th class="t6">发货数量</th>
+              <th class="t6">赠送数量</th>
+              <th class="t7">累计发货数量</th>
+              <th class="t7">累计赠送数量</th>
+              <th class="t6">打包方式</th>
+              <th class="t6">每箱本数</th>
+              <th class="t6">箱数</th>
+              <th class="t6">余数</th>
+              <th class="t6">状态</th>
+              <th class="t6">单位重量</th>
+              <th class="t6">总重量</th>
+              <th class="t6">发货地址</th>
+              <th class="t6">联系人</th>
+              <th class="t6">电话</th>
+              <th class="t6">发货日期</th>
+              <th class="t6">备注</th>
+          </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="box-wrap antiscroll-wrap sm002-listView-table">
+        <div class="box-inner">
+          <div class="antiscroll-inner">
+            <table class="table table-bordered table-striped table-hover">
+              <tbody class="sm002_data1"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="paging el-hide stp-paging-sm002 el-mt-10"></div>
+  </div>
+
+  <fieldset>
+    <legend style="margin-bottom:0px;">物流信息</legend>
+    <div class="navbarbtn navbar-form .el-mt-5" >
+      <!--<div class="form-group">
+        <button type="submit" class="btn btn-primary">保存</button>
+      </div>-->
+     <!-- <div class="form-group">
+        <button type="submit" class="btn btn-primary">修改</button>
+      </div>-->
+      <div class="form-group">
+        <button type="button" class="btn btn-primary" id="sm002-2-insertBtn">新增</button>
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-primary" id="sm002-2-removeBtn">删除</button>
+      </div>
+    </div>
+
+  <div class="tablelist  table-responsive">
+      <table class="table table-bordered table-striped table-hover sm002-editView-table">
+        <thead>
+        <tr>
+          <th class="t1"></th>
+          <th class="t10">物流公司</th>
+          <th class="t6">车牌号</th>
+          <th class="t6">司机</th>
+          <th class="t6">装卸工</th>
+          <th class="t6">过路过桥费</th>
+          <th class="t4">物流费用</th>
+          <th class="t4">发货数量</th>
+          <th class="t4">赠送数量</th>
+          <th class="t6">发货日期</th>
+          <th class="t4">操作</th>
+        </tr>
+        </thead>
+        <tbody class="sm002_data2">
+        </tbody>
+      </table>
+    </div>
+    </fieldset>
+
+</div>
+<script id="sm002_table1" type="text/x-handlebars-template">
+  {{#each this}}
+  <tr>
+    <td class="t1 el-center"><input type="radio" name="delinoteProdId" value="{{id}}"></td>
+    <td class="t2 el-center">{{inc @index}}</td>
+    <td class="t10 el-center">{{note.docNo}}</td>
+    <td class="t10 el-left">{{ou.ouName}}</td>
+    <td class="t6 el-center">{{so.soNo}}</td>
+    <td class="t6 el-center">{{cust.custCode}}</td>
+    <td class="t6 el-left">{{cust.custName}}</td>
+    <td class="t6 el-center">{{prod.prodCode}}</td>
+    <td class="t6 el-left">{{prod.prodName}}</td>
+    <td class="t6 el-right">{{soprodQty}}</td>
+    <td class="t6 el-right">{{demandDeliQty}}</td>
+    <td class="t6 el-right">{{demandGiftQty}}</td>
+    <td class="t7 el-right">{{sumDeliQty}}</td>
+    <td class="t7 el-right">{{sumGiftQty}}</td>
+    <td class="t6 el-center"><div class="el-hbs-udc-desc" data-udc-name="PACKAGE_METHOD"  data-udc-code="{{packageMethod}}" ></div></td>
+    <td class="t6 el-right">{{qtyPerpackage}}</td>
+    <td class="t6 el-right">{{packageQty}}</td>
+    <td class="t6 el-right">{{spareQty}}</td>
+    <td class="t6 el-center">
+      <div class="el-hbs-udc-select" data-udc-name="DELINOTE_PROD_STATUS"  data-udc-code="{{lineStatus}}"
+            data-select-name="lineStatus" data-select-class="form-control"></div>
+    </td>
+    <td class="t6 el-right">{{uomWeight}}</td>
+    <td class="t6 el-right">{{weight}}</td>
+    <td class="t6 el-left">{{deliAddrNo}}</td>
+    <td class="t6 el-left">{{contPerson}}</td>
+    <td class="t6 el-center">{{contTel}}</td>
+    <td class="t6 el-center">{{demandDeliDateYmd}}</td>
+    <td class="t6 el-left">{{remark}}</td>
+  </tr>
+    {{/each}}
+  </script>
+  <script id="sm002_table2" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="t1"><input type="checkbox" name="checkItem">
+        <input type="hidden" class="edit id" name="id" value="{{id}}"/>
+        <input type="hidden" class="edit delinoteProdId" value="{{delinoteProdId}}"/>
+      </td>
+      <td class="t10 edit ">
+        <span data-prop="transCompanyAddrno">
+          <div class="el-hbs-supp-desc" data-supp-addrno="{{transCompanyAddrno}}"></div>
+         </span>
+        <div class="el-hbs-supp-select edit el-center transCompanyAddrno" data-supp-addrno="{{transCompanyAddrno}}" data-select-name="transCompanyAddrno"></div>
+      </td>
+      <td class="t6 edit "><!--<input type="text" value="{{cargoNo}}">-->
+        <span data-prop="cargoNo">{{cargoNo}}</span>
+        <input type="text" class="input-sm form-control edit el-center cargoNo" value="{{cargoNo}}"/>
+      </td>
+      <td class="t6 edit "><!--<input type="text" value="{{cargoPic}}">-->
+        <span data-prop="cargoPic">{{cargoPic}}</span>
+        <input type="text" class="input-sm form-control edit cargoPic" value="{{cargoPic}}"/>
+      </td>
+      <td class="t6 edit "><!--<input type="text" value="{{cargoPerson}}">-->
+        <span data-prop="cargoPerson">{{cargoPerson}}</span>
+        <input type="text" class="input-sm form-control edit cargoPerson" value="{{cargoPerson}}"/>
+      </td>
+      <td class="t6 el-right edit "><!--<input type="text" value="{{fee1}}">-->
+        <span data-prop="fee1">{{fee1}}</span>
+        <input type="text" class="input-sm form-control edit el-right fee1" value="{{fee1}}"/>
+      </td>
+      <td class="t4 el-right edit "><!--<input type="text" value="{{fee2}}">-->
+        <span data-prop="fee2">{{fee2}}</span>
+        <input type="text" class="input-sm form-control edit el-right fee2" value="{{fee2}}"/>
+      </td>
+      <td class="t4 el-right edit "><!--<input type="text" value="{{deliQty}}">-->
+        <span data-prop="deliQty">{{deliQty}}</span>
+        <input type="text" class="input-sm form-control edit el-right deliQty" value="{{deliQty}}"/>
+      </td>
+      <td class="t4 el-right edit "><!--<input type="text" value="{{giftQty}}">-->
+        <span data-prop="giftQty">{{giftQty}}</span>
+        <input type="text" class="input-sm form-control edit el-right giftQty" value="{{giftQty}}"/>
+      </td>
+      <td class="t6 el-center edit "><!--<input type="text" value="{{deliDate}}" class="el-dtp">-->
+        <span data-prop="deliDate">{{deliDateYmd}}</span>
+        <input type="text" name="deliDate" class="input-sm form-control edit el-dtp deliDate"  value="{{deliDateYmd}}"/>
+      </td>
+      <td class="t4 el-center">
+        <button type="button" class="btn btn-info btn-xs ops">修改</button>
+      </td>
+    </tr>
+    {{/each}}
+  </script>

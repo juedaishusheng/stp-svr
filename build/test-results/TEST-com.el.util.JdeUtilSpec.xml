@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.el.util.JdeUtilSpec" tests="6" skipped="0" failures="0" errors="0" timestamp="2016-08-01T03:04:46" hostname="CharlesdeMacBook-Air.local" time="0.036">
+  <properties/>
+  <testcase name="Decimal number 3 is 1000" classname="com.el.util.JdeUtilSpec" time="0.008"/>
+  <testcase name="Java date -&gt; JDE date" classname="com.el.util.JdeUtilSpec" time="0.002"/>
+  <testcase name="JDE date -&gt; Java date" classname="com.el.util.JdeUtilSpec" time="0.003"/>
+  <testcase name="Java time -&gt; JDE time" classname="com.el.util.JdeUtilSpec" time="0.007"/>
+  <testcase name="JDE time -&gt; Java time" classname="com.el.util.JdeUtilSpec" time="0.003"/>
+  <testcase name="convert to int number for jde" classname="com.el.util.JdeUtilSpec" time="0.011"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

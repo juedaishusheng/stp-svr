@@ -1,0 +1,90 @@
+/*
+ * EL UI - 1.0.0
+ * http://www.elitesland.com/
+ *
+ * Copyright 2016 Elitesland.com
+ */
+.cm004 {
+}
+
+.cm004 > .panel > .tablelist {
+  width: 100%;
+}
+.cm004 > .navpage{
+  width: 100%;
+}
+.cm004 > .panel > .panel-body > .navbar-left > .form-group > .form-selection {
+  min-width: 169px;
+}
+/**页面表头查询组块，间距和统一查询下来框宽度统一*/
+.cm004 > .view > .panel > .panel-body > .navbar-form>.form-group{
+  margin: auto 15px ;
+}
+.cm004 > .view > .panel > .panel-body > .navbar-form>.form-group>.selection-wd01 {
+  min-width: 196px;
+}
+
+.selection-wd01 {
+  min-width: 196px;
+}
+
+.tablelist > .table > thead > tr > .thW01 {
+  min-width: 61px;
+}
+.tablelist > .table > thead > tr > .thW02 {
+  min-width: 100px;
+}
+.tablelist > .table > thead > tr > .thW03 {
+  min-width: 120px;
+}
+.tablelist > .table > thead > tr > .thW04 {
+  min-width: 140px;
+}
+.tablelist > .table > thead > tr > .thW05 {
+  min-width: 160px;
+}
+
+.tablelist > .table > thead > tr > .thW06 {
+  min-width: 180px;
+}
+
+.cm004 > .listView > .panel > .panel-body {
+  background-color: #f4f4f4;
+}
+
+.cm004 > .navpage {
+  width: 100%;
+}
+
+.cm004 > .cm004Panel {
+  width: 100%;
+  min-height: 350px;
+}
+
+
+.cm004 > .dblView > .panel > .panel-heading { height: 50px;line-height: 50px;}
+.cm004 > .dblView > .panel > .panel-heading h1{float: left; font-size: 20px;}
+.cm004 > .dblView > .panel > .panel-heading .floatRight {
+  float: right;
+  margin-right: 15px;
+}
+
+.cm004   .panel > .panel-heading { height: 50px;line-height: 50px;}
+.cm004   .panel > .panel-heading h1{float: left; font-size: 20px;}
+.cm004   .panel > .panel-heading .floatRight {
+  float: right;
+  margin-right: 15px;
+}
+
+.cm004-heading {
+  padding: 0px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.cm004-mt{
+  float: right;
+  margin-right: 15px;
+  margin-top: -20px;
+  text-align: left;
+}

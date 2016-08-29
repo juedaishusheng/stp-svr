@@ -1,0 +1,1176 @@
+<!-- Default panel contents start -->
+<div class="cm012">
+
+  <!--初始化加载列表-->
+  <div class="view listView el-hide">
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-body">
+        <!--检索条件隐藏、显示-->
+        <button class="btn btn-box-tool pull-right search-toggle-btn" title="收缩" type="button"
+                data-original-title="Collapse">
+          <i class="fa fa-minus"></i>
+        </button>
+        <!--检索条件隐藏、显示  end -->
+
+        <!-- search panel start -->
+        <div class="navbar-form navbar-left search-toggle-content">
+          <div class="form-group el-mr-15">
+            <label>产品名称</label>
+            <input type="text" class="form-control productName" name="productName">
+          </div>
+          <div class="form-group el-mr-15">
+            <label>订单编号</label>
+            <input type="text" class="form-control orderNo" name="orderNo">
+          </div>
+          <div class="form-group el-mr-15">
+            <label>交货截止日期</label>
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <input type="text" class="form-control pull-right el-dtp startDuedate" data-date-format="yyyy-mm-dd" value="" name="startDuedate">
+            </div>
+            <label>-</label>
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <input type="text" class="form-control pull-right el-dtp endDuedate" data-date-format="yyyy-mm-dd" value="" name="endDuedate">
+            </div>
+          </div>
+        </div>
+        <div class="navbar-form navbar-left search-toggle-content">
+          <div class="form-group el-mr-15">
+            <label>生产工厂</label>
+            <input type="text" class="form-control factoryAddr" name="factoryAddr">
+          </div>
+          <div class="form-group el-mr-15 orderStatus">
+            <label>订单状态</label>
+          </div>
+          <div class="form-group el-mr-15 productConfirmationStatus">
+            <label>产品信息确认</label>
+          </div>
+        </div>
+        <div class="navbar-form navbar-left search-toggle-content">
+          <div class="form-group el-mr-15 seperateStatus">
+            <label>分单状态</label>
+          </div>
+          <div class="form-group el-mr-15 seperateMethod">
+            <label>分单方式</label>
+          </div>
+          <div class="form-group el-mr-15 paperStatus">
+            <label class="el-ml-28">纸张确认</label>
+          </div>
+          <div class="form-group el-mr-15">
+            <button type="button" class="btn btn-primary search-ou-btn">
+              <i class="fa fa-search"></i> 检索
+            </button>
+          </div>
+        </div>
+        <!-- search panel end  -->
+      </div>
+      <!-- Default panel contents end -->
+      <!-- client button panel start -->
+      <div class="navbarbtn navbar-form">
+        <div class="form-group">
+          <button type="button" class="btn btn-primary disabled" data-view-id="pauseSinglePoints">暂停分单</button>
+        </div>
+        <div class="form-group">
+          <button type="button" class="btn btn-primary disabled" data-view-id="reassign">重新分配</button>
+        </div>
+        <div class="form-group">
+          <button type="button" class="btn btn-primary disabled" data-view-id="manualSinglePoints" >手工分单</button>
+        </div>
+        <div class="form-group">
+          <button type="button" class="btn btn-primary disabled" data-view-id="automaticSingle">自动分单</button>
+        </div>
+        <div class="form-group">
+          <button type="button" class="btn btn-primary disabled" data-view-id="updatePrice">修改价格</button>
+        </div>
+      </div>
+      <!-- client button panel end -->
+      <!-- table表格开始-->
+      <div class="box-head table-order-search">
+        <table class="table table-bordered">
+          <thead>
+          <tr>
+            <th colspan="2"></th>
+            <th colspan="7">订单信息</th>
+            <th colspan="8">产品信息</th>
+            <th colspan="11">分单状态</th>
+            <th colspan="2">生产支持</th>
+            <th colspan="2"></th>
+          </tr>
+          <tr>
+            <th class="t2"></th>
+            <th class="t3">行号</th>
+            <th class="t6">客户编号</th>
+            <th class="t6">客户名称</th>
+            <th class="t6">订单编号</th>
+            <th class="t6">营业员</th>
+            <th class="t6">登记日期</th>
+            <th class="t6">要求交期</th>
+            <th class="t6">产品编号</th>
+            <th class="t6">产品名称</th>
+            <th class="t6">产品类型</th>
+            <th class="t6">质量等级</th>
+            <th class="t7">印刷难度等级</th>
+            <th class="t7">装订难度等级</th>
+            <th class="t6">装订方式</th>
+            <th class="t6">产品总数</th>
+            <th class="t6">生产交期</th>
+            <th class="t6">订单状态</th>
+            <th class="t6">分单状态</th>
+            <th class="t6">分单方式</th>
+            <th class="t6">下发时间</th>
+            <th class="t6">分单数量</th>
+            <th class="t6">工厂编号</th>
+            <th class="t6">工厂名称</th>
+            <th class="t6">接单员</th>
+            <th class="t6">接单时间</th>
+            <th class="t7">是否行拆分</th>
+            <th class="t7">是否数量拆分</th>
+            <th class="t7">纸张是否确认</th>
+            <th class="t8">产品信息是否确认</th>
+            <th class="t7">产品完成率</th>
+          </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="box-wrap antiscroll-wrap table-order-search">
+        <div class="box-inner">
+          <div class="antiscroll-inner">
+            <table class="table table-bordered table-striped table-hover">
+              <tbody class="el-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="paging el-hide paging-order-search el-mt-10"></div>
+      <!-- table表格结束-->
+    </div>
+
+    <!-- 修改价格页面 开始-->
+    <div class="el-msg-updatePrice modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">修改价格</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <div data-dismiss="modal" class="btn btn-danger ok">确认</div>
+            <div data-dismiss="modal" class="btn btn-default cancel">取消</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 修改价格页面 结束-->
+  </div>
+
+  <!--订单明细-->
+  <div class="view orderDetail el-hide">
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">
+        <h1 class="panel-title">
+          订单详情
+        </h1>
+        <!-- client button panel start -->
+        <div class="navbarbtn navbar-form floatRight">
+          <div class="form-group">
+            <button type="button" class="btn btn-primary" data-view-id="cm012-pause-btn">暂停分单</button>
+          </div>
+          <div class="form-group">
+            <button type="button" class="btn btn-primary" data-view-id="cm012-redist-btn">重新分配</button>
+          </div>
+          <div class="form-group">
+            <button type="button" data-view-id="factorySelect" class="btn btn-primary">手工分单</button>
+          </div>
+          <div class="form-group">
+            <button type="button" class="btn btn-primary" data-view-id="factorySelect">自动分单</button>
+          </div>
+          <div class="form-group">
+            <button type="button" class="btn btn-primary" data-view-id="cm012-update-btn">修改价格</button>
+          </div>
+          <div class="form-group">
+            <button type="button" data-view-id="listView" class="btn btn-warning back-btn">返回订单查询</button>
+          </div>
+        </div>
+        <!-- client button panel end -->
+      </div>
+      <div class="panel-body">
+      </div>
+      <div class="page-container el-mt-15 el-ml-15 el-mr-15">
+        <ul class="nav nav-tabs">
+          <li class="active">
+            <a href="#cm012product" data-toggle="tab">产品明细</a>
+          </li>
+          <li>
+            <a href="#cm012order" data-toggle="tab">
+              分单对象
+            </a>
+          </li>
+          <li>
+            <a href="#progressTrack" data-toggle="tab">
+              进度跟踪
+            </a>
+          </li>
+        </ul>
+        <div id="cm012MyTabContent" class="tab-content">
+          <!--product detail start-->
+          <div class="tab-pane fade in active" id="cm012product">
+            <!-- table表格开始-->
+            <div class="tablelist table-responsive pre-scrollable el-mb-15">
+              <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <th class="t3">行号</th>
+                <th class="t6">产品编号</th>
+                <th class="t6">产品名称</th>
+                <th class="t6">产品类型</th>
+                <th class="t6">质量等级</th>
+                <th class="t7">印刷难度等级</th>
+                <th class="t7">装订难度等级</th>
+                <th class="t6">装订方式</th>
+                <th class="t8">产品总数(pcs)</th>
+                <th class="t8">分单数量(pcs)</th>
+                </thead>
+                <tbody class="product-detail">
+                </tbody>
+              </table>
+            </div>
+            <!-- table表格结束-->
+            <fieldset disabled class="el-mt-15 el-mb-15">
+              <legend>工序产能</legend>
+              <div class="tablelist table-responsive">
+                <table class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th class="t3">行号</th>
+                    <th class="t6">工序类型</th>
+                    <th class="t7">工序合作产能</th>
+                    <th class="t6">单位</th>
+                  </tr>
+                  </thead>
+                  <tbody class="capacity-detail">
+                  </tbody>
+                </table>
+              </div>
+            </fieldset>
+          </div>
+          <!--product detail end-->
+          <!--order tab start-->
+          <div class="tab-pane fade" id="cm012order">
+            <div class="tablelist table-responsive pre-scrollable el-mb-15">
+              <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                  <th class="t3">行号</th>
+                  <th class="t6">工厂编号</th>
+                  <th class="t6">工厂名称</th>
+                  <th class="t6">产品编号</th>
+                  <th class="t6">产品名称</th>
+                  <th class="t6">产品类型</th>
+                  <th class="t6">质量等级</th>
+                  <th class="t7">印刷难度等级</th>
+                  <th class="t7">装订难度等级</th>
+                  <th class="t6">装订方式</th>
+                  <th class="t7">是否上次印刷</th>
+                  <th class="t8">产品总数（pcs）</th>
+                  <th class="t8">分单数量（pcs）</th>
+                  <th class="t8">产品总价（元）</th>
+                  <th class="t8">订单价格（元）</th>
+                  <th class="t7">自动发送批次</th>
+                  <th class="t6">发送时间</th>
+                  <th class="t6">发送状态</th>
+                  <th class="t6">分单方式</th>
+                  <th class="t6">接单状态</th>
+                  <th class="t6">接单员</th>
+                  <th class="t6">接单时间</th>
+                  <th class="t6">拒绝原因</th>
+                </tr>
+                </thead>
+                <tbody class="spilt-orderDetail">
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!--order tab end-->
+          <!--progress tab start-->
+          <div class="tab-pane fade" id="progressTrack">
+            <div class="tablelist table-responsive pre-scrollable">
+              <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                  <th colspan="1"></th>
+                  <th colspan="5">产品信息</th>
+                  <th colspan="2"></th>
+                </tr>
+                <tr>
+                  <th class="t3">行号</th>
+                  <th class="t6">产品编号</th>
+                  <th class="t6">产品名称</th>
+                  <th class="t6">产品类型</th>
+                  <th class="t6">产品总数</th>
+                  <th class="t6">分单数量</th>
+                  <th class="t6">入库数量</th>
+                  <th class="t6">产品状态</th>
+                </tr>
+                </thead>
+                <tbody class="progress-data">
+                </tbody>
+              </table>
+            </div>
+            <fieldset disabled class="el-mt-15 el-mb-15">
+              <legend>完成列表</legend>
+              <div class="tablelist table-responsive">
+                <table class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th class="t3">行号</th>
+                    <th class="t6">工序类型</th>
+                    <th class="t7">工序所需产能</th>
+                    <th class="t6">单位</th>
+                    <th class="t6">完成比例</th>
+                  </tr>
+                  </thead>
+                  <tbody class="finished-list">
+                  </tbody>
+                </table>
+              </div>
+            </fieldset>
+          </div>
+          <!--progress tab end-->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--工厂选择-->
+  <div class="view factorySelect el-hide"></div>
+
+  <!--分派订单-->
+  <div class="view spiltOrder el-hide">
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">
+        <h1 class="panel-title ">订单详情:</h1>
+        <div class="navbarbtn navbar-form floatRight">
+          <div class="form-group">
+            <button type="button" data-view-id="listView" class="btn btn-primary back-btn">确定分派</button>
+          </div>
+          <div class="form-group">
+            <button type="button" data-view-id="factorySelect" class="btn btn-warning back-btn">返回选择工厂</button>
+          </div>
+        </div>
+      </div>
+      <!-- client button panel end -->
+      <div class="panel-body orderDetailInfo">
+
+      </div>
+      <!-- Default panel contents end -->
+
+      <!-- Default panel contents -->
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          产品明细
+        </h3>
+      </div>
+      <div class="panel-body">
+        <div class="navbarbtn navbar-form">
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary" data-view-id="cm012-look-btn">查看产品信息</button>
+          </div>
+        </div>
+        <div class="tablelist table-responsive">
+          <table class="table table-bordered table-striped table-hover">
+            <thead>
+            <tr>
+              <th class="t6">行号</th>
+              <th class="t6">产品编号</th>
+              <th class="t6">产品名称</th>
+              <th class="t6">产品类型</th>
+              <th class="t6">质量等级</th>
+              <th class="t7">印刷难度等级</th>
+              <th class="t7">装订难度等级</th>
+              <th class="t6">装订方式</th>
+              <th class="t6">产品总数</th>
+            </tr>
+            </thead>
+            <tbody class="spilorder-prod-detail">
+            </tbody>
+          </table>
+        </div>
+
+        <fieldset class="el-mt-15">
+          <legend><h4>产能需求</h4></legend>
+          <div class="tablelist table-responsive">
+            <table class="table table-bordered table-striped table-hover">
+              <thead>
+              <tr>
+                <th class="t6">行号</th>
+                <th class="t6">工序类型</th>
+                <th class="t7">工序所需产能</th>
+                <th class="t6">单位</th>
+              </tr>
+              </thead>
+              <tbody class="spilorder-capacity">
+              </tbody>
+            </table>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+
+    <div class="panel-heading">
+      <h3 class="panel-title">
+        西游记产品未全部分派完
+      </h3>
+    </div>
+    <div class="tablelist table-responsive el-ml-15 el-mr-15">
+      <table class="table table-bordered table-striped table-hover">
+        <thead>
+        <tr>
+          <th colspan="1"></th>
+          <th class="t6" colspan="6">工厂信息</th>
+          <th class="t6" colspan="11">产能信息</th>
+          <th class="t6" colspan="8">分单信息</th>
+        </tr>
+        <tr>
+          <th class="t3">行号</th>
+          <th class="t6">工厂编号</th>
+          <th class="t6">工厂名称</th>
+          <th class="t7">上月交付准时率</th>
+          <th class="t6">质量等级</th>
+          <th class="t7">印刷难度等级</th>
+          <th class="t7">装订难度等级</th>
+          <th class="t11">单色平张印刷产能</th>
+          <th class="t11">双色平张印刷产能(pcs)</th>
+          <th class="t11">四色平张印刷产能(pcs)</th>
+          <th class="t11">五色及以上平张印刷产能</th>
+          <th class="t10">单色轮转印刷产能</th>
+          <th class="t10">双色轮转印刷产能</th>
+          <th class="t10">四色轮转印刷产能</th>
+          <th class="t8">骑马订装订产能</th>
+          <th class="t8">胶订装订产能</th>
+          <th class="t8">精装装订产能</th>
+          <th class="t10">其他订装订产能</th>
+          <th class="t6">产品编号</th>
+          <th class="t6">产品名称</th>
+          <th class="t6">产品总数</th>
+          <th class="t6">分单数量</th>
+          <th class="t6">产品总价</th>
+          <th class="t6">分单总价</th>
+          <th class="t10">变更后分单金额</th>
+          <th class="t6">变更原因</th>
+        </tr>
+        </thead>
+        <tbody class="spiltorder-unallocated-order">
+        </tbody>
+      </table>
+    </div>
+
+    <!-- page panel start -->
+    <div class="navpage el-mt-15 el-ml-15 el-mr-15">
+      <nav>
+        <ul class="pagination pagination-sm">
+          <li>
+            <a href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li>
+            <a href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- 修改价格 -->
+  <div class="view updatePrice el-hide"></div>
+
+  <!--订单查询 初始化数据 start-->
+  <script class="hbs" data-view-id="listView" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="el-center t2"><input type="radio" name="orderSearch" data-order-id="{{so.soNo}}" data-spod-sostatue="{{soProd.soStatus}}"/></td>
+      <td class="el-center t3">{{inc @index}}</td><!--行号-->
+      <td class="el-left t6">{{cust.custCode}}</td><!--客户编号-->
+      <td class="el-left t6">
+        <a href="javascript:void(0);" data-view-id="orderDetail" data-so-id="{{so.id}}" data-somanu-id="{{soManu.id}}"
+           data-manudist-id="{{manudistFact.id}}" data-soprod-id="{{prod.id}}" data-acpt-method="{{soManu.distMethod}}">{{cust.custName}}</a>
+
+      </td><!--客户名称-->
+      <td class="el-left t6">{{so.soNo}}</td><!--订单编号-->
+      <td class="el-left t6">{{clerk}}</td><!--营业员-->
+      <td class="el-left t6">{{so.soDate}}</td><!--登记日期-->
+      <td class="el-left t6">{{so.dueDate}}</td><!--要求交期-->
+      <td class="el-left t6">{{prod.prodCode}}</td><!--产品编号-->
+      <td class="el-left t6">{{prod.prodName}}</td><!--产品名称-->
+      <td class="el-left t6">{{prod.prodType}}</td><!--产品类型-->
+      <td class="el-left t6">{{prod.qualityLevel}}</td><!--质量等级-->
+      <td class="el-left t7">{{prod.printDiffLevel}}</td><!--印刷难度等级-->
+      <td class="el-left t7">{{prod.bindDiffLevel}}</td><!--装订难度等级-->
+      <td class="el-left t6">{{pro.bindType}}</td><!--装订方式-->
+      <td class="el-right t6">{{soProd.manuQty}}</td><!--产品总数-->
+      <td class="el-left t6">{{so.manuDueDate}}</td><!--生产交期-->
+      <td class="el-left t6">{{soProd.soStatus}}</td><!--订单状态-->
+      <td class="el-left t6">{{soManu.acptStatus}}</td><!--分单状态-->
+      <td class="el-left t6">{{soManu.distMethod}}</td><!--分单方式-->
+      <td class="el-left t6">{{soManu.soDate}}</td><!--下发时间-->
+      <td class="el-left t6">{{soManu.distQty}}</td><!--分单数量-->
+      <td class="el-left t6">{{addrNo}}</td><!--工厂编号-->
+      <td class="el-left t6">{{addrName}}</td><!--工厂名称-->
+      <td class="el-left t6">{{soManu.acptUser}}</td><!--接单员-->
+      <td class="el-left t6">{{soManu.acptTime}}</td><!--接单时间-->
+      <td class="el-left t7">{{so.lineSplitFlag}}</td><!--是否行拆分-->
+      <td class="el-left t7">{{soProd.qtySplitFlag}}</td><!--是否数量拆分-->
+      <td class="el-left t7">{{soManu.paperReadyStatus}}</td><!--纸张是否确认-->
+      <td class="el-left t8">{{soManu.prodInfoStatus}}</td><!--产品信息是否确认-->
+      <td class="el-right t7">{{completionRate}}%</td><!--产品完成率-->
+    </tr>
+    {{/each}}
+  </script>
+  <!--订单查询  end-->
+
+  <!--订单详情 fieldset start-->
+  <script class="hbs" data-view-id="prodDetailFieldset" type="text/x-handlebars-template">
+    <fieldset disabled class="el-mt-15">
+      <legend>客户信息</legend>
+      <div class="form-horizontal bordered-row">
+        <div class="form-group">
+          <label class="col-sm-1 control-label">客户名称</label>
+          <div class="col-sm-2">
+            <input class="form-control" type="text" value="{{custName}}">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset disabled class="el-mt-15">
+      <legend>订单信息</legend>
+      <div class="form-horizontal bordered-row">
+        <div class="form-group">
+          <label class="col-sm-1 control-label">订单编号</label>
+          <div class="col-sm-2">
+            <input class="form-control" type="text" value="{{soNo}}">
+          </div>
+          <label class="col-sm-1 control-label">要求交期</label>
+          <div class="col-sm-2">
+            <input class="form-control" type="text" value="{{dueDate}}">
+          </div>
+          <label class="col-sm-1 control-label">营业员</label>
+          <div class="col-sm-2">
+            <input class="form-control" type="text" value="{{clerk}}">
+          </div>
+          <label class="col-sm-1 control-label">登记时间</label>
+          <div class="col-sm-2">
+            <input class="form-control" type="text" value="{{soDate}}">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset disabled class="el-mt-15 fieldset-03">
+      <legend>分单信息</legend>
+      <div class="form-horizontal bordered-row">
+        <div class="form-group">
+          <label class="col-sm-1 control-label">订单状态</label>
+          <div class="col-sm-2">
+            <input class="form-control" type="text" value="{{orderStatus}}">
+          </div>
+          <label class="col-sm-1 control-label">分单状态</label>
+          <div class="col-sm-2">
+            <input class="form-control" type="text" value="{{distStatus}}">
+          </div>
+          <label class="col-sm-1 control-label">生产交期</label>
+          <div class="col-sm-2">
+            <input class="form-control" type="text" value="{{prodDate}}">
+          </div>
+          <label class="col-sm-1 control-label">分单方式</label>
+          <div class="col-sm-2">
+            <input class="form-control" type="text" value="{{distMethod}}">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-1 control-label">是否行拆分</label>
+          <div class="col-sm-2">
+            <input class="form-control" type="text" value="{{lineSplitFlag}}">
+          </div>
+          <label class="col-sm-1 control-label">是否数量拆分</label>
+          <div class="col-sm-2">
+            <input class="form-control" type="text" value="{{qtySplitFlag}}">
+          </div>
+          <label class="col-sm-1 control-label">工厂编号</label>
+          <div class="col-sm-2">
+            <input class="form-control" type="text" value="{{addrNo}}">
+          </div>
+          <label class="col-sm-1 control-label">工厂名称</label>
+          <div class="col-sm-2">
+            <input class="form-control" type="text" value="{{addrName}}">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-1 control-label">接单时间</label>
+          <div class="col-sm-2">
+            <input class="form-control" type="text" value="{{accpDate}}">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </script>
+  <!--产品明细 fieldset end-->
+
+  <!--产品明细 table start-->
+  <script class="hbs" data-view-id="prodDetailTable" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr data-soprod-id="{{soprodId}}" data-manudistprod-id="{{manudistprodId}}" data-somanu-id="{{soprodId}}">
+      <td class="el-center t3">{{inc @index}}</td>
+      <td class="el-left t6">{{prod.prodCode}}</td>
+      <td class="el-left t6">{{prod.prodName}}</td>
+      <td class="el-left t6">{{prod.prodType}}</td>
+      <td class="el-left t6">{{prod.qualityLevel}}</td>
+      <td class="el-left t7">{{prod.printDiffLevel}}</td>
+      <td class="el-left t7">{{bindDiffLevel}}</td>
+      <td class="el-left t6">{{prod.bindType}}</td>
+      <td class="el-right t8">{{manuQty}}</td>
+      <td class="el-right t8">{{distQty}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <!--产品明细 table end-->
+
+  <!--产能需求 start-->
+  <script class="hbs" data-view-id="capacityDetail" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="el-center">{{inc @index}}</td>
+      <td class="el-left">{{capaType}}</td>
+      <td class="el-right">{{capa}}</td>
+      <td class="el-left">{{uom}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <!--产能需求 end-->
+
+  <!--分单对象 start-->
+  <script class="hbs" data-view-id="spiltOrderDetail" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="el-center">{{inc @index}}</td>
+      <td class="el-left">{{fctCode}}</td>
+      <td class="el-left">{{fctName}}</td>
+      <td class="el-left">{{prodNo}}</td>
+      <td class="el-left">{{prodName}}</td>
+      <td class="el-left">{{prodType}}</td>
+      <td class="el-left">{{qualifyLevel}}</td>
+      <td class="el-left">{{printDiffLevel}}</td>
+      <td class="el-left">{{bindDiffLevel}}</td>
+      <td class="el-left">{{bindType}}</td>
+      <td class="el-left">{{lastPrint}}</td>
+      <td class="el-right">{{prodNum}}</td>
+      <td class="el-right">{{spiltNum}}</td>
+      <td class="el-right">{{prodPrice}}</td>
+      <td class="el-right">{{orderPrice}}</td>
+      <td class="el-right">{{send}}</td>
+      <td class="el-left">{{sendTime}}</td>
+      <td class="el-left">{{sendStatus}}</td>
+      <td class="el-left">{{spiltType}}</td>
+      <td class="el-left">{{accStatus}}</td>
+      <td class="el-left">{{clerk}}</td>
+      <td class="el-left">{{accTime}}</td>
+      <td class="el-left">{{refuseReason}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <!--分单对象 end-->
+
+  <!--进度跟踪 start-->
+  <script class="hbs" data-view-id="progressTracking" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr data-somanu-id="{{somanuId}}">
+      <td class="el-center">{{inc @index}}</td>
+      <td class="el-left">{{prod.prodCode}}</td>
+      <td class="el-left">{{prod.prodName}}</td>
+      <td class="el-left">{{prod.prodType}}</td>
+      <td class="el-left">{{manuQty}}</td>
+      <td class="el-left">{{distQty}}</td>
+      <td class="el-right">{{whinQty}}</td>
+      <td class="el-left">{{manuStatus}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <!--进度跟踪 end-->
+
+  <!--完成列表 start-->
+  <script class="hbs" data-view-id="finishedList" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="el-center">{{inc @index}}</td>
+      <td class="el-left">{{capaType}}</td>
+      <td class="el-right">{{capa}}</td>
+      <td class="el-left">{{uom}}</td>
+      <td class="el-right">{{rptQty}}</td>
+      <td class="el-right">{{rptNum}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <!--完成列表 end-->
+
+  <!--选择工厂  start-->
+  <script class="hbs" data-view-id="factorySelect" type="text/x-handlebars-template">
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">
+        <h1 class="panel-title ">订单详情:</h1>
+        <div class="navbarbtn navbar-form floatRight">
+          <div class="form-group">
+            <button type="button" data-view-id="spiltOrder" class="btn btn-primary back-btn">分派订单</button>
+          </div>
+          <div class="form-group">
+            <button type="button" data-view-id="listView" class="btn btn-warning back-btn">返回</button>
+          </div>
+        </div>
+      </div>
+      <div class="panel-body">
+        <form class="form-horizontal" role="form">
+          <div class="form-group">
+            <label class="col-sm-1 control-label">客户名称</label>
+            <div class="col-sm-2">
+              <input type="text" class="form-control" disabled value="{{custAbbr}}">
+            </div>
+
+            <label class="col-sm-1 control-label">订单编号</label>
+            <div class="col-sm-2">
+              <input type="text" class="form-control" disabled value="{{soNo}}">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-1 control-label">营业员</label>
+            <div class="col-sm-2">
+              <input type="text" class="form-control" disabled value="{{assistant}}">
+            </div>
+
+            <label class="col-sm-1 control-label">登记日期</label>
+            <div class="col-sm-2">
+              <input type="text" class="form-control" disabled value="{{soDate}}">
+            </div>
+
+            <label class="col-sm-1 control-label">要求交期</label>
+            <div class="col-sm-2">
+              <input type="text" class="form-control" disabled value="{{dueDate}}">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-1 control-label">订单状态</label>
+            <div class="col-sm-2">
+              <input type="text" class="form-control" disabled value="{{soStatus}}">
+            </div>
+
+            <label class="col-sm-1 control-label">分单状态</label>
+            <div class="col-sm-2">
+              <input type="text" class="form-control" disabled value="{{spiltSoStatus}}">
+            </div>
+
+            <label class="col-sm-1 control-label">生产交期</label>
+            <div class="col-sm-2">
+              <input type="text" class="form-control" disabled value="{{deliDate}}">
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- Default panel contents end -->
+
+      <!-- Default panel contents -->
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          产品明细
+        </h3>
+      </div>
+      <div class="panel-body">
+        <div class="navbarbtn navbar-form">
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary" data-view-id="cm012-look-btn">查看产品信息</button>
+          </div>
+        </div>
+        <div class="tablelist  table-responsive">
+          <table class="table table-bordered table-striped table-hover">
+            <thead>
+            <tr>
+              <th class="t3">行号</th>
+              <th class="t6">产品编号</th>
+              <th class="t6">产品名称</th>
+              <th class="t6">产品类型</th>
+              <th class="t6">质量等级</th>
+              <th class="t7">印刷难度等级</th>
+              <th class="t7">装订难度等级</th>
+              <th class="t6">装订方式</th>
+              <th class="t6">产品总数</th>
+            </tr>
+            </thead>
+            <tbody class="factory-prod-detail">
+            </tbody>
+          </table>
+        </div>
+
+        <fieldset class="el-mt-15">
+          <legend><h4>产能需求</h4></legend>
+          <div class="tablelist table-responsive">
+            <table class="table table-bordered table-striped table-hover">
+              <thead>
+              <tr>
+                <th class="t3">行号</th>
+                <th class="t6">工序类型</th>
+                <th class="t7">工序所需产能</th>
+                <th class="t6">单位</th>
+              </tr>
+              </thead>
+              <tbody class="factory-capacity">
+              </tbody>
+            </table>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    <div class="panel panel-body">
+      <div class="navbarbtn navbar-form">
+        <div class="form-group">
+          <label class="control-label el-mr-5">工厂名称</label>
+          <input type="text" class="form-control el-mr-5" value="">
+          <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> 查找</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6 col-lg-8">
+          <div class="tablelist table-responsive">
+            <table class="table table-bordered table-striped table-hover cm012-factory-table-001">
+              <thead>
+              <tr>
+                <th class="t3">行号</th>
+                <th class="t6">工厂编号</th>
+                <th class="t6">工厂名称</th>
+                <th class="t8">上月交付准时率</th>
+                <th class="t6">质量等级</th>
+                <th class="t7">印刷难度等级</th>
+                <th class="t7">装订难度等级</th>
+              </tr>
+              </thead>
+              <tbody class="factory-list">
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-1">
+          <div class="navbarbtn navbar-form navbar-left">
+            <div class="text-center el-mb-5"><i class="fa fa-angle-double-right fa-2" aria-hidden="true"></i></div>
+            <div class="text-center el-mb-5"><i class="fa fa-angle-right fa-2 el-mt-10" aria-hidden="true"></i></div>
+            <div class="text-center el-mb-5"><i class="fa fa-angle-left fa-2 el-mt-10" aria-hidden="true"></i></div>
+            <div class="text-center el-mb-5"><i class="fa fa-angle-double-left fa-2 el-mt-10" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="tablelist table-responsive">
+            <table class="table table-bordered table-striped table-hover">
+              <thead>
+              <tr>
+                <th class="t3">行号</th>
+                <th class="t6">工厂编号</th>
+                <th class="t6">工厂名称</th>
+              </tr>
+              </thead>
+              <tbody class="cm015_select_table">
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+      <!--工厂选择 点击工厂查看产能信息-->
+      <div class="view capacityInfo hide">
+        <div class="row">
+          <div class="col-sm-6 col-lg-8">
+            <div class="tablelist table-responsive">
+              <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                  <th class="t3">行号</th>
+                  <th class="t8">产品所需工序类型</th>
+                  <th class="t7">工序合作产能</th>
+                  <th class="t6">单位</th>
+                </tr>
+                </thead>
+                <tbody class="factory_capacity_table">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- page panel start -->
+      <div class="navpage">
+        <nav>
+          <ul class="pagination pagination-sm">
+            <li>
+              <a href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li>
+              <a href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- page panel end -->
+    </div>
+  </script>
+  <!--选择工厂  end-->
+
+  <!--选择工厂 产品明细 start-->
+  <script class="hbs" data-view-id="factoryProdDetail" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="el-center">{{inc @index}}</td>
+      <td class="el-left">{{prodCode}}</td>
+      <td class="el-left">{{prodName}}</td>
+      <td class="el-left">{{prodType}}</td>
+      <td class="el-left">{{qualifyLevel}}</td>
+      <td class="el-left">{{printDiffLevel}}</td>
+      <td class="el-left">{{bindDiffLevel}}</td>
+      <td class="el-left">{{bindType}}</td>
+      <td class="el-right">{{prodTotal}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <!--选择工厂 产品明细 end-->
+
+  <!--选择工厂 产能需求 end-->
+  <script class="hbs" data-view-id="factoryCapacity" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="el-center">{{inc @index}}</td>
+      <td class="el-left">{{procType}}</td>
+      <td class="el-right">{{procCapacity}}</td>
+      <td class="el-left">{{unit}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <!--选择工厂 产能需求 end-->
+
+  <!--选择工厂 工厂查询 start-->
+  <script class="hbs" data-view-id="factoryList" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr data-view-id="capacityInfo" data-view-value="{{inc @index}}">
+      <td class="el-center">{{inc @index}}</td>
+      <td class="el-left">{{factCode}}</td>
+      <td class="el-left">{{factFullName}}</td>
+      <td class="el-right">{{punctuality}}</td>
+      <td class="el-left">{{qualifyLevel}}</td>
+      <td class="el-left">{{printDiffLevel}}</td>
+      <td class="el-left">{{bindDiffLevel}}</td>
+    </tr>
+    {{/each}}
+  </script>
+  <!--选择工厂 工厂查询 end-->
+
+  <script class="hbs" data-view-id="capacityInfo" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="el-center">{{inc @index}}</td>
+      <td class="el-left">{{procType}}</td>
+      <td class="el-right">{{procCapacity}}</td>
+      <td class="el-left">{{unit}}</td>
+    </tr>
+    {{/each}}
+  </script>
+
+  <!--分派订单 未全部分派完订单 start-->
+  <script class="hbs" data-view-id="unallocatedOrder" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="el-center">{{inc @index}}</td>
+      <td class="el-left">{{factCode}}</td>
+      <td class="el-left">{{factFullName}}</td>
+      <td class="el-right">{{punctuality}}</td>
+      <td class="el-left">{{qualifyLevel}}</td>
+      <td class="el-left">{{printDiffLevel}}</td>
+      <td class="el-left">{{bindDiffLevel}}</td>
+      <td class="el-right">{{key1}}</td>
+      <td class="el-right">{{key2}}</td>
+      <td class="el-right">{{key3}}</td>
+      <td class="el-right">{{key4}}</td>
+      <td class="el-right">{{key5}}</td>
+      <td class="el-right">{{key6}}</td>
+      <td class="el-right">{{key7}}</td>
+      <td class="el-right">{{print1}}</td>
+      <td class="el-right">{{print2}}</td>
+      <td class="el-right">{{print3}}</td>
+      <td class="el-right">{{print4}}</td>
+      <td class="el-left">{{prodCode}}</td>
+      <td class="el-left">{{prodName}}</td>
+      <td class="el-right">{{prodNum}}</td>
+      <td class="el-left">
+        <input type="text" value="{{orderNum}}">
+      </td>
+      <td class="el-right">{{prodAmt}}</td>
+      <td class="el-right">{{orderAmt}}</td>
+      <td class="el-left">
+        <input type="text" value="{{changedAmt}}">
+      </td>
+      <td class="el-left">
+        <input type="text" value="{{changeReason}}">
+      </td>
+
+    </tr>
+    {{/each}}
+  </script>
+  <!--分派订单 未全部分派完订单 end-->
+
+  <!--订单状态 start-->
+  <script class="hbs" data-view-id="orderStatus" type="text/x-handlebars-template">
+    <select class="form-control form-selection el-select orderStatus_select">{{opt this}}</select>
+  </script>
+  <!--订单状态 end-->
+
+  <!--产品信息确认 start-->
+  <script class="hbs" data-view-id="productConfirmationStatus" type="text/x-handlebars-template">
+    <select class="form-control form-selection el-select productStatus_select">{{opt this}}</select>
+  </script>
+  <!--产品信息确认 end-->
+
+  <!--分单状态 start-->
+  <script class="hbs" data-view-id="seperateStatus" type="text/x-handlebars-template">
+    <select class="form-control form-selection el-select seperateStatus_select">{{opt this}}</select>
+  </script>
+  <!--分单状态 end-->
+
+  <!--分单方式 start-->
+  <script class="hbs" data-view-id="seperateMethod" type="text/x-handlebars-template">
+    <select class="form-control form-selection el-select acptMethod_select">{{opt this}}</select>
+  </script>
+  <!--分单方式 end-->
+
+  <!--纸张确认 start-->
+  <script class="hbs" data-view-id="paperStatus" type="text/x-handlebars-template">
+    <select class="form-control form-selection el-select paperReadyStatus_select">{{opt this}}</select>
+  </script>
+  <!--纸张确认 end-->
+
+  <!--订单查询-订单信息 start-->
+  <script class="hbs" data-view-id="orderDetailInfo" type="text/x-handlebars-template">
+    <div class="form-group">
+      <label class="col-sm-1 control-label">客户名称</label>
+      <div class="col-sm-2">
+        <input type="text" class="form-control" disabled value="{{custAbbr}}">
+      </div>
+
+      <label class="col-sm-1 control-label">订单编号</label>
+      <div class="col-sm-2">
+        <input type="text" class="form-control" disabled value="{{soNo}}">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-sm-1 control-label">营业员</label>
+      <div class="col-sm-2">
+        <input type="text" class="form-control" disabled value="{{assistant}}">
+      </div>
+
+      <label class="col-sm-1 control-label">登记日期</label>
+      <div class="col-sm-2">
+        <input type="text" class="form-control" disabled value="{{orderDate}}">
+      </div>
+
+      <label class="col-sm-1 control-label">要求交期</label>
+      <div class="col-sm-2">
+        <input type="text" class="form-control" disabled value="{{dueDate}}">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-sm-1 control-label">订单状态</label>
+      <div class="col-sm-2">
+        <input type="text" class="form-control" disabled value="{{soStatus}}">
+      </div>
+
+      <label class="col-sm-1 control-label">分单状态</label>
+      <div class="col-sm-2">
+        <input type="text" class="form-control" disabled value="{{spiltStatus}}">
+      </div>
+
+      <label class="col-sm-1 control-label">生产交期</label>
+      <div class="col-sm-2">
+        <input type="text" class="form-control" disabled value="{{deliDate}}">
+      </div>
+    </div>
+  </script>
+  <!--订单查询-订单信息 end-->
+
+  <!-- 修改价格 -->
+  <script class="hbs"  data-view-id="updatePrice" type="text/x-handlebars-template">
+    <div class="tablelist table-responsive pre-scrollable">
+      <table class="table table-bordered table-striped table-hover">
+        <thead>
+        <tr>
+          <th class="t3">行号</th>
+          <th class="t6">工厂名称</th>
+          <th class="t8">上月交付准时率</th>
+          <th class="t6">产品编号</th>
+          <th class="t6">产品名称</th>
+          <th class="t6">产品总数</th>
+          <th class="t6">分单数量</th>
+          <th class="t8">产品总价（元）</th>
+          <th class="t8">分单总价（元）</th>
+          <th class="t8">变更后分单金额</th>
+          <th class="t6">变更原因</th>
+          <th class="t7">新价格</th>
+        </tr>
+        </thead>
+        <tbody class="updatePrice_data">
+        {{#each this}}
+        <tr>
+          <td class="el-center">{{inc @index}}</td>
+          <td class="el-left">{{factFullName}}</td>
+          <td class="el-right">{{punctuality}}</td>
+          <td class="el-left">{{prodCode}}</td>
+          <td class="el-left">{{prodName}}</td>
+          <td class="el-right">{{totalNum}}</td>
+          <td class="el-right">{{orderNum}}</td>
+          <td class="el-right">{{prodAmt}}</td>
+          <td class="el-right">{{orderAmt}}</td>
+          <td class="el-right">{{changedAmt}}</td>
+          <td class="el-left">{{changeReason}}</td>
+          <td class="el-right"><input type="text" class="el-right" value="{{salePrice}}"></td>
+        </tr>
+        {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </script>
+  <!-- 修改价格 end -->
+
+
+</div>
+<!-- Default panel end -->

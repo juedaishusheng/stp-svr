@@ -1,0 +1,1029 @@
+2016-08-29 10:28:46.459  INFO 2327 --- [restartedMain] com.el.Application                       : Starting Application on CharlesdeMacBook-Air.local with PID 2327 (/Users/billy/Documents/stp/stp-svr/build/classes/main started by billy in /Users/billy/Documents/stp/stp-svr)
+2016-08-29 10:28:46.459 DEBUG 2327 --- [restartedMain] com.el.Application                       : Running with Spring Boot v1.3.6.RELEASE, Spring v4.2.7.RELEASE
+2016-08-29 10:28:46.459  INFO 2327 --- [restartedMain] com.el.Application                       : The following profiles are active: dev
+2016-08-29 10:28:46.871  INFO 2327 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@75c255ee: startup date [Mon Aug 29 10:28:46 CST 2016]; root of context hierarchy
+2016-08-29 10:28:51.002  INFO 2327 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfiguration' of type [class com.el.cfg.security.ShiroConfiguration$$EnhancerBySpringCGLIB$$55fb06d0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-29 10:28:51.033  INFO 2327 --- [restartedMain] com.el.cfg.security.ShiroConfiguration   : [APP-BEAN] lifecycleBeanPostProcessor
+2016-08-29 10:28:51.035  INFO 2327 --- [restartedMain] com.el.cfg.security.ShiroConfiguration   : [APP-BEAN] defaultAdvisorAutoProxyCreator
+2016-08-29 10:28:51.078  INFO 2327 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'webMvcConfig' of type [class com.el.cfg.WebMvcConfig$$EnhancerBySpringCGLIB$$2fa8604d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-29 10:28:51.324  INFO 2327 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'realmProperties' of type [class com.el.cfg.security.ShiroRealmProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-29 10:28:51.327  INFO 2327 --- [restartedMain] com.el.cfg.security.ShiroConfiguration   : [APP-BEAN] shiroFilter: ShiroRealmProperties(appServiceUrl=http://localhost:9000, type=JDBC, cas=MyCasRealmProperties(casServiceUrl=https://elpdtmvn:9443/cas4), simple=MySimpleRealmProperties(accounts=[MyAccountProperties(id=null, username=dev, password=password, salt=null, role=DEV, profile=null), MyAccountProperties(id=null, username=admin, password=password, salt=null, role=SYS, profile=null)]))
+2016-08-29 10:28:51.332  INFO 2327 --- [restartedMain] com.el.cfg.security.ShiroConfiguration   : [APP-BEAN] shiroSecurityManager
+2016-08-29 10:28:51.634  INFO 2327 --- [restartedMain] com.el.cfg.security.ShiroConfiguration   : [APP-BEAN] shiroJdbcRealm: stpRealm
+2016-08-29 10:28:51.670  INFO 2327 --- [restartedMain] com.el.cfg.security.ShiroConfiguration   : [APP-BEAN] shiroCacheManager
+2016-08-29 10:28:51.678  INFO 2327 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'shiroCacheManager' of type [class org.apache.shiro.cache.MemoryConstrainedCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-29 10:28:51.679 DEBUG 2327 --- [restartedMain] org.apache.shiro.realm.AuthorizingRealm  : No authorizationCache instance set.  Checking for a cacheManager...
+2016-08-29 10:28:51.681 DEBUG 2327 --- [restartedMain] org.apache.shiro.realm.AuthorizingRealm  : CacheManager [MemoryConstrainedCacheManager with 0 cache(s)): []] has been configured.  Building authorization cache named [stpRealm.authorizationCache]
+2016-08-29 10:28:51.819  INFO 2327 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'jdbc.CONFIGURATION_PROPERTIES' of type [class com.el.cfg.repository.RepositoryConfigurationProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-29 10:28:51.824  INFO 2327 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'repositoryConfiguration' of type [class com.el.cfg.repository.RepositoryConfiguration$$EnhancerBySpringCGLIB$$3d57996d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-29 10:28:51.831 DEBUG 2327 --- [restartedMain] uration$$EnhancerBySpringCGLIB$$3d57996d : [APP-BEAN] sqlSessionFactory
+2016-08-29 10:28:51.857 DEBUG 2327 --- [restartedMain] uration$$EnhancerBySpringCGLIB$$3d57996d : [APP-BEAN] dataSource: RepositoryConfig{driverClassName='oracle.jdbc.OracleDriver', url='jdbc:oracle:thin:@192.168.0.146:1521:orcl', username='stdev', password='123456'}
+2016-08-29 10:28:51.876  INFO 2327 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [class org.apache.tomcat.jdbc.pool.DataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-29 10:28:51.944  INFO 2327 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [class org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-29 10:28:51.992  INFO 2327 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'myAccountMapper' of type [class org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-29 10:28:51.994  INFO 2327 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'myAccountMapper' of type [class com.sun.proxy.$Proxy48] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-29 10:28:51.995 DEBUG 2327 --- [restartedMain] o.a.s.spring.LifecycleBeanPostProcessor  : Initializing bean [shiroRealm]...
+2016-08-29 10:28:51.996  INFO 2327 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'shiroRealm' of type [class com.el.cfg.security.ShiroConfiguration$3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-29 10:28:51.996  INFO 2327 --- [restartedMain] com.el.cfg.security.ShiroConfiguration   : [APP-BEAN] shiroSessionManager
+2016-08-29 10:28:51.999  INFO 2327 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'shiroSessionManager' of type [class org.apache.shiro.web.session.mgt.ServletContainerSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-29 10:28:52.013  INFO 2327 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'shiroSecurityManager' of type [class com.el.cfg.security.ShiroConfiguration$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-29 10:28:52.015  INFO 2327 --- [restartedMain] com.el.cfg.security.ShiroConfiguration   : [APP-BEAN] shiroCasFilter
+2016-08-29 10:28:52.048  INFO 2327 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'shiroCasFilter' of type [class com.el.cfg.security.filter.MyCasFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-29 10:28:52.049  INFO 2327 --- [restartedMain] com.el.cfg.security.ShiroConfiguration   : [APP-BEAN] shiroAuthenticationFilter
+2016-08-29 10:28:52.085  INFO 2327 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'shiroFormAuthenticationFilter' of type [class com.el.cfg.security.filter.MyFormAuthenticationFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-29 10:28:52.101  INFO 2327 --- [restartedMain] com.el.cfg.security.ShiroConfiguration   : [APP-BEAN] shiroAnyRoleAuthorizationFilter
+2016-08-29 10:28:52.128  INFO 2327 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'shiroAnyRoleAuthorizationFilter' of type [class com.el.cfg.security.filter.AnyRolesAuthorizationFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-29 10:28:52.141 DEBUG 2327 --- [restartedMain] org.apache.shiro.io.ResourceUtils        : Opening resource from class path [shiro.ini]
+2016-08-29 10:28:52.155 DEBUG 2327 --- [restartedMain] org.apache.shiro.config.Ini              : Parsing [urls]
+2016-08-29 10:28:52.215  INFO 2327 --- [restartedMain] com.el.cfg.security.ShiroConfiguration   : [APP-BEAN] authorizationAttributeSourceAdvisor
+2016-08-29 10:28:52.261  INFO 2327 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [class org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-29 10:28:52.267  INFO 2327 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f9f200bc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-29 10:28:52.770  INFO 2327 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9000 (http)
+2016-08-29 10:28:52.796  INFO 2327 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-08-29 10:28:52.799  INFO 2327 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.36
+2016-08-29 10:28:52.920  INFO 2327 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-08-29 10:28:52.920  INFO 2327 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6055 ms
+2016-08-29 10:28:52.930 DEBUG 2327 --- [localhost-startStop-1] c.e.c.security.MyShiroFilterFactoryBean  : Creating Shiro Filter instance.
+2016-08-29 10:28:52.939 DEBUG 2327 --- [localhost-startStop-1] o.a.s.w.f.mgt.DefaultFilterChainManager  : Creating chain [/cas] from String definition [cas]
+2016-08-29 10:28:52.940 DEBUG 2327 --- [localhost-startStop-1] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/cas] to filter [cas] with config [null]
+2016-08-29 10:28:52.942 DEBUG 2327 --- [localhost-startStop-1] o.a.s.w.f.mgt.DefaultFilterChainManager  : Creating chain [/app_logout] from String definition [logout]
+2016-08-29 10:28:52.943 DEBUG 2327 --- [localhost-startStop-1] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/app_logout] to filter [logout] with config [null]
+2016-08-29 10:28:52.943 DEBUG 2327 --- [localhost-startStop-1] o.a.s.w.f.mgt.DefaultFilterChainManager  : Creating chain [/] from String definition [authc]
+2016-08-29 10:28:52.943 DEBUG 2327 --- [localhost-startStop-1] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/] to filter [authc] with config [null]
+2016-08-29 10:28:52.943 DEBUG 2327 --- [localhost-startStop-1] o.a.s.w.f.mgt.DefaultFilterChainManager  : Creating chain [/api/ui/**] from String definition [authc]
+2016-08-29 10:28:52.943 DEBUG 2327 --- [localhost-startStop-1] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/api/ui/**] to filter [authc] with config [null]
+2016-08-29 10:28:52.944 DEBUG 2327 --- [localhost-startStop-1] o.a.s.w.f.mgt.DefaultFilterChainManager  : Creating chain [/api/sys/**] from String definition [authc, anyroles[DEV,SYS]]
+2016-08-29 10:28:52.944 DEBUG 2327 --- [localhost-startStop-1] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/api/sys/**] to filter [authc] with config [null]
+2016-08-29 10:28:52.944 DEBUG 2327 --- [localhost-startStop-1] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/api/sys/**] to filter [anyroles] with config [DEV,SYS]
+2016-08-29 10:28:52.944 DEBUG 2327 --- [localhost-startStop-1] o.a.s.w.f.mgt.DefaultFilterChainManager  : Creating chain [/api/pm/**] from String definition [authc, anyroles[DEV,PM]]
+2016-08-29 10:28:52.944 DEBUG 2327 --- [localhost-startStop-1] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/api/pm/**] to filter [authc] with config [null]
+2016-08-29 10:28:52.944 DEBUG 2327 --- [localhost-startStop-1] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/api/pm/**] to filter [anyroles] with config [DEV,PM]
+2016-08-29 10:28:52.944 DEBUG 2327 --- [localhost-startStop-1] o.a.s.w.f.mgt.DefaultFilterChainManager  : Creating chain [/api/fm/**] from String definition [authc, anyroles[DEV,FM]]
+2016-08-29 10:28:52.945 DEBUG 2327 --- [localhost-startStop-1] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/api/fm/**] to filter [authc] with config [null]
+2016-08-29 10:28:52.945 DEBUG 2327 --- [localhost-startStop-1] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/api/fm/**] to filter [anyroles] with config [DEV,FM]
+2016-08-29 10:28:52.945 DEBUG 2327 --- [localhost-startStop-1] o.a.s.w.f.mgt.DefaultFilterChainManager  : Creating chain [/api/om/**] from String definition [authc, anyroles[DEV,OM]]
+2016-08-29 10:28:52.945 DEBUG 2327 --- [localhost-startStop-1] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/api/om/**] to filter [authc] with config [null]
+2016-08-29 10:28:52.945 DEBUG 2327 --- [localhost-startStop-1] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/api/om/**] to filter [anyroles] with config [DEV,OM]
+2016-08-29 10:28:52.945 DEBUG 2327 --- [localhost-startStop-1] o.a.s.w.f.mgt.DefaultFilterChainManager  : Creating chain [/api/cm_ou/**] from String definition [authc, anyroles[DEV,CM1]]
+2016-08-29 10:28:52.945 DEBUG 2327 --- [localhost-startStop-1] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/api/cm_ou/**] to filter [authc] with config [null]
+2016-08-29 10:28:52.945 DEBUG 2327 --- [localhost-startStop-1] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/api/cm_ou/**] to filter [anyroles] with config [DEV,CM1]
+2016-08-29 10:28:52.946 DEBUG 2327 --- [localhost-startStop-1] o.a.s.w.f.mgt.DefaultFilterChainManager  : Creating chain [/api/cm_fac/**] from String definition [authc, anyroles[DEV,CM2]]
+2016-08-29 10:28:52.946 DEBUG 2327 --- [localhost-startStop-1] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/api/cm_fac/**] to filter [authc] with config [null]
+2016-08-29 10:28:52.946 DEBUG 2327 --- [localhost-startStop-1] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/api/cm_fac/**] to filter [anyroles] with config [DEV,CM2]
+2016-08-29 10:28:52.946 DEBUG 2327 --- [localhost-startStop-1] o.a.s.w.f.mgt.DefaultFilterChainManager  : Creating chain [/**] from String definition [anon]
+2016-08-29 10:28:52.946 DEBUG 2327 --- [localhost-startStop-1] o.a.s.w.f.mgt.DefaultFilterChainManager  : Attempting to apply path [/**] to filter [anon] with config [null]
+2016-08-29 10:28:52.957  INFO 2327 --- [localhost-startStop-1] com.el.cfg.security.ShiroConfiguration   : [APP-BEAN] shiroFilterRegistrationBean
+2016-08-29 10:28:53.366 DEBUG 2327 --- [localhost-startStop-1] o.a.s.spring.web.ShiroFilterFactoryBean  : Found filter chain candidate filter 'requestContextFilter'
+2016-08-29 10:28:53.386 DEBUG 2327 --- [localhost-startStop-1] o.a.s.spring.web.ShiroFilterFactoryBean  : Found filter chain candidate filter 'hiddenHttpMethodFilter'
+2016-08-29 10:28:53.400 DEBUG 2327 --- [localhost-startStop-1] o.a.s.spring.web.ShiroFilterFactoryBean  : Found filter chain candidate filter 'httpPutFormContentFilter'
+2016-08-29 10:28:53.425 DEBUG 2327 --- [localhost-startStop-1] o.a.s.spring.web.ShiroFilterFactoryBean  : Found filter chain candidate filter 'characterEncodingFilter'
+2016-08-29 10:28:53.480  INFO 2327 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-29 10:28:53.481  INFO 2327 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-29 10:28:53.482  INFO 2327 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-29 10:28:53.485  INFO 2327 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-29 10:28:53.486  INFO 2327 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'delegatingFilterProxy' to urls: [/*]
+2016-08-29 10:28:53.486  INFO 2327 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'shiroFilter' to: [/*]
+2016-08-29 10:28:53.486  INFO 2327 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'shiroCasFilter' to: [/*]
+2016-08-29 10:28:53.487  INFO 2327 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'shiroFormAuthenticationFilter' to: [/*]
+2016-08-29 10:28:53.487  INFO 2327 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'shiroAnyRoleAuthorizationFilter' to: [/*]
+2016-08-29 10:28:53.487  INFO 2327 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-29 10:28:53.677  INFO 2327 --- [restartedMain] com.el.sys.service.AuthServiceImpl       : [APP-INIT] all menus fetching...
+2016-08-29 10:28:56.486 DEBUG 2327 --- [restartedMain] com.el.sys.mapper.MenuMapper.menus       : ==>  Preparing: select menu as menuId, menu_icon as menuIco, menu_label as menuLbl, menu_fixed as menuFix, menu_upper as upperId, menu_order as menuOrder, menu_roles as menuRoles from s_menus order by menu_upper, menu_order 
+2016-08-29 10:28:56.565 DEBUG 2327 --- [restartedMain] com.el.sys.mapper.MenuMapper.menus       : ==> Parameters: 
+2016-08-29 10:28:56.753 DEBUG 2327 --- [restartedMain] com.el.sys.mapper.MenuMapper.menus       : <==      Total: 42
+2016-08-29 10:28:56.760  INFO 2327 --- [restartedMain] com.el.sys.service.AuthServiceImpl       : [APP-INIT] all menus fetched.
+2016-08-29 10:28:56.856  INFO 2327 --- [restartedMain] com.el.ApplicationInitializingBean       : [APP-INIT] all locks clearing...
+2016-08-29 10:28:56.892 DEBUG 2327 --- [restartedMain] uration$$EnhancerBySpringCGLIB$$3d57996d : [APP-BEAN] transactionManager
+2016-08-29 10:28:56.921  INFO 2327 --- [restartedMain] com.el.sys.service.LockServiceImpl       : [APP-LOCK] node unlocking...: dev
+2016-08-29 10:28:56.926 DEBUG 2327 --- [restartedMain] com.el.sys.mapper.LockMapper.unlockNode  : ==>  Preparing: DELETE FROM s_locks WHERE node_id = ? 
+2016-08-29 10:28:56.928 DEBUG 2327 --- [restartedMain] com.el.sys.mapper.LockMapper.unlockNode  : ==> Parameters: dev(String)
+2016-08-29 10:28:56.937 DEBUG 2327 --- [restartedMain] com.el.sys.mapper.LockMapper.unlockNode  : <==    Updates: 0
+2016-08-29 10:28:56.938  INFO 2327 --- [restartedMain] com.el.sys.service.LockServiceImpl       : [APP-LOCK] node unlocked.
+2016-08-29 10:28:56.942  INFO 2327 --- [restartedMain] com.el.ApplicationInitializingBean       : [APP-INIT] all locks cleared.
+2016-08-29 10:28:58.790 DEBUG 2327 --- [restartedMain] cConfig$$EnhancerBySpringCGLIB$$2fa8604d : [APP-BEAN] templateEngine with shiro:*
+2016-08-29 10:28:59.119 DEBUG 2327 --- [restartedMain] c.e.c.s.thymeleaf.AccountAttrProcessor   : [APP-AUTH] 'shiro:account' created
+2016-08-29 10:28:59.121 DEBUG 2327 --- [restartedMain] c.e.c.s.thymeleaf.AnyRolesAttrProcessor  : [APP-AUTH] 'shiro:anyroles' created
+2016-08-29 10:28:59.317  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@75c255ee: startup date [Mon Aug 29 10:28:46 CST 2016]; root of context hierarchy
+2016-08-29 10:28:59.457  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout]}" onto public void com.el.cfg.security.controller.LogoutController.logout(javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2016-08-29 10:28:59.460  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/ui/ui005/fruits]}" onto public java.util.List<com.el.dev.domain.DevUi005Fruit> com.el.dev.controller.DevUi005Controller.fruits2()
+2016-08-29 10:28:59.461  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/ui/ui005_books]}" onto public java.util.List<com.el.dev.domain.DevUi005Book> com.el.dev.controller.DevUi005Controller.books(java.lang.String)
+2016-08-29 10:28:59.461  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/ui/ui005_fruits]}" onto public java.util.List<com.el.dev.domain.DevUi005Fruit> com.el.dev.controller.DevUi005Controller.fruits()
+2016-08-29 10:28:59.463  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/ui/ui005/books]}" onto public java.util.List<com.el.dev.domain.DevUi005Book> com.el.dev.controller.DevUi005Controller.books2()
+2016-08-29 10:28:59.463  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/ui/ui005_my_book]}" onto public java.lang.String com.el.dev.controller.DevUi005Controller.myBook()
+2016-08-29 10:28:59.466  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dev/greeting]}" onto public com.el.dev.domain.DevGreeting com.el.dev.DevGreetingController.greeting(java.lang.String)
+2016-08-29 10:28:59.467  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dev/map_data]}" onto public java.util.Map<java.math.BigDecimal, java.math.BigDecimal> com.el.dev.DevGreetingController.mapData()
+2016-08-29 10:28:59.470  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dev/session/inc]}" onto public void com.el.dev.DevSessionController.inc(org.springframework.ui.Model)
+2016-08-29 10:28:59.471  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_fac/cm201/orderStatus]}" onto public java.util.Map<java.lang.String, java.lang.String> com.el.stp.cm_fac.controller.CmCockpitFacController.orderStatusNum(java.lang.String)
+2016-08-29 10:28:59.472  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_fac/cm201/orderCompletionChar]}" onto public java.util.List<java.lang.Integer> com.el.stp.cm_fac.controller.CmCockpitFacController.orderCompletionCharNum(java.lang.String)
+2016-08-29 10:28:59.477  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_fac/cm209/listView]}" onto public com.el.stp.common.util.PageUtil com.el.stp.cm_fac.controller.CmOrderQryController.cmOrderQry(com.el.stp.cm_fac.domain.CmOrderQryMainCondition)
+2016-08-29 10:28:59.478  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_fac/cm209/dblDtlData]}" onto public com.el.stp.cm_fac.domain.CmOrderQryDtlData com.el.stp.cm_fac.controller.CmOrderQryController.cmOrderDtlDataQry(java.lang.Integer)
+2016-08-29 10:28:59.479  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_fac/cm209/dblProdProcess]}" onto public java.util.List<com.el.stp.cm_fac.domain.CmOrderQryProdProcessDomain> com.el.stp.cm_fac.controller.CmOrderQryController.cmOrderProdProcessQry(java.lang.Integer)
+2016-08-29 10:28:59.483  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_fac/cm205/listView]}" onto public com.el.stp.common.util.PageUtil com.el.stp.cm_fac.controller.CmOrderTakeController.orderTakeList(com.el.sys.domain.PagingBean)
+2016-08-29 10:28:59.483  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_fac/cm205/dblView]}" onto public java.util.List<com.el.stp.cm_fac.domain.MeetOrderDomain> com.el.stp.cm_fac.controller.CmOrderTakeController.orderDetailsList(java.lang.Integer)
+2016-08-29 10:28:59.485  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_fac/cm205/productDetail]}" onto public java.util.List<com.el.stp.cm_fac.domain.ProductSpecsDomain> com.el.stp.cm_fac.controller.CmOrderTakeController.productDetailList()
+2016-08-29 10:28:59.487  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_fac/cm205/productDetailDemand]}" onto public java.util.List<com.el.stp.cm_fac.domain.ProductSpecsDomain> com.el.stp.cm_fac.controller.CmOrderTakeController.productDetailDemand(java.lang.String)
+2016-08-29 10:28:59.487  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_fac/cm205/productData]}" onto public com.el.stp.common.util.PageUtil com.el.stp.cm_fac.controller.CmOrderTakeController.productDataList(com.el.sys.domain.PagingBean)
+2016-08-29 10:28:59.489  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_fac/cm205/capacityData]}" onto public java.util.List<com.el.stp.cm_fac.domain.CapacityDataDomain> com.el.stp.cm_fac.controller.CmOrderTakeController.capacityData(java.lang.String,java.lang.String)
+2016-08-29 10:28:59.492  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_fac/cm203/listView]}" onto public com.el.stp.common.util.PageUtil com.el.stp.cm_fac.controller.CmOuController.ous(com.el.stp.cm_fac.domain.OuCondition)
+2016-08-29 10:28:59.493  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_fac/cm203/detailTables]}" onto public com.el.stp.cm_fac.domain.OuDomain com.el.stp.cm_fac.controller.CmOuController.ouDetailsTable(java.lang.Integer)
+2016-08-29 10:28:59.494  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_fac/cm203/dblViewProData]}" onto public com.el.stp.common.util.PageUtil com.el.stp.cm_fac.controller.CmOuController.proData(com.el.stp.cm_fac.domain.CapaCondition)
+2016-08-29 10:28:59.494  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_fac/cm203/dblViewPrintData]}" onto public com.el.stp.common.util.PageUtil com.el.stp.cm_fac.controller.CmOuController.printData(com.el.stp.cm_fac.domain.CapaCondition)
+2016-08-29 10:28:59.494  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_fac/cm203/prinDetailView]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.el.stp.cm_fac.controller.CmOuController.printDetails(java.lang.Integer,java.lang.Integer,java.lang.String)
+2016-08-29 10:28:59.499  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_fac/cm207/listView]}" onto public com.el.stp.common.util.PageUtil com.el.stp.cm_fac.controller.CmProductManagementController.productManagementServiceList(com.el.stp.cm_fac.domain.ProductManagementCondition)
+2016-08-29 10:28:59.500  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_fac/cm207/dblView]}" onto public java.util.List<com.el.stp.cm_fac.domain.ProductManagementDomain> com.el.stp.cm_fac.controller.CmProductManagementController.headInfoList(java.lang.Integer)
+2016-08-29 10:28:59.501  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_fac/cm207/productDetail]}" onto public java.util.List<com.el.stp.cm_fac.domain.ProductDetailDomain> com.el.stp.cm_fac.controller.CmProductManagementController.productDetailInfoList(java.lang.Integer)
+2016-08-29 10:28:59.501  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_fac/cm207/productRequire]}" onto public java.util.List<com.el.stp.cm_fac.domain.ProductRequireDomain> com.el.stp.cm_fac.controller.CmProductManagementController.productRequireInfoList()
+2016-08-29 10:28:59.502  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_fac/cm207/fileCheck]}" onto public java.util.List<com.el.stp.cm_fac.domain.ProductManagementDomain> com.el.stp.cm_fac.controller.CmProductManagementController.fileCheckList()
+2016-08-29 10:28:59.502  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_fac/cm207/fileCheckDoubleClick]}" onto public java.util.List<com.el.stp.cm_fac.domain.ProductManagementPageCheckDomain> com.el.stp.cm_fac.controller.CmProductManagementController.fileCheckDoubleClickList(java.lang.Integer)
+2016-08-29 10:28:59.503  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_fac/cm207/pageCheck]}" onto public java.util.List<com.el.stp.cm_fac.domain.ProductManagementPaperCheckDomain> com.el.stp.cm_fac.controller.CmProductManagementController.productManagementPaperCheckList(java.lang.Integer)
+2016-08-29 10:28:59.503  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_fac/cm207/productReport]}" onto public java.util.List<com.el.stp.cm_fac.domain.ProductManagementProductReportDomain> com.el.stp.cm_fac.controller.CmProductManagementController.productManagementProductReportList()
+2016-08-29 10:28:59.504  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_fac/cm207/recordReport]}" onto public java.util.List<com.el.stp.cm_fac.domain.RecordReportDomain> com.el.stp.cm_fac.controller.CmProductManagementController.recordReportList(java.lang.Integer)
+2016-08-29 10:28:59.507  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_fac/cm207/recordReportSave]}" onto public int com.el.stp.cm_fac.controller.CmProductManagementController.recordReportSaveList(com.el.cfg.domain.TSonoteItem)
+2016-08-29 10:28:59.507  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_fac/cm207/finishPut]}" onto public java.util.List<com.el.stp.cm_fac.domain.FinishPutDomain> com.el.stp.cm_fac.controller.CmProductManagementController.finishPutList(java.lang.Integer)
+2016-08-29 10:28:59.508  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_fac/cm207/finishPutSave]}" onto public int com.el.stp.cm_fac.controller.CmProductManagementController.finishPutSaveList(com.el.cfg.domain.TProdin)
+2016-08-29 10:28:59.509  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_ou/cm001/orderStatus]}" onto public java.util.Map<java.lang.String, java.lang.String> com.el.stp.cm_ou.controller.CmCockpitOuController.orderStatusNum(java.lang.String)
+2016-08-29 10:28:59.509  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_ou/cm001/orderCompletionChar]}" onto public java.util.List<java.lang.Integer> com.el.stp.cm_ou.controller.CmCockpitOuController.orderCompletionCharNum(java.lang.String)
+2016-08-29 10:28:59.512  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_ou/cm004/processCapacity]}" onto public java.util.List<com.el.stp.cm_ou.domain.FactoryCapacityDomain> com.el.stp.cm_ou.controller.CmFactoryController.capacitys()
+2016-08-29 10:28:59.515  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_ou/cm004/printSo]}" onto public com.el.stp.common.util.PageUtil com.el.stp.cm_ou.controller.CmFactoryController.printSoData(com.el.stp.cm_ou.domain.DateCondition)
+2016-08-29 10:28:59.516  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_ou/cm004/processPrice]}" onto public java.util.List<com.el.stp.cm_ou.domain.ProcessPriceDomain> com.el.stp.cm_ou.controller.CmFactoryController.processPrice(java.lang.String)
+2016-08-29 10:28:59.516  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_ou/cm004/soProdDetail]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.el.stp.cm_ou.controller.CmFactoryController.productionRecord(java.lang.Integer,java.lang.Integer)
+2016-08-29 10:28:59.520  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_ou/cm004/listView]}" onto public com.el.stp.common.util.PageUtil com.el.stp.cm_ou.controller.CmFactoryController.factoryList(com.el.stp.cm_ou.domain.FactoryCondition)
+2016-08-29 10:28:59.522  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_ou/cm004/printOrderView]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.el.stp.cm_ou.controller.CmFactoryController.printOrderList()
+2016-08-29 10:28:59.523  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_ou/cm004/capacity]}" onto public com.el.stp.common.util.PageUtil com.el.stp.cm_ou.controller.CmFactoryController.capacityData(com.el.stp.cm_ou.domain.DateCondition)
+2016-08-29 10:28:59.523  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_ou/cm004/capaType]}" onto public java.util.List<com.el.stp.cm_ou.domain.FactoryCapacityDomain> com.el.stp.cm_ou.controller.CmFactoryController.capaType()
+2016-08-29 10:28:59.524  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_ou/cm004/headInfo]}" onto public java.util.List<com.el.stp.cm_ou.domain.FactoryDomain> com.el.stp.cm_ou.controller.CmFactoryController.headInfo(java.lang.Integer)
+2016-08-29 10:28:59.528  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_ou/cm011/listView]}" onto public com.el.stp.common.util.PageUtil com.el.stp.cm_ou.controller.CmOrderPriceController.listData(com.el.sys.domain.PagingBean)
+2016-08-29 10:28:59.529  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_ou/cm011/updateListView]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.el.stp.cm_ou.controller.CmOrderPriceController.orderInfo(java.lang.Integer)
+2016-08-29 10:28:59.529  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cm_ou/cm011/orderPriceBackView]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.el.stp.cm_ou.controller.CmOrderPriceController.orderPriceBackInfo(java.lang.Integer,java.lang.String)
+2016-08-29 10:28:59.534  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/mock/cm012/listView]}" onto public com.el.stp.common.util.PageUtil com.el.stp.cm_ou.controller.CmOrderSearchController.orderListView(com.el.stp.cm_ou.domain.OrderSearchCondition)
+2016-08-29 10:28:59.535  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/mock/cm012/productSearchByOrder]}" onto public java.util.List<com.el.stp.cm_ou.domain.OrderSearchDetailDomain> com.el.stp.cm_ou.controller.CmOrderSearchController.productSearchByOrder(java.lang.String,java.lang.String,java.lang.String)
+2016-08-29 10:28:59.536  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/mock/cm012/trackingProgressSearch]}" onto public java.util.List<com.el.stp.cm_ou.domain.OrderSearchDetailDomain> com.el.stp.cm_ou.controller.CmOrderSearchController.trackingProgressSearch(java.lang.String,java.lang.String,java.lang.String)
+2016-08-29 10:28:59.537  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/mock/cm012/trackingProgressCompletionSearch]}" onto public java.util.List<com.el.stp.cm_ou.domain.OrderSearchDetailDomain> com.el.stp.cm_ou.controller.CmOrderSearchController.trackingProgressCompletionSearch(java.lang.String)
+2016-08-29 10:28:59.539  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/mock/cm012/pauseSeperate]}" onto public java.lang.Integer com.el.stp.cm_ou.controller.CmOrderSearchController.pauseSeperate(java.lang.String)
+2016-08-29 10:28:59.541  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/mock/cm012/productSeperateObject]}" onto public java.util.List<com.el.stp.cm_ou.domain.OrderSearchDetailDomain> com.el.stp.cm_ou.controller.CmOrderSearchController.productSeperateObject(java.lang.String)
+2016-08-29 10:28:59.542  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/mock/cm012/orderDetailSearch]}" onto public com.el.stp.cm_ou.domain.OrderSearchDetailDomain com.el.stp.cm_ou.controller.CmOrderSearchController.orderDetailSearch(java.lang.String,java.lang.String,java.lang.String)
+2016-08-29 10:28:59.543  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/mock/cm012/updatePrice]}" onto public java.util.List<java.lang.String> com.el.stp.cm_ou.controller.CmOrderSearchController.updatePrice(java.lang.String)
+2016-08-29 10:28:59.543  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/mock/cm012/processType]}" onto public java.util.List<com.el.stp.cm_ou.domain.OrderSearchDetailDomain> com.el.stp.cm_ou.controller.CmOrderSearchController.processType(java.lang.String,java.lang.String,java.lang.String)
+2016-08-29 10:28:59.547  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/common/dropdown/metas/{inputValue}]}" onto public java.util.List<com.el.stp.common.domain.DropDownDomain> com.el.stp.common.controller.DropDownQueryController.findAllWaitingItem(java.lang.String,java.lang.String)
+2016-08-29 10:28:59.548  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/common/dropdown/cust]}" onto public java.util.List<com.el.stp.common.domain.DropDownDomain> com.el.stp.common.controller.DropDownQueryController.queryCustByParam(com.el.stp.common.domain.DropDownDomain)
+2016-08-29 10:28:59.552  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/common/dropdown/prod]}" onto public java.util.List<com.el.stp.common.domain.DropDownDomain> com.el.stp.common.controller.DropDownQueryController.queryProdByParam(com.el.stp.common.domain.DropDownDomain)
+2016-08-29 10:28:59.555  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/common/dropdown/orgProd]}" onto public java.util.List<com.el.stp.common.domain.DropDownDomain> com.el.stp.common.controller.DropDownQueryController.queryOrgProdByParam(com.el.stp.common.domain.DropDownDomain)
+2016-08-29 10:28:59.560  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/common/dropdown/ou]}" onto public java.util.List<com.el.stp.common.domain.DropDownDomain> com.el.stp.common.controller.DropDownQueryController.queryOuByParam(com.el.stp.common.domain.DropDownDomain)
+2016-08-29 10:28:59.563  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/common/select/processTypeOuItems]}" onto public java.util.List<com.el.sys.domain.CodeName> com.el.stp.common.controller.SelectController.processTypeOuItems(java.lang.String,javax.servlet.http.HttpServletResponse)
+2016-08-29 10:28:59.565  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/common/select/processTypeFacItems]}" onto public java.util.List<com.el.sys.domain.CodeName> com.el.stp.common.controller.SelectController.processTypeFacItems(java.lang.String,javax.servlet.http.HttpServletResponse)
+2016-08-29 10:28:59.566  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/common/supp/list]}" onto public java.util.List<com.el.stp.common.domain.TSuppDomain> com.el.stp.common.controller.SuppController.listSupp(com.el.stp.common.domain.TSuppDomain)
+2016-08-29 10:28:59.570  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/common/supp/one/{addrNo}]}" onto public com.el.stp.common.domain.TSuppDomain com.el.stp.common.controller.SuppController.suppOne(java.lang.String)
+2016-08-29 10:28:59.588  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/fc/fc007/listView]}" onto public com.el.stp.common.util.PageUtil com.el.stp.fc.controller.FcProdInController.prodIn(com.el.stp.fc.domian.ProdInCondition)
+2016-08-29 10:28:59.590  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/fc/fc007/editView]}" onto public com.el.stp.common.util.PageUtil com.el.stp.fc.controller.FcProdInController.prodInDetailInfo(com.el.stp.fc.domian.ProdInCondition)
+2016-08-29 10:28:59.593  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/fm/fm002/payView]}" onto public com.el.stp.common.util.PageUtil com.el.stp.fm.controller.FmAccountController.payBtn(com.el.stp.fm.domain.AccountCondition)
+2016-08-29 10:28:59.594  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/fm/fm002/listView]}" onto public com.el.stp.common.util.PageUtil com.el.stp.fm.controller.FmAccountController.accountDomains(com.el.stp.fm.domain.AccountCondition)
+2016-08-29 10:28:59.594  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/fm/fm002/listTotal]}" onto public java.util.List<com.el.stp.fm.domain.AccountDomain> com.el.stp.fm.controller.FmAccountController.accountTotal(com.el.stp.fm.domain.AccountCondition)
+2016-08-29 10:28:59.595  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/fm/fm002/delinoteProdView]}" onto public com.el.stp.common.util.PageUtil com.el.stp.fm.controller.FmAccountController.delinoteProdBtn(com.el.stp.fm.domain.AccountCondition)
+2016-08-29 10:28:59.595  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/fm/fm002/ticketView]}" onto public com.el.stp.common.util.PageUtil com.el.stp.fm.controller.FmAccountController.ticketBtn(com.el.stp.fm.domain.AccountCondition)
+2016-08-29 10:28:59.595  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/fm/fm002/ticketTotal]}" onto public java.util.List<com.el.stp.fm.domain.AccountDomain> com.el.stp.fm.controller.FmAccountController.ticketTotal(com.el.stp.fm.domain.AccountCondition)
+2016-08-29 10:28:59.596  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/fm/fm002/payTotal]}" onto public java.util.List<com.el.stp.fm.domain.AccountDomain> com.el.stp.fm.controller.FmAccountController.payTotal(com.el.stp.fm.domain.AccountCondition)
+2016-08-29 10:28:59.596  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/fm/fm002/statementView]}" onto public com.el.stp.common.util.PageUtil com.el.stp.fm.controller.FmAccountController.statementBtn(com.el.stp.fm.domain.AccountCondition)
+2016-08-29 10:28:59.597  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/fm/fm002/statementTotal]}" onto public java.util.List<com.el.stp.fm.domain.AccountDomain> com.el.stp.fm.controller.FmAccountController.statementTotal(com.el.stp.fm.domain.AccountCondition)
+2016-08-29 10:28:59.599  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/fm/fm002/handStatementView]}" onto public java.lang.Boolean com.el.stp.fm.controller.FmAccountController.handStatementBtn(java.lang.Long)
+2016-08-29 10:28:59.602  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/fm/fm001/listView]}" onto public com.el.stp.common.util.PageUtil com.el.stp.fm.controller.FmCustAccountController.statementBtn(com.el.stp.fm.domain.CustAccountCondition)
+2016-08-29 10:28:59.603  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/fm/fm001/accountView]}" onto public java.lang.Boolean com.el.stp.fm.controller.FmCustAccountController.accountBtn(java.lang.Long)
+2016-08-29 10:28:59.605  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/fm/fm005/listView]}" onto public com.el.stp.common.util.PageUtil com.el.stp.fm.controller.FmPrintPoController.printPos(com.el.stp.fm.domain.PrintPoCondition)
+2016-08-29 10:28:59.606  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/fm/fm005/totalView]}" onto public java.util.List<com.el.stp.fm.domain.PrintPoDomain> com.el.stp.fm.controller.FmPrintPoController.total(com.el.stp.fm.domain.PrintPoCondition)
+2016-08-29 10:28:59.607  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/om/om005/listView]}" onto public com.el.stp.common.util.PageUtil com.el.stp.om.controller.OmDelinoteProdController.delinoteProd(com.el.stp.om.domain.DelinoteProdCondition)
+2016-08-29 10:28:59.609  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/om/om001/headView]}" onto public java.util.List<com.el.stp.om.domain.SoProdDomain> com.el.stp.om.controller.OmPrintSaleSoController.headView(com.el.stp.om.domain.SoProdDomain)
+2016-08-29 10:28:59.610  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/om/om001/listView]}" onto public com.el.stp.common.util.PageUtil com.el.stp.om.controller.OmPrintSaleSoController.printSale(com.el.stp.om.domain.SoProdCondition)
+2016-08-29 10:28:59.611  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/om/om001/productInfo]}" onto public java.util.List<com.el.stp.om.domain.SoProdDomain> com.el.stp.om.controller.OmPrintSaleSoController.prodInfo(com.el.stp.om.domain.SoProdDomain)
+2016-08-29 10:28:59.612  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/om/om004/listView]}" onto public com.el.stp.common.util.PageUtil com.el.stp.om.controller.OmUnCreditAuditController.creditAudit(com.el.stp.om.domain.SoProdCondition)
+2016-08-29 10:28:59.613  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/pm/pm002/listView]}" onto private com.el.stp.common.util.PageUtil com.el.stp.pm.controller.PmOnHandController.onHandSearch(com.el.stp.pm.domain.OnHandCondition)
+2016-08-29 10:28:59.614  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/pm/pm004/listView]}" onto private com.el.stp.common.util.PageUtil com.el.stp.pm.controller.PmPriceAuditController.priceAuditSearch(com.el.stp.pm.domain.PriceAuditCondition)
+2016-08-29 10:28:59.615  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/pm/pm001/listView]}" onto public com.el.stp.common.util.PageUtil com.el.stp.pm.controller.PmQuoteSearchController.quotesearch(com.el.stp.pm.domain.QuoteSearchCondition)
+2016-08-29 10:28:59.615  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/sm/sm004/listView]}" onto public com.el.stp.common.util.PageUtil com.el.stp.sm.controller.SmDelinoteDeliController.delinoteDeli(com.el.stp.sm.domain.DelinoteDeliCondition)
+2016-08-29 10:28:59.618  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/sm/sm002/page/list]}" onto public com.el.stp.common.util.PageUtil com.el.stp.sm.controller.SmDelinoteManageController.list(com.el.stp.sm.domain.SmDelinoteManageCondition)
+2016-08-29 10:28:59.619  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/sm/sm002/showDeli]}" onto public java.util.List<com.el.stp.sm.domain.TDelinoteDeliDomain> com.el.stp.sm.controller.SmDelinoteManageController.showDeli(com.el.stp.sm.domain.TDelinoteDeliDomain)
+2016-08-29 10:28:59.619  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/sm/sm002/deliUpdate]}" onto public com.el.stp.sm.domain.TDelinoteDeliDomain com.el.stp.sm.controller.SmDelinoteManageController.deliUpdate(org.springframework.ui.Model,com.el.stp.sm.domain.TDelinoteDeliDomain)
+2016-08-29 10:28:59.620  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/sm/sm002/deliDelete]}" onto public int com.el.stp.sm.controller.SmDelinoteManageController.deliDelete(org.springframework.ui.Model,java.lang.String)
+2016-08-29 10:28:59.620  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/sm/sm002/saveStatus]}" onto public int com.el.stp.sm.controller.SmDelinoteManageController.saveStatus(java.lang.String)
+2016-08-29 10:28:59.621  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/sm/sm003/listView]}" onto public com.el.stp.common.util.PageUtil com.el.stp.sm.controller.SmDelinoteTransController.delinoteTrans(com.el.stp.sm.domain.DelinoteDeliCondition)
+2016-08-29 10:28:59.622  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/sm/sm005/page/list]}" onto public com.el.stp.common.util.PageUtil com.el.stp.sm.controller.SmPapertransController.list(org.springframework.ui.Model,com.el.stp.sm.domain.SmPapertransCondition)
+2016-08-29 10:28:59.623  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/sm/sm001/listView]}" onto public com.el.stp.common.util.PageUtil com.el.stp.sm.controller.SmUnDelinoteProdController.unDelinoteProd(com.el.stp.sm.domain.SmDelinoteProdDomain)
+2016-08-29 10:28:59.624  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/ui/menus]}" onto public java.util.List<com.el.sys.domain.MenuTree> com.el.sys.controller.AuthController.menus()
+2016-08-29 10:28:59.624  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.el.sys.controller.HomeController.home()
+2016-08-29 10:28:59.625  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/pub/unlock],methods=[POST]}" onto public void com.el.sys.controller.PublicController.unlock(com.el.sys.domain.Lock)
+2016-08-29 10:28:59.626  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/pub/health]}" onto public org.springframework.ui.ModelMap com.el.sys.controller.PublicController.health(java.util.Locale,javax.servlet.http.HttpServletRequest)
+2016-08-29 10:28:59.627  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/ui/udc/{udcName}/{udcCode}]}" onto public com.el.sys.domain.CodeName com.el.sys.controller.UdcController.udcItem(java.lang.String,java.lang.String,javax.servlet.http.HttpServletResponse)
+2016-08-29 10:28:59.627  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/ui/udc/{udcName}]}" onto public java.util.List<com.el.sys.domain.CodeName> com.el.sys.controller.UdcController.udcItems(java.lang.String,javax.servlet.http.HttpServletResponse)
+2016-08-29 10:28:59.628  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/sys/users]}" onto public java.util.List<java.lang.String> com.el.sys.controller.UserOpsController.usernames()
+2016-08-29 10:28:59.631  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-29 10:28:59.632  INFO 2327 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-29 10:28:59.673  INFO 2327 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/error] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-08-29 10:28:59.675  INFO 2327 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/login] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-08-29 10:28:59.714  INFO 2327 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-29 10:28:59.714  INFO 2327 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-29 10:28:59.715  INFO 2327 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-29 10:28:59.775  INFO 2327 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in globalRestExceptionHandler
+2016-08-29 10:28:59.777  INFO 2327 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in globalExceptionHandler
+2016-08-29 10:28:59.840  INFO 2327 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-29 10:29:00.244  INFO 2327 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2016-08-29 10:29:00.546  INFO 2327 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-08-29 10:29:00.679  INFO 2327 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9000 (http)
+2016-08-29 10:29:00.690  INFO 2327 --- [restartedMain] com.el.Application                       : Started Application in 14.793 seconds (JVM running for 15.543)
+2016-08-29 10:29:00.690  INFO 2327 --- [restartedMain] com.el.Application                       : [APP] Application started.
+2016-08-29 10:29:05.573  INFO 2327 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-08-29 10:29:05.574  INFO 2327 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-08-29 10:29:05.608  INFO 2327 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 34 ms
+2016-08-29 10:29:11.336 DEBUG 2327 --- [http-nio-9000-exec-5] c.e.c.s.m.MyAccountMapper.accountOf      : ==>  Preparing: select id, username, password, salt, role, profile from s_users where enabled = 1 and username = ? 
+2016-08-29 10:29:11.337 DEBUG 2327 --- [http-nio-9000-exec-5] c.e.c.s.m.MyAccountMapper.accountOf      : ==> Parameters: dev(String)
+2016-08-29 10:29:11.360 DEBUG 2327 --- [http-nio-9000-exec-5] c.e.c.s.m.MyAccountMapper.accountOf      : <==      Total: 1
+2016-08-29 10:29:11.363 DEBUG 2327 --- [http-nio-9000-exec-5] com.el.cfg.security.realm.MyJdbcRealm    : [APP-AUTH] doGetAuthenticationInfo - account attributes: MyAccountProperties(id=0, username=dev, password=9bbb66bda489d8286ff18f8832bbbe399c761237c9d6d0e4029bac1f33e972be, salt=flh884wndkv5rfwc, role=DEV, profile=null)
+2016-08-29 10:29:11.366 DEBUG 2327 --- [http-nio-9000-exec-5] o.a.shiro.realm.AuthenticatingRealm      : Looked up AuthenticationInfo [com.el.cfg.security.domain.MyAuthenticationInfo@7a97fd57] from doGetAuthenticationInfo
+2016-08-29 10:29:11.366 DEBUG 2327 --- [http-nio-9000-exec-5] o.a.shiro.realm.AuthenticatingRealm      : AuthenticationInfo caching is disabled for info [com.el.cfg.security.domain.MyAuthenticationInfo@7a97fd57].  Submitted token: [org.apache.shiro.authc.UsernamePasswordToken - dev, rememberMe=false (0:0:0:0:0:0:0:1)].
+2016-08-29 10:29:11.380 DEBUG 2327 --- [http-nio-9000-exec-5] o.a.shiro.authc.AbstractAuthenticator    : Authentication successful for token [org.apache.shiro.authc.UsernamePasswordToken - dev, rememberMe=false (0:0:0:0:0:0:0:1)].  Returned account [com.el.cfg.security.domain.MyAuthenticationInfo@7a97fd57]
+2016-08-29 10:29:11.380 DEBUG 2327 --- [http-nio-9000-exec-5] o.a.s.s.support.DefaultSubjectContext    : No SecurityManager available in subject context map.  Falling back to SecurityUtils.getSecurityManager() lookup.
+2016-08-29 10:29:11.381 DEBUG 2327 --- [http-nio-9000-exec-5] o.a.s.s.support.DefaultSubjectContext    : No SecurityManager available in subject context map.  Falling back to SecurityUtils.getSecurityManager() lookup.
+2016-08-29 10:29:11.397 DEBUG 2327 --- [http-nio-9000-exec-5] o.apache.shiro.web.servlet.SimpleCookie  : Added HttpServletResponse Cookie [rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Sun, 28-Aug-2016 02:29:11 GMT]
+2016-08-29 10:29:11.397 DEBUG 2327 --- [http-nio-9000-exec-5] o.a.shiro.mgt.AbstractRememberMeManager  : AuthenticationToken did not indicate RememberMe is requested.  RememberMe functionality will not be executed for corresponding account.
+2016-08-29 10:29:11.397 DEBUG 2327 --- [http-nio-9000-exec-5] c.e.c.s.f.MyFormAuthenticationFilter     : [APP-AUTH] login success
+2016-08-29 10:29:11.432 DEBUG 2327 --- [http-nio-9000-exec-6] com.el.sys.controller.HomeController     : [APP-AUTH] Current user's principals: MyAccountProperties(id=0, username=dev, password=9bbb66bda489d8286ff18f8832bbbe399c761237c9d6d0e4029bac1f33e972be, salt=flh884wndkv5rfwc, role=DEV, profile=null)
+2016-08-29 10:29:11.434 DEBUG 2327 --- [http-nio-9000-exec-6] com.el.sys.controller.HomeController     : [APP-AUTH] Current user has role SYS: false
+2016-08-29 10:29:19.167 DEBUG 2327 --- [http-nio-9000-exec-2] c.e.s.c.m.O.totalOrderTake               : ==>  Preparing: SELECT COUNT(1) AS N FROM T_SO_FACTGROUP f LEFT OUTER JOIN T_SO_CALC c ON f.CALC_ID = c.ID LEFT OUTER JOIN T_OU o ON c.OU_ID = o.ID LEFT OUTER JOIN T_SO s ON c.SO_ID = s.ID LEFT OUTER JOIN T_SO_PROD d ON d.SO_ID = s.ID LEFT OUTER JOIN T_PROD p ON d.PROD_ID = p.ID WHERE (f.SEIZE_START_TIME <= sysdate AND f.ACPT_STATUS != 01) 
+2016-08-29 10:29:19.167 DEBUG 2327 --- [http-nio-9000-exec-2] c.e.s.c.m.O.totalOrderTake               : ==> Parameters: 
+2016-08-29 10:29:19.271 DEBUG 2327 --- [http-nio-9000-exec-2] c.e.s.c.m.O.totalOrderTake               : <==      Total: 1
+2016-08-29 10:29:19.278  INFO 2327 --- [http-nio-9000-exec-2] com.el.sys.domain.PagingBean             : [sms] rowCount=5, pageSize=10
+2016-08-29 10:29:19.279  INFO 2327 --- [http-nio-9000-exec-2] com.el.util.SqlDialectOracle             : [sms] paging rowIndex=0
+2016-08-29 10:29:19.279  INFO 2327 --- [http-nio-9000-exec-2] com.el.sys.domain.PagingBean             : [sms] rowCount=5, pageSize=10
+2016-08-29 10:29:19.280 DEBUG 2327 --- [http-nio-9000-exec-2] c.e.s.c.m.OrderTakeMapper.orderTakeIn    : ==>  Preparing: SELECT * FROM (SELECT ROWNUM rn_, all_.* FROM (SELECT f.ID as id, o.OU_NAME as ouName, s.SO_NO as soNo, s.MANU_DUE_DATE as manuDueDate, f.FACT_AMT as factAmt, p.PROD_CODE as prodCode, p.PROD_NAME as prodName, p.PROD_TYPE as prodType, p.QUALITY_LEVEL as qualityLevel, p.PRINT_DIFF_LEVEL as printDiffLevel, p.BIND_DIFF_LEVEL as bindDiffLevel, p.BIND_TYPE as bindType, d.MANU_QTY as manuQty, f.SEIZE_START_TIME as seizeStartTime FROM T_SO_FACTGROUP f LEFT OUTER JOIN T_SO_CALC c ON f.CALC_ID = c.ID LEFT OUTER JOIN T_OU o ON c.OU_ID = o.ID LEFT OUTER JOIN T_SO s ON c.SO_ID = s.ID LEFT OUTER JOIN T_SO_PROD d ON d.SO_ID = s.ID LEFT OUTER JOIN T_PROD p ON d.PROD_ID = p.ID WHERE (f.SEIZE_START_TIME <= sysdate AND f.ACPT_STATUS != 01)) all_) WHERE rn_ BETWEEN 1 AND 10 
+2016-08-29 10:29:19.281 DEBUG 2327 --- [http-nio-9000-exec-2] c.e.s.c.m.OrderTakeMapper.orderTakeIn    : ==> Parameters: 
+2016-08-29 10:29:19.347  INFO 2327 --- [http-nio-9000-exec-2] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2016-08-29 10:29:19.450  INFO 2327 --- [http-nio-9000-exec-2] o.s.jdbc.support.SQLErrorCodesFactory    : SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2016-08-29 10:29:19.466 ERROR 2327 --- [http-nio-9000-exec-2] com.el.cfg.GlobalRestExceptionHandler    : [APP-GEXH] Exception happened in rest-controller.
+
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: ORA-00904: "P"."BIND_TYPE": 标识符无效
+
+### The error may exist in com/el/stp/cm_fac/mapper/OrderTakeMapper.java (best guess)
+### The error may involve com.el.stp.cm_fac.mapper.OrderTakeMapper.orderTakeIn-Inline
+### The error occurred while setting parameters
+### SQL: SELECT * FROM (SELECT ROWNUM rn_, all_.* FROM (SELECT f.ID  as id, o.OU_NAME  as ouName, s.SO_NO  as soNo, s.MANU_DUE_DATE  as manuDueDate, f.FACT_AMT  as factAmt, p.PROD_CODE  as prodCode, p.PROD_NAME  as prodName, p.PROD_TYPE  as prodType, p.QUALITY_LEVEL  as qualityLevel, p.PRINT_DIFF_LEVEL  as printDiffLevel, p.BIND_DIFF_LEVEL  as bindDiffLevel, p.BIND_TYPE  as bindType, d.MANU_QTY  as manuQty, f.SEIZE_START_TIME  as seizeStartTime FROM T_SO_FACTGROUP f  LEFT OUTER JOIN T_SO_CALC c ON f.CALC_ID = c.ID LEFT OUTER JOIN T_OU o ON c.OU_ID = o.ID LEFT OUTER JOIN T_SO s ON c.SO_ID = s.ID LEFT OUTER JOIN T_SO_PROD d ON d.SO_ID = s.ID LEFT OUTER JOIN T_PROD p ON d.PROD_ID = p.ID WHERE (f.SEIZE_START_TIME <= sysdate AND f.ACPT_STATUS != 01)) all_) WHERE rn_ BETWEEN 1 AND 10
+### Cause: java.sql.SQLSyntaxErrorException: ORA-00904: "P"."BIND_TYPE": 标识符无效
+
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: ORA-00904: "P"."BIND_TYPE": 标识符无效
+
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:231)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:75)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:447)
+	at com.sun.proxy.$Proxy46.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:231)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:137)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:75)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy84.orderTakeIn(Unknown Source)
+	at com.el.stp.cm_fac.service.OrderTakeServiceImpl.orderTakeIn(OrderTakeServiceImpl.java:37)
+	at com.el.stp.cm_fac.controller.CmOrderTakeController.orderTakeList(CmOrderTakeController.java:39)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:110)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:832)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:743)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:895)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:967)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:858)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:843)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:292)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:112)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:112)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:112)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:87)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:121)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:528)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1099)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:670)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1520)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1476)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLSyntaxErrorException: ORA-00904: "P"."BIND_TYPE": 标识符无效
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3923)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1385)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy66.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:434)
+	... 95 common frames omitted
+
+2016-08-29 10:29:29.051 DEBUG 2327 --- [http-nio-9000-exec-7] com.el.sys.mapper.UdcMapper.codeNames    : ==>  Preparing: SELECT UDC_CODE as code, VAL_DESC1 as name FROM T_UDC WHERE VAL_ENABLED = 1 AND DOMAIN_CODE = ? AND UDC_TYPE = ? ORDER BY UDC_CODE nulls first 
+2016-08-29 10:29:29.051 DEBUG 2327 --- [http-nio-9000-exec-7] com.el.sys.mapper.UdcMapper.codeNames    : ==> Parameters: E7(String), A5(String)
+2016-08-29 10:29:29.054 DEBUG 2327 --- [http-nio-9000-exec-8] com.el.sys.mapper.UdcMapper.codeNames    : ==>  Preparing: SELECT UDC_CODE as code, VAL_DESC1 as name FROM T_UDC WHERE VAL_ENABLED = 1 AND DOMAIN_CODE = ? AND UDC_TYPE = ? ORDER BY UDC_CODE nulls first 
+2016-08-29 10:29:29.054 DEBUG 2327 --- [http-nio-9000-exec-8] com.el.sys.mapper.UdcMapper.codeNames    : ==> Parameters: E7(String), C1(String)
+2016-08-29 10:29:29.056 DEBUG 2327 --- [http-nio-9000-exec-7] com.el.sys.mapper.UdcMapper.codeNames    : <==      Total: 3
+2016-08-29 10:29:29.056 DEBUG 2327 --- [http-nio-9000-exec-10] com.el.sys.mapper.UdcMapper.codeNames    : ==>  Preparing: SELECT UDC_CODE as code, VAL_DESC1 as name FROM T_UDC WHERE VAL_ENABLED = 1 AND DOMAIN_CODE = ? AND UDC_TYPE = ? ORDER BY UDC_CODE nulls first 
+2016-08-29 10:29:29.057 DEBUG 2327 --- [http-nio-9000-exec-10] com.el.sys.mapper.UdcMapper.codeNames    : ==> Parameters: E7(String), B8(String)
+2016-08-29 10:29:29.060 DEBUG 2327 --- [http-nio-9000-exec-8] com.el.sys.mapper.UdcMapper.codeNames    : <==      Total: 4
+2016-08-29 10:29:29.061 DEBUG 2327 --- [http-nio-9000-exec-9] com.el.sys.mapper.UdcMapper.codeNames    : ==>  Preparing: SELECT UDC_CODE as code, VAL_DESC1 as name FROM T_UDC WHERE VAL_ENABLED = 1 AND DOMAIN_CODE = ? AND UDC_TYPE = ? ORDER BY UDC_CODE nulls first 
+2016-08-29 10:29:29.062 DEBUG 2327 --- [http-nio-9000-exec-9] com.el.sys.mapper.UdcMapper.codeNames    : ==> Parameters: E7(String), B5(String)
+2016-08-29 10:29:29.063 DEBUG 2327 --- [http-nio-9000-exec-10] com.el.sys.mapper.UdcMapper.codeNames    : <==      Total: 4
+2016-08-29 10:29:29.066 DEBUG 2327 --- [http-nio-9000-exec-9] com.el.sys.mapper.UdcMapper.codeNames    : <==      Total: 4
+2016-08-29 10:29:29.076 DEBUG 2327 --- [http-nio-9000-exec-1] com.el.sys.mapper.UdcMapper.codeNames    : ==>  Preparing: SELECT UDC_CODE as code, VAL_DESC1 as name FROM T_UDC WHERE VAL_ENABLED = 1 AND DOMAIN_CODE = ? AND UDC_TYPE = ? ORDER BY UDC_CODE nulls first 
+2016-08-29 10:29:29.076 DEBUG 2327 --- [http-nio-9000-exec-1] com.el.sys.mapper.UdcMapper.codeNames    : ==> Parameters: E7(String), A1(String)
+2016-08-29 10:29:29.082 DEBUG 2327 --- [http-nio-9000-exec-1] com.el.sys.mapper.UdcMapper.codeNames    : <==      Total: 4
+2016-08-29 10:29:29.168 DEBUG 2327 --- [http-nio-9000-exec-3] c.e.s.c.m.O.orderSearchNum               : ==>  Preparing: SELECT COUNT(1) AS VALUE FROM T_SO_PROD spod JOIN T_SO_MANU ma ON ma.SO_PROD_ID = spod.ID JOIN T_PROD pro ON spod.PROD_ID = pro.ID JOIN T_SO so ON ma.SO_ID = so.ID OR so.ID=spod.SO_ID JOIN T_CUST cu ON so.CUST_ID = cu.ID JOIN T_ADDRESS_BOOK adb ON so.AGENT_ID = adb.ID JOIN T_FACTORY fac ON ma.FACT_ID = fac.ID OR fac.ADDR_NO=adb.ADDR_NO JOIN T_PRODIN pin ON ma.ID = pin.WHIN_QTY JOIN T_MANUDIST_PROD mp ON pro.id=mp.prod_id OR SO.ID=MP.SOPROD_ID OR so.ID=mp.SO_ID JOIN T_MANUDIST_FACT maf ON maf.FACT_ID=fac.ID WHERE ((ma.ACPT_STATUS='01' OR ma.ACPT_STATUS='02' OR maf.ACPT_STATUS='05' OR maf.ACPT_STATUS='06' OR maf.ACPT_STATUS='07')) 
+2016-08-29 10:29:29.168 DEBUG 2327 --- [http-nio-9000-exec-3] c.e.s.c.m.O.orderSearchNum               : ==> Parameters: 
+2016-08-29 10:29:29.525 DEBUG 2327 --- [http-nio-9000-exec-3] c.e.s.c.m.O.orderSearchNum               : <==      Total: 1
+2016-08-29 10:29:29.530  INFO 2327 --- [http-nio-9000-exec-3] c.e.s.cm_ou.domain.OrderSearchCondition  : [sms] rowCount=14, pageSize=10
+2016-08-29 10:29:29.530  INFO 2327 --- [http-nio-9000-exec-3] com.el.util.SqlDialectOracle             : [sms] paging rowIndex=0
+2016-08-29 10:29:29.530  INFO 2327 --- [http-nio-9000-exec-3] c.e.s.cm_ou.domain.OrderSearchCondition  : [sms] rowCount=14, pageSize=10
+2016-08-29 10:29:29.531 DEBUG 2327 --- [http-nio-9000-exec-3] c.e.s.c.m.O.orderSerachList              : ==>  Preparing: SELECT * FROM (SELECT ROWNUM rn_, all_.* FROM (SELECT cu.CUST_CODE AS "cust.custCode", cu.CUST_NAME AS "cust.custName", so.SO_NO AS "so.soNo", (SELECT ADDR_NAME FROM T_ADDRESS_BOOK AB WHERE so.AGENT_ID = AB.ID ) AS clerk, so.DUE_DATE AS "so.dueDate", pro.PROD_CODE AS "prod.prodCode", pro.PROD_NAME AS "prod.prodName", pro.PROD_TYPE AS "prod.prodType", pro.QUALITY_LEVEL AS "prod.qualityLevel", pro.PRINT_DIFF_LEVEL AS "prod.printDiffLevel", pro.BIND_DIFF_LEVEL AS "prod.bindDiffLevel", pro.BIND_TYPE AS "prod.bindType", spod.MANU_QTY AS "soProd.manuQty", so.MANU_DUE_DATE AS "so.manuDueDate", spod.SO_STATUS AS "soProd.soStatus", ma.ACPT_STATUS AS "soManu.acptStatus", ma.DIST_METHOD AS "soManu.distMethod", so.SO_DATE AS "so.soDate", ma.DIST_QTY AS "soManu.distQty", fac.ADDR_NO AS addrNo, (SELECT ADDR_NAME FROM T_ADDRESS_BOOK A WHERE fac.ADDR_NO=A.ADDR_NO) AS addrName, ma.ACPT_USER AS "soManu.acptUser", ma.ACPT_TIME AS "soManu.acptTime", so.LINE_SPLIT_FLAG AS "so.lineSplitFlag", spod.QTY_SPLIT_FLAG AS "soProd.qtySplitFlag", ma.PAPER_READY_STATUS AS "soManu.paperReadyStatus", ma.PROD_INFO_STATUS AS "soManu.prodInfoStatus", ma.ID AS "soManu.id", maf.ID AS "manudistFact.id", so.ID AS "so.id", mp.ID AS "manudistProd.id", pro.ID AS "prod.id", maf.ACPT_STATUS AS "manudistFact.acptStatus", (SELECT SUM(NVL(P.WHIN_QTY,0))/NVL(ma.DIST_QTY,1) FROM T_PRODIN P WHERE ma.ACPT_STATUS = '01' OR ma.ACPT_STATUS = '02' ) AS completionRate FROM T_SO_PROD spod JOIN T_SO_MANU ma ON ma.SO_PROD_ID = spod.ID JOIN T_PROD pro ON spod.PROD_ID = pro.ID JOIN T_SO so ON ma.SO_ID = so.ID OR so.ID=spod.SO_ID JOIN T_CUST cu ON so.CUST_ID = cu.ID JOIN T_ADDRESS_BOOK adb ON so.AGENT_ID = adb.ID JOIN T_FACTORY fac ON ma.FACT_ID = fac.ID OR fac.ADDR_NO=adb.ADDR_NO JOIN T_PRODIN pin ON ma.ID = pin.WHIN_QTY JOIN T_MANUDIST_PROD mp ON pro.id=mp.prod_id OR SO.ID=MP.SOPROD_ID OR so.ID=mp.SO_ID JOIN T_MANUDIST_FACT maf ON maf.FACT_ID=fac.ID WHERE ((ma.ACPT_STATUS='01' OR ma.ACPT_STATUS='02' OR maf.ACPT_STATUS='05' OR maf.ACPT_STATUS='06' OR maf.ACPT_STATUS='07'))) all_) WHERE rn_ BETWEEN 1 AND 10 
+2016-08-29 10:29:29.532 DEBUG 2327 --- [http-nio-9000-exec-3] c.e.s.c.m.O.orderSerachList              : ==> Parameters: 
+2016-08-29 10:29:29.575 ERROR 2327 --- [http-nio-9000-exec-3] com.el.cfg.GlobalRestExceptionHandler    : [APP-GEXH] Exception happened in rest-controller.
+
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: ORA-00904: "PRO"."BIND_TYPE": 标识符无效
+
+### The error may exist in com/el/stp/cm_ou/mapper/OrderSearchMapper.java (best guess)
+### The error may involve com.el.stp.cm_ou.mapper.OrderSearchMapper.orderSerachList-Inline
+### The error occurred while setting parameters
+### SQL: SELECT * FROM (SELECT ROWNUM rn_, all_.* FROM (SELECT cu.CUST_CODE AS "cust.custCode", cu.CUST_NAME AS "cust.custName", so.SO_NO AS "so.soNo", (SELECT ADDR_NAME FROM T_ADDRESS_BOOK AB WHERE so.AGENT_ID = AB.ID ) AS clerk, so.DUE_DATE AS "so.dueDate", pro.PROD_CODE AS "prod.prodCode", pro.PROD_NAME AS "prod.prodName", pro.PROD_TYPE AS "prod.prodType", pro.QUALITY_LEVEL AS "prod.qualityLevel", pro.PRINT_DIFF_LEVEL AS "prod.printDiffLevel", pro.BIND_DIFF_LEVEL AS "prod.bindDiffLevel", pro.BIND_TYPE AS "prod.bindType", spod.MANU_QTY AS "soProd.manuQty", so.MANU_DUE_DATE AS "so.manuDueDate", spod.SO_STATUS AS "soProd.soStatus", ma.ACPT_STATUS AS "soManu.acptStatus", ma.DIST_METHOD AS "soManu.distMethod", so.SO_DATE AS "so.soDate", ma.DIST_QTY AS "soManu.distQty", fac.ADDR_NO AS addrNo, (SELECT ADDR_NAME FROM T_ADDRESS_BOOK A WHERE fac.ADDR_NO=A.ADDR_NO) AS addrName, ma.ACPT_USER AS "soManu.acptUser", ma.ACPT_TIME AS "soManu.acptTime", so.LINE_SPLIT_FLAG AS "so.lineSplitFlag", spod.QTY_SPLIT_FLAG AS "soProd.qtySplitFlag", ma.PAPER_READY_STATUS AS "soManu.paperReadyStatus", ma.PROD_INFO_STATUS AS "soManu.prodInfoStatus", ma.ID AS "soManu.id", maf.ID AS "manudistFact.id", so.ID AS "so.id", mp.ID AS "manudistProd.id", pro.ID AS "prod.id", maf.ACPT_STATUS AS "manudistFact.acptStatus", (SELECT SUM(NVL(P.WHIN_QTY,0))/NVL(ma.DIST_QTY,1) FROM T_PRODIN P WHERE ma.ACPT_STATUS = '01' OR ma.ACPT_STATUS = '02' ) AS completionRate FROM T_SO_PROD spod JOIN T_SO_MANU ma ON ma.SO_PROD_ID = spod.ID JOIN T_PROD pro ON spod.PROD_ID = pro.ID JOIN T_SO so ON ma.SO_ID = so.ID OR so.ID=spod.SO_ID JOIN T_CUST cu ON so.CUST_ID = cu.ID JOIN T_ADDRESS_BOOK adb ON so.AGENT_ID = adb.ID JOIN T_FACTORY fac ON ma.FACT_ID = fac.ID OR fac.ADDR_NO=adb.ADDR_NO JOIN T_PRODIN pin ON ma.ID = pin.WHIN_QTY JOIN T_MANUDIST_PROD mp ON pro.id=mp.prod_id OR SO.ID=MP.SOPROD_ID OR so.ID=mp.SO_ID JOIN T_MANUDIST_FACT maf ON maf.FACT_ID=fac.ID WHERE ((ma.ACPT_STATUS='01' OR ma.ACPT_STATUS='02' OR maf.ACPT_STATUS='05' OR maf.ACPT_STATUS='06' OR maf.ACPT_STATUS='07'))) all_) WHERE rn_ BETWEEN 1 AND 10
+### Cause: java.sql.SQLSyntaxErrorException: ORA-00904: "PRO"."BIND_TYPE": 标识符无效
+
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: ORA-00904: "PRO"."BIND_TYPE": 标识符无效
+
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:231)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:75)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:447)
+	at com.sun.proxy.$Proxy46.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:231)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:137)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:75)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy101.orderSerachList(Unknown Source)
+	at com.el.stp.cm_ou.service.OrderSearchServiceImpl.orderSerachList(OrderSearchServiceImpl.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:302)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:202)
+	at com.sun.proxy.$Proxy102.orderSerachList(Unknown Source)
+	at com.el.stp.cm_ou.controller.CmOrderSearchController.orderListView(CmOrderSearchController.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:110)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:832)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:743)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:895)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:967)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:858)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:843)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:292)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:112)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:87)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:121)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:528)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1099)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:670)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1520)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1476)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLSyntaxErrorException: ORA-00904: "PRO"."BIND_TYPE": 标识符无效
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3923)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1385)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy66.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:434)
+	... 102 common frames omitted
+
+2016-08-29 10:29:56.941 DEBUG 2327 --- [http-nio-9000-exec-2] com.el.sys.mapper.UdcMapper.codeNames    : ==>  Preparing: SELECT UDC_CODE as code, VAL_DESC1 as name FROM T_UDC WHERE VAL_ENABLED = 1 AND DOMAIN_CODE = ? AND UDC_TYPE = ? ORDER BY UDC_CODE nulls first 
+2016-08-29 10:29:56.941 DEBUG 2327 --- [http-nio-9000-exec-2] com.el.sys.mapper.UdcMapper.codeNames    : ==> Parameters: E7(String), B8(String)
+2016-08-29 10:29:56.941 DEBUG 2327 --- [http-nio-9000-exec-4] com.el.sys.mapper.UdcMapper.codeNames    : ==>  Preparing: SELECT UDC_CODE as code, VAL_DESC1 as name FROM T_UDC WHERE VAL_ENABLED = 1 AND DOMAIN_CODE = ? AND UDC_TYPE = ? ORDER BY UDC_CODE nulls first 
+2016-08-29 10:29:56.942 DEBUG 2327 --- [http-nio-9000-exec-4] com.el.sys.mapper.UdcMapper.codeNames    : ==> Parameters: E7(String), C1(String)
+2016-08-29 10:29:56.950 DEBUG 2327 --- [http-nio-9000-exec-5] com.el.sys.mapper.UdcMapper.codeNames    : ==>  Preparing: SELECT UDC_CODE as code, VAL_DESC1 as name FROM T_UDC WHERE VAL_ENABLED = 1 AND DOMAIN_CODE = ? AND UDC_TYPE = ? ORDER BY UDC_CODE nulls first 
+2016-08-29 10:29:56.950 DEBUG 2327 --- [http-nio-9000-exec-5] com.el.sys.mapper.UdcMapper.codeNames    : ==> Parameters: E7(String), A5(String)
+2016-08-29 10:29:56.952 DEBUG 2327 --- [http-nio-9000-exec-6] com.el.sys.mapper.UdcMapper.codeNames    : ==>  Preparing: SELECT UDC_CODE as code, VAL_DESC1 as name FROM T_UDC WHERE VAL_ENABLED = 1 AND DOMAIN_CODE = ? AND UDC_TYPE = ? ORDER BY UDC_CODE nulls first 
+2016-08-29 10:29:56.952 DEBUG 2327 --- [http-nio-9000-exec-6] com.el.sys.mapper.UdcMapper.codeNames    : ==> Parameters: E7(String), B5(String)
+2016-08-29 10:29:56.955 DEBUG 2327 --- [http-nio-9000-exec-2] com.el.sys.mapper.UdcMapper.codeNames    : <==      Total: 4
+2016-08-29 10:29:56.956 DEBUG 2327 --- [http-nio-9000-exec-4] com.el.sys.mapper.UdcMapper.codeNames    : <==      Total: 4
+2016-08-29 10:29:56.962 DEBUG 2327 --- [http-nio-9000-exec-5] com.el.sys.mapper.UdcMapper.codeNames    : <==      Total: 3
+2016-08-29 10:29:56.976 DEBUG 2327 --- [http-nio-9000-exec-7] com.el.sys.mapper.UdcMapper.codeNames    : ==>  Preparing: SELECT UDC_CODE as code, VAL_DESC1 as name FROM T_UDC WHERE VAL_ENABLED = 1 AND DOMAIN_CODE = ? AND UDC_TYPE = ? ORDER BY UDC_CODE nulls first 
+2016-08-29 10:29:56.977 DEBUG 2327 --- [http-nio-9000-exec-7] com.el.sys.mapper.UdcMapper.codeNames    : ==> Parameters: E7(String), A1(String)
+2016-08-29 10:29:56.977 DEBUG 2327 --- [http-nio-9000-exec-6] com.el.sys.mapper.UdcMapper.codeNames    : <==      Total: 4
+2016-08-29 10:29:56.983 DEBUG 2327 --- [http-nio-9000-exec-7] com.el.sys.mapper.UdcMapper.codeNames    : <==      Total: 4
+2016-08-29 10:29:57.063 DEBUG 2327 --- [http-nio-9000-exec-8] c.e.s.c.m.O.orderSearchNum               : ==>  Preparing: SELECT COUNT(1) AS VALUE FROM T_SO_PROD spod JOIN T_SO_MANU ma ON ma.SO_PROD_ID = spod.ID JOIN T_PROD pro ON spod.PROD_ID = pro.ID JOIN T_SO so ON ma.SO_ID = so.ID OR so.ID=spod.SO_ID JOIN T_CUST cu ON so.CUST_ID = cu.ID JOIN T_ADDRESS_BOOK adb ON so.AGENT_ID = adb.ID JOIN T_FACTORY fac ON ma.FACT_ID = fac.ID OR fac.ADDR_NO=adb.ADDR_NO JOIN T_PRODIN pin ON ma.ID = pin.WHIN_QTY JOIN T_MANUDIST_PROD mp ON pro.id=mp.prod_id OR SO.ID=MP.SOPROD_ID OR so.ID=mp.SO_ID JOIN T_MANUDIST_FACT maf ON maf.FACT_ID=fac.ID WHERE ((ma.ACPT_STATUS='01' OR ma.ACPT_STATUS='02' OR maf.ACPT_STATUS='05' OR maf.ACPT_STATUS='06' OR maf.ACPT_STATUS='07')) 
+2016-08-29 10:29:57.064 DEBUG 2327 --- [http-nio-9000-exec-8] c.e.s.c.m.O.orderSearchNum               : ==> Parameters: 
+2016-08-29 10:29:57.289 DEBUG 2327 --- [http-nio-9000-exec-8] c.e.s.c.m.O.orderSearchNum               : <==      Total: 1
+2016-08-29 10:29:57.294  INFO 2327 --- [http-nio-9000-exec-8] c.e.s.cm_ou.domain.OrderSearchCondition  : [sms] rowCount=14, pageSize=10
+2016-08-29 10:29:57.294  INFO 2327 --- [http-nio-9000-exec-8] com.el.util.SqlDialectOracle             : [sms] paging rowIndex=0
+2016-08-29 10:29:57.294  INFO 2327 --- [http-nio-9000-exec-8] c.e.s.cm_ou.domain.OrderSearchCondition  : [sms] rowCount=14, pageSize=10
+2016-08-29 10:29:57.296 DEBUG 2327 --- [http-nio-9000-exec-8] c.e.s.c.m.O.orderSerachList              : ==>  Preparing: SELECT * FROM (SELECT ROWNUM rn_, all_.* FROM (SELECT cu.CUST_CODE AS "cust.custCode", cu.CUST_NAME AS "cust.custName", so.SO_NO AS "so.soNo", (SELECT ADDR_NAME FROM T_ADDRESS_BOOK AB WHERE so.AGENT_ID = AB.ID ) AS clerk, so.DUE_DATE AS "so.dueDate", pro.PROD_CODE AS "prod.prodCode", pro.PROD_NAME AS "prod.prodName", pro.PROD_TYPE AS "prod.prodType", pro.QUALITY_LEVEL AS "prod.qualityLevel", pro.PRINT_DIFF_LEVEL AS "prod.printDiffLevel", pro.BIND_DIFF_LEVEL AS "prod.bindDiffLevel", pro.BIND_TYPE AS "prod.bindType", spod.MANU_QTY AS "soProd.manuQty", so.MANU_DUE_DATE AS "so.manuDueDate", spod.SO_STATUS AS "soProd.soStatus", ma.ACPT_STATUS AS "soManu.acptStatus", ma.DIST_METHOD AS "soManu.distMethod", so.SO_DATE AS "so.soDate", ma.DIST_QTY AS "soManu.distQty", fac.ADDR_NO AS addrNo, (SELECT ADDR_NAME FROM T_ADDRESS_BOOK A WHERE fac.ADDR_NO=A.ADDR_NO) AS addrName, ma.ACPT_USER AS "soManu.acptUser", ma.ACPT_TIME AS "soManu.acptTime", so.LINE_SPLIT_FLAG AS "so.lineSplitFlag", spod.QTY_SPLIT_FLAG AS "soProd.qtySplitFlag", ma.PAPER_READY_STATUS AS "soManu.paperReadyStatus", ma.PROD_INFO_STATUS AS "soManu.prodInfoStatus", ma.ID AS "soManu.id", maf.ID AS "manudistFact.id", so.ID AS "so.id", mp.ID AS "manudistProd.id", pro.ID AS "prod.id", maf.ACPT_STATUS AS "manudistFact.acptStatus", (SELECT SUM(NVL(P.WHIN_QTY,0))/NVL(ma.DIST_QTY,1) FROM T_PRODIN P WHERE ma.ACPT_STATUS = '01' OR ma.ACPT_STATUS = '02' ) AS completionRate FROM T_SO_PROD spod JOIN T_SO_MANU ma ON ma.SO_PROD_ID = spod.ID JOIN T_PROD pro ON spod.PROD_ID = pro.ID JOIN T_SO so ON ma.SO_ID = so.ID OR so.ID=spod.SO_ID JOIN T_CUST cu ON so.CUST_ID = cu.ID JOIN T_ADDRESS_BOOK adb ON so.AGENT_ID = adb.ID JOIN T_FACTORY fac ON ma.FACT_ID = fac.ID OR fac.ADDR_NO=adb.ADDR_NO JOIN T_PRODIN pin ON ma.ID = pin.WHIN_QTY JOIN T_MANUDIST_PROD mp ON pro.id=mp.prod_id OR SO.ID=MP.SOPROD_ID OR so.ID=mp.SO_ID JOIN T_MANUDIST_FACT maf ON maf.FACT_ID=fac.ID WHERE ((ma.ACPT_STATUS='01' OR ma.ACPT_STATUS='02' OR maf.ACPT_STATUS='05' OR maf.ACPT_STATUS='06' OR maf.ACPT_STATUS='07'))) all_) WHERE rn_ BETWEEN 1 AND 10 
+2016-08-29 10:29:57.297 DEBUG 2327 --- [http-nio-9000-exec-8] c.e.s.c.m.O.orderSerachList              : ==> Parameters: 
+2016-08-29 10:29:57.342 ERROR 2327 --- [http-nio-9000-exec-8] com.el.cfg.GlobalRestExceptionHandler    : [APP-GEXH] Exception happened in rest-controller.
+
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: ORA-00904: "PRO"."BIND_TYPE": 标识符无效
+
+### The error may exist in com/el/stp/cm_ou/mapper/OrderSearchMapper.java (best guess)
+### The error may involve com.el.stp.cm_ou.mapper.OrderSearchMapper.orderSerachList-Inline
+### The error occurred while setting parameters
+### SQL: SELECT * FROM (SELECT ROWNUM rn_, all_.* FROM (SELECT cu.CUST_CODE AS "cust.custCode", cu.CUST_NAME AS "cust.custName", so.SO_NO AS "so.soNo", (SELECT ADDR_NAME FROM T_ADDRESS_BOOK AB WHERE so.AGENT_ID = AB.ID ) AS clerk, so.DUE_DATE AS "so.dueDate", pro.PROD_CODE AS "prod.prodCode", pro.PROD_NAME AS "prod.prodName", pro.PROD_TYPE AS "prod.prodType", pro.QUALITY_LEVEL AS "prod.qualityLevel", pro.PRINT_DIFF_LEVEL AS "prod.printDiffLevel", pro.BIND_DIFF_LEVEL AS "prod.bindDiffLevel", pro.BIND_TYPE AS "prod.bindType", spod.MANU_QTY AS "soProd.manuQty", so.MANU_DUE_DATE AS "so.manuDueDate", spod.SO_STATUS AS "soProd.soStatus", ma.ACPT_STATUS AS "soManu.acptStatus", ma.DIST_METHOD AS "soManu.distMethod", so.SO_DATE AS "so.soDate", ma.DIST_QTY AS "soManu.distQty", fac.ADDR_NO AS addrNo, (SELECT ADDR_NAME FROM T_ADDRESS_BOOK A WHERE fac.ADDR_NO=A.ADDR_NO) AS addrName, ma.ACPT_USER AS "soManu.acptUser", ma.ACPT_TIME AS "soManu.acptTime", so.LINE_SPLIT_FLAG AS "so.lineSplitFlag", spod.QTY_SPLIT_FLAG AS "soProd.qtySplitFlag", ma.PAPER_READY_STATUS AS "soManu.paperReadyStatus", ma.PROD_INFO_STATUS AS "soManu.prodInfoStatus", ma.ID AS "soManu.id", maf.ID AS "manudistFact.id", so.ID AS "so.id", mp.ID AS "manudistProd.id", pro.ID AS "prod.id", maf.ACPT_STATUS AS "manudistFact.acptStatus", (SELECT SUM(NVL(P.WHIN_QTY,0))/NVL(ma.DIST_QTY,1) FROM T_PRODIN P WHERE ma.ACPT_STATUS = '01' OR ma.ACPT_STATUS = '02' ) AS completionRate FROM T_SO_PROD spod JOIN T_SO_MANU ma ON ma.SO_PROD_ID = spod.ID JOIN T_PROD pro ON spod.PROD_ID = pro.ID JOIN T_SO so ON ma.SO_ID = so.ID OR so.ID=spod.SO_ID JOIN T_CUST cu ON so.CUST_ID = cu.ID JOIN T_ADDRESS_BOOK adb ON so.AGENT_ID = adb.ID JOIN T_FACTORY fac ON ma.FACT_ID = fac.ID OR fac.ADDR_NO=adb.ADDR_NO JOIN T_PRODIN pin ON ma.ID = pin.WHIN_QTY JOIN T_MANUDIST_PROD mp ON pro.id=mp.prod_id OR SO.ID=MP.SOPROD_ID OR so.ID=mp.SO_ID JOIN T_MANUDIST_FACT maf ON maf.FACT_ID=fac.ID WHERE ((ma.ACPT_STATUS='01' OR ma.ACPT_STATUS='02' OR maf.ACPT_STATUS='05' OR maf.ACPT_STATUS='06' OR maf.ACPT_STATUS='07'))) all_) WHERE rn_ BETWEEN 1 AND 10
+### Cause: java.sql.SQLSyntaxErrorException: ORA-00904: "PRO"."BIND_TYPE": 标识符无效
+
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: ORA-00904: "PRO"."BIND_TYPE": 标识符无效
+
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:231)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:75)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:447)
+	at com.sun.proxy.$Proxy46.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:231)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:137)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:75)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy101.orderSerachList(Unknown Source)
+	at com.el.stp.cm_ou.service.OrderSearchServiceImpl.orderSerachList(OrderSearchServiceImpl.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:302)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:202)
+	at com.sun.proxy.$Proxy102.orderSerachList(Unknown Source)
+	at com.el.stp.cm_ou.controller.CmOrderSearchController.orderListView(CmOrderSearchController.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:110)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:832)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:743)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:895)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:967)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:858)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:843)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:292)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:112)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:87)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:121)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:528)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1099)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:670)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1520)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1476)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLSyntaxErrorException: ORA-00904: "PRO"."BIND_TYPE": 标识符无效
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3923)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1385)
+	at sun.reflect.GeneratedMethodAccessor90.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy66.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:434)
+	... 102 common frames omitted
+
+2016-08-29 11:26:28.258 DEBUG 2327 --- [http-nio-9000-exec-10] c.e.c.s.f.MyFormAuthenticationFilter     : [APP-AUTH] this is PAGE request
+2016-08-29 11:26:29.905 DEBUG 2327 --- [http-nio-9000-exec-5] c.e.c.s.m.MyAccountMapper.accountOf      : ==>  Preparing: select id, username, password, salt, role, profile from s_users where enabled = 1 and username = ? 
+2016-08-29 11:26:29.907 DEBUG 2327 --- [http-nio-9000-exec-5] c.e.c.s.m.MyAccountMapper.accountOf      : ==> Parameters: cm1(String)
+2016-08-29 11:26:29.935 DEBUG 2327 --- [http-nio-9000-exec-5] c.e.c.s.m.MyAccountMapper.accountOf      : <==      Total: 1
+2016-08-29 11:26:29.941 DEBUG 2327 --- [http-nio-9000-exec-5] com.el.cfg.security.realm.MyJdbcRealm    : [APP-AUTH] doGetAuthenticationInfo - account attributes: MyAccountProperties(id=4, username=cm1, password=9bbb66bda489d8286ff18f8832bbbe399c761237c9d6d0e4029bac1f33e972be, salt=flh884wndkv5rfwc, role=CM1, profile=null)
+2016-08-29 11:26:29.941 DEBUG 2327 --- [http-nio-9000-exec-5] o.a.shiro.realm.AuthenticatingRealm      : Looked up AuthenticationInfo [com.el.cfg.security.domain.MyAuthenticationInfo@75ef826c] from doGetAuthenticationInfo
+2016-08-29 11:26:29.941 DEBUG 2327 --- [http-nio-9000-exec-5] o.a.shiro.realm.AuthenticatingRealm      : AuthenticationInfo caching is disabled for info [com.el.cfg.security.domain.MyAuthenticationInfo@75ef826c].  Submitted token: [org.apache.shiro.authc.UsernamePasswordToken - cm1, rememberMe=false (0:0:0:0:0:0:0:1)].
+2016-08-29 11:26:29.942 DEBUG 2327 --- [http-nio-9000-exec-5] o.a.shiro.authc.AbstractAuthenticator    : Authentication successful for token [org.apache.shiro.authc.UsernamePasswordToken - cm1, rememberMe=false (0:0:0:0:0:0:0:1)].  Returned account [com.el.cfg.security.domain.MyAuthenticationInfo@75ef826c]
+2016-08-29 11:26:29.943 DEBUG 2327 --- [http-nio-9000-exec-5] o.a.s.s.support.DefaultSubjectContext    : No SecurityManager available in subject context map.  Falling back to SecurityUtils.getSecurityManager() lookup.
+2016-08-29 11:26:29.943 DEBUG 2327 --- [http-nio-9000-exec-5] o.a.shiro.mgt.DefaultSecurityManager     : Context already contains a session.  Returning.
+2016-08-29 11:26:29.943 DEBUG 2327 --- [http-nio-9000-exec-5] o.a.s.s.support.DefaultSubjectContext    : No SecurityManager available in subject context map.  Falling back to SecurityUtils.getSecurityManager() lookup.
+2016-08-29 11:26:29.943 DEBUG 2327 --- [http-nio-9000-exec-5] o.apache.shiro.web.servlet.SimpleCookie  : Added HttpServletResponse Cookie [rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Sun, 28-Aug-2016 03:26:29 GMT]
+2016-08-29 11:26:29.944 DEBUG 2327 --- [http-nio-9000-exec-5] o.a.shiro.mgt.AbstractRememberMeManager  : AuthenticationToken did not indicate RememberMe is requested.  RememberMe functionality will not be executed for corresponding account.
+2016-08-29 11:26:29.944 DEBUG 2327 --- [http-nio-9000-exec-5] c.e.c.s.f.MyFormAuthenticationFilter     : [APP-AUTH] login success
+2016-08-29 11:26:29.950 DEBUG 2327 --- [http-nio-9000-exec-4] com.el.sys.controller.HomeController     : [APP-AUTH] Current user's principals: MyAccountProperties(id=4, username=cm1, password=9bbb66bda489d8286ff18f8832bbbe399c761237c9d6d0e4029bac1f33e972be, salt=flh884wndkv5rfwc, role=CM1, profile=null)
+2016-08-29 11:26:29.950 DEBUG 2327 --- [http-nio-9000-exec-4] com.el.sys.controller.HomeController     : [APP-AUTH] Current user has role SYS: false
+2016-08-29 11:26:35.394 DEBUG 2327 --- [http-nio-9000-exec-5] com.el.sys.mapper.UdcMapper.codeNames    : ==>  Preparing: SELECT UDC_CODE as code, VAL_DESC1 as name FROM T_UDC WHERE VAL_ENABLED = 1 AND DOMAIN_CODE = ? AND UDC_TYPE = ? ORDER BY UDC_CODE nulls first 
+2016-08-29 11:26:35.394 DEBUG 2327 --- [http-nio-9000-exec-5] com.el.sys.mapper.UdcMapper.codeNames    : ==> Parameters: E7(String), C1(String)
+2016-08-29 11:26:35.395 DEBUG 2327 --- [http-nio-9000-exec-4] com.el.sys.mapper.UdcMapper.codeNames    : ==>  Preparing: SELECT UDC_CODE as code, VAL_DESC1 as name FROM T_UDC WHERE VAL_ENABLED = 1 AND DOMAIN_CODE = ? AND UDC_TYPE = ? ORDER BY UDC_CODE nulls first 
+2016-08-29 11:26:35.395 DEBUG 2327 --- [http-nio-9000-exec-2] com.el.sys.mapper.UdcMapper.codeNames    : ==>  Preparing: SELECT UDC_CODE as code, VAL_DESC1 as name FROM T_UDC WHERE VAL_ENABLED = 1 AND DOMAIN_CODE = ? AND UDC_TYPE = ? ORDER BY UDC_CODE nulls first 
+2016-08-29 11:26:35.395 DEBUG 2327 --- [http-nio-9000-exec-4] com.el.sys.mapper.UdcMapper.codeNames    : ==> Parameters: E7(String), A5(String)
+2016-08-29 11:26:35.396 DEBUG 2327 --- [http-nio-9000-exec-2] com.el.sys.mapper.UdcMapper.codeNames    : ==> Parameters: E7(String), B8(String)
+2016-08-29 11:26:35.400 DEBUG 2327 --- [http-nio-9000-exec-5] com.el.sys.mapper.UdcMapper.codeNames    : <==      Total: 4
+2016-08-29 11:26:35.402 DEBUG 2327 --- [http-nio-9000-exec-2] com.el.sys.mapper.UdcMapper.codeNames    : <==      Total: 4
+2016-08-29 11:26:35.402 DEBUG 2327 --- [http-nio-9000-exec-4] com.el.sys.mapper.UdcMapper.codeNames    : <==      Total: 3
+2016-08-29 11:26:35.409 DEBUG 2327 --- [http-nio-9000-exec-8] com.el.sys.mapper.UdcMapper.codeNames    : ==>  Preparing: SELECT UDC_CODE as code, VAL_DESC1 as name FROM T_UDC WHERE VAL_ENABLED = 1 AND DOMAIN_CODE = ? AND UDC_TYPE = ? ORDER BY UDC_CODE nulls first 
+2016-08-29 11:26:35.409 DEBUG 2327 --- [http-nio-9000-exec-6] com.el.sys.mapper.UdcMapper.codeNames    : ==>  Preparing: SELECT UDC_CODE as code, VAL_DESC1 as name FROM T_UDC WHERE VAL_ENABLED = 1 AND DOMAIN_CODE = ? AND UDC_TYPE = ? ORDER BY UDC_CODE nulls first 
+2016-08-29 11:26:35.409 DEBUG 2327 --- [http-nio-9000-exec-8] com.el.sys.mapper.UdcMapper.codeNames    : ==> Parameters: E7(String), B5(String)
+2016-08-29 11:26:35.410 DEBUG 2327 --- [http-nio-9000-exec-6] com.el.sys.mapper.UdcMapper.codeNames    : ==> Parameters: E7(String), A1(String)
+2016-08-29 11:26:35.414 DEBUG 2327 --- [http-nio-9000-exec-8] com.el.sys.mapper.UdcMapper.codeNames    : <==      Total: 4
+2016-08-29 11:26:35.417 DEBUG 2327 --- [http-nio-9000-exec-6] com.el.sys.mapper.UdcMapper.codeNames    : <==      Total: 4
+2016-08-29 11:26:35.507 DEBUG 2327 --- [http-nio-9000-exec-7] c.e.s.c.m.O.orderSearchNum               : ==>  Preparing: SELECT COUNT(1) AS VALUE FROM T_SO_PROD spod JOIN T_SO_MANU ma ON ma.SO_PROD_ID = spod.ID JOIN T_PROD pro ON spod.PROD_ID = pro.ID JOIN T_SO so ON ma.SO_ID = so.ID OR so.ID=spod.SO_ID JOIN T_CUST cu ON so.CUST_ID = cu.ID JOIN T_ADDRESS_BOOK adb ON so.AGENT_ID = adb.ID JOIN T_FACTORY fac ON ma.FACT_ID = fac.ID OR fac.ADDR_NO=adb.ADDR_NO JOIN T_PRODIN pin ON ma.ID = pin.WHIN_QTY JOIN T_MANUDIST_PROD mp ON pro.id=mp.prod_id OR SO.ID=MP.SOPROD_ID OR so.ID=mp.SO_ID JOIN T_MANUDIST_FACT maf ON maf.FACT_ID=fac.ID WHERE ((ma.ACPT_STATUS='01' OR ma.ACPT_STATUS='02' OR maf.ACPT_STATUS='05' OR maf.ACPT_STATUS='06' OR maf.ACPT_STATUS='07')) 
+2016-08-29 11:26:35.508 DEBUG 2327 --- [http-nio-9000-exec-7] c.e.s.c.m.O.orderSearchNum               : ==> Parameters: 
+2016-08-29 11:26:35.723 DEBUG 2327 --- [http-nio-9000-exec-7] c.e.s.c.m.O.orderSearchNum               : <==      Total: 1
+2016-08-29 11:26:35.726  INFO 2327 --- [http-nio-9000-exec-7] c.e.s.cm_ou.domain.OrderSearchCondition  : [sms] rowCount=14, pageSize=10
+2016-08-29 11:26:35.727  INFO 2327 --- [http-nio-9000-exec-7] com.el.util.SqlDialectOracle             : [sms] paging rowIndex=0
+2016-08-29 11:26:35.727  INFO 2327 --- [http-nio-9000-exec-7] c.e.s.cm_ou.domain.OrderSearchCondition  : [sms] rowCount=14, pageSize=10
+2016-08-29 11:26:35.728 DEBUG 2327 --- [http-nio-9000-exec-7] c.e.s.c.m.O.orderSerachList              : ==>  Preparing: SELECT * FROM (SELECT ROWNUM rn_, all_.* FROM (SELECT cu.CUST_CODE AS "cust.custCode", cu.CUST_NAME AS "cust.custName", so.SO_NO AS "so.soNo", (SELECT ADDR_NAME FROM T_ADDRESS_BOOK AB WHERE so.AGENT_ID = AB.ID ) AS clerk, so.DUE_DATE AS "so.dueDate", pro.PROD_CODE AS "prod.prodCode", pro.PROD_NAME AS "prod.prodName", pro.PROD_TYPE AS "prod.prodType", pro.QUALITY_LEVEL AS "prod.qualityLevel", pro.PRINT_DIFF_LEVEL AS "prod.printDiffLevel", pro.BIND_DIFF_LEVEL AS "prod.bindDiffLevel", pro.BIND_TYPE AS "prod.bindType", spod.MANU_QTY AS "soProd.manuQty", so.MANU_DUE_DATE AS "so.manuDueDate", spod.SO_STATUS AS "soProd.soStatus", ma.ACPT_STATUS AS "soManu.acptStatus", ma.DIST_METHOD AS "soManu.distMethod", so.SO_DATE AS "so.soDate", ma.DIST_QTY AS "soManu.distQty", fac.ADDR_NO AS addrNo, (SELECT ADDR_NAME FROM T_ADDRESS_BOOK A WHERE fac.ADDR_NO=A.ADDR_NO) AS addrName, ma.ACPT_USER AS "soManu.acptUser", ma.ACPT_TIME AS "soManu.acptTime", so.LINE_SPLIT_FLAG AS "so.lineSplitFlag", spod.QTY_SPLIT_FLAG AS "soProd.qtySplitFlag", ma.PAPER_READY_STATUS AS "soManu.paperReadyStatus", ma.PROD_INFO_STATUS AS "soManu.prodInfoStatus", ma.ID AS "soManu.id", maf.ID AS "manudistFact.id", so.ID AS "so.id", mp.ID AS "manudistProd.id", pro.ID AS "prod.id", maf.ACPT_STATUS AS "manudistFact.acptStatus", (SELECT SUM(NVL(P.WHIN_QTY,0))/NVL(ma.DIST_QTY,1) FROM T_PRODIN P WHERE ma.ACPT_STATUS = '01' OR ma.ACPT_STATUS = '02' ) AS completionRate FROM T_SO_PROD spod JOIN T_SO_MANU ma ON ma.SO_PROD_ID = spod.ID JOIN T_PROD pro ON spod.PROD_ID = pro.ID JOIN T_SO so ON ma.SO_ID = so.ID OR so.ID=spod.SO_ID JOIN T_CUST cu ON so.CUST_ID = cu.ID JOIN T_ADDRESS_BOOK adb ON so.AGENT_ID = adb.ID JOIN T_FACTORY fac ON ma.FACT_ID = fac.ID OR fac.ADDR_NO=adb.ADDR_NO JOIN T_PRODIN pin ON ma.ID = pin.WHIN_QTY JOIN T_MANUDIST_PROD mp ON pro.id=mp.prod_id OR SO.ID=MP.SOPROD_ID OR so.ID=mp.SO_ID JOIN T_MANUDIST_FACT maf ON maf.FACT_ID=fac.ID WHERE ((ma.ACPT_STATUS='01' OR ma.ACPT_STATUS='02' OR maf.ACPT_STATUS='05' OR maf.ACPT_STATUS='06' OR maf.ACPT_STATUS='07'))) all_) WHERE rn_ BETWEEN 1 AND 10 
+2016-08-29 11:26:35.729 DEBUG 2327 --- [http-nio-9000-exec-7] c.e.s.c.m.O.orderSerachList              : ==> Parameters: 
+2016-08-29 11:26:35.776 ERROR 2327 --- [http-nio-9000-exec-7] com.el.cfg.GlobalRestExceptionHandler    : [APP-GEXH] Exception happened in rest-controller.
+
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: ORA-00904: "PRO"."BIND_TYPE": 标识符无效
+
+### The error may exist in com/el/stp/cm_ou/mapper/OrderSearchMapper.java (best guess)
+### The error may involve com.el.stp.cm_ou.mapper.OrderSearchMapper.orderSerachList-Inline
+### The error occurred while setting parameters
+### SQL: SELECT * FROM (SELECT ROWNUM rn_, all_.* FROM (SELECT cu.CUST_CODE AS "cust.custCode", cu.CUST_NAME AS "cust.custName", so.SO_NO AS "so.soNo", (SELECT ADDR_NAME FROM T_ADDRESS_BOOK AB WHERE so.AGENT_ID = AB.ID ) AS clerk, so.DUE_DATE AS "so.dueDate", pro.PROD_CODE AS "prod.prodCode", pro.PROD_NAME AS "prod.prodName", pro.PROD_TYPE AS "prod.prodType", pro.QUALITY_LEVEL AS "prod.qualityLevel", pro.PRINT_DIFF_LEVEL AS "prod.printDiffLevel", pro.BIND_DIFF_LEVEL AS "prod.bindDiffLevel", pro.BIND_TYPE AS "prod.bindType", spod.MANU_QTY AS "soProd.manuQty", so.MANU_DUE_DATE AS "so.manuDueDate", spod.SO_STATUS AS "soProd.soStatus", ma.ACPT_STATUS AS "soManu.acptStatus", ma.DIST_METHOD AS "soManu.distMethod", so.SO_DATE AS "so.soDate", ma.DIST_QTY AS "soManu.distQty", fac.ADDR_NO AS addrNo, (SELECT ADDR_NAME FROM T_ADDRESS_BOOK A WHERE fac.ADDR_NO=A.ADDR_NO) AS addrName, ma.ACPT_USER AS "soManu.acptUser", ma.ACPT_TIME AS "soManu.acptTime", so.LINE_SPLIT_FLAG AS "so.lineSplitFlag", spod.QTY_SPLIT_FLAG AS "soProd.qtySplitFlag", ma.PAPER_READY_STATUS AS "soManu.paperReadyStatus", ma.PROD_INFO_STATUS AS "soManu.prodInfoStatus", ma.ID AS "soManu.id", maf.ID AS "manudistFact.id", so.ID AS "so.id", mp.ID AS "manudistProd.id", pro.ID AS "prod.id", maf.ACPT_STATUS AS "manudistFact.acptStatus", (SELECT SUM(NVL(P.WHIN_QTY,0))/NVL(ma.DIST_QTY,1) FROM T_PRODIN P WHERE ma.ACPT_STATUS = '01' OR ma.ACPT_STATUS = '02' ) AS completionRate FROM T_SO_PROD spod JOIN T_SO_MANU ma ON ma.SO_PROD_ID = spod.ID JOIN T_PROD pro ON spod.PROD_ID = pro.ID JOIN T_SO so ON ma.SO_ID = so.ID OR so.ID=spod.SO_ID JOIN T_CUST cu ON so.CUST_ID = cu.ID JOIN T_ADDRESS_BOOK adb ON so.AGENT_ID = adb.ID JOIN T_FACTORY fac ON ma.FACT_ID = fac.ID OR fac.ADDR_NO=adb.ADDR_NO JOIN T_PRODIN pin ON ma.ID = pin.WHIN_QTY JOIN T_MANUDIST_PROD mp ON pro.id=mp.prod_id OR SO.ID=MP.SOPROD_ID OR so.ID=mp.SO_ID JOIN T_MANUDIST_FACT maf ON maf.FACT_ID=fac.ID WHERE ((ma.ACPT_STATUS='01' OR ma.ACPT_STATUS='02' OR maf.ACPT_STATUS='05' OR maf.ACPT_STATUS='06' OR maf.ACPT_STATUS='07'))) all_) WHERE rn_ BETWEEN 1 AND 10
+### Cause: java.sql.SQLSyntaxErrorException: ORA-00904: "PRO"."BIND_TYPE": 标识符无效
+
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: ORA-00904: "PRO"."BIND_TYPE": 标识符无效
+
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:231)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:75)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:447)
+	at com.sun.proxy.$Proxy46.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:231)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:137)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:75)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy101.orderSerachList(Unknown Source)
+	at com.el.stp.cm_ou.service.OrderSearchServiceImpl.orderSerachList(OrderSearchServiceImpl.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:302)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:202)
+	at com.sun.proxy.$Proxy102.orderSerachList(Unknown Source)
+	at com.el.stp.cm_ou.controller.CmOrderSearchController.orderListView(CmOrderSearchController.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:110)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:832)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:743)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:895)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:967)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:858)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:843)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:292)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:112)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:87)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:121)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:528)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1099)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:670)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1520)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1476)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLSyntaxErrorException: ORA-00904: "PRO"."BIND_TYPE": 标识符无效
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3923)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1385)
+	at sun.reflect.GeneratedMethodAccessor90.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy66.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at sun.reflect.GeneratedMethodAccessor112.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:434)
+	... 102 common frames omitted
+
+2016-08-29 11:54:09.185 DEBUG 2327 --- [http-nio-9000-exec-10] com.el.sys.controller.HomeController     : [APP-AUTH] Current user's principals: MyAccountProperties(id=4, username=cm1, password=9bbb66bda489d8286ff18f8832bbbe399c761237c9d6d0e4029bac1f33e972be, salt=flh884wndkv5rfwc, role=CM1, profile=null)
+2016-08-29 11:54:09.187 DEBUG 2327 --- [http-nio-9000-exec-10] com.el.sys.controller.HomeController     : [APP-AUTH] Current user has role SYS: false
+2016-08-29 11:54:13.089 DEBUG 2327 --- [http-nio-9000-exec-9] com.el.sys.mapper.UdcMapper.codeNames    : ==>  Preparing: SELECT UDC_CODE as code, VAL_DESC1 as name FROM T_UDC WHERE VAL_ENABLED = 1 AND DOMAIN_CODE = ? AND UDC_TYPE = ? ORDER BY UDC_CODE nulls first 
+2016-08-29 11:54:13.089 DEBUG 2327 --- [http-nio-9000-exec-9] com.el.sys.mapper.UdcMapper.codeNames    : ==> Parameters: E7(String), A2(String)
+2016-08-29 11:54:13.090 DEBUG 2327 --- [http-nio-9000-exec-5] com.el.sys.mapper.UdcMapper.codeNames    : ==>  Preparing: SELECT UDC_CODE as code, VAL_DESC1 as name FROM T_UDC WHERE VAL_ENABLED = 1 AND DOMAIN_CODE = ? AND UDC_TYPE = ? ORDER BY UDC_CODE nulls first 
+2016-08-29 11:54:13.091 DEBUG 2327 --- [http-nio-9000-exec-5] com.el.sys.mapper.UdcMapper.codeNames    : ==> Parameters: E7(String), A1(String)
+2016-08-29 11:54:13.092 DEBUG 2327 --- [http-nio-9000-exec-8] com.el.sys.mapper.UdcMapper.codeNames    : ==>  Preparing: SELECT UDC_CODE as code, VAL_DESC1 as name FROM T_UDC WHERE VAL_ENABLED = 1 AND DOMAIN_CODE = ? AND UDC_TYPE = ? ORDER BY UDC_CODE nulls first 
+2016-08-29 11:54:13.092 DEBUG 2327 --- [http-nio-9000-exec-8] com.el.sys.mapper.UdcMapper.codeNames    : ==> Parameters: E7(String), A3(String)
+2016-08-29 11:54:13.098 DEBUG 2327 --- [http-nio-9000-exec-5] com.el.sys.mapper.UdcMapper.codeNames    : <==      Total: 4
+2016-08-29 11:54:13.098 DEBUG 2327 --- [http-nio-9000-exec-9] com.el.sys.mapper.UdcMapper.codeNames    : <==      Total: 4
+2016-08-29 11:54:13.099 DEBUG 2327 --- [http-nio-9000-exec-8] com.el.sys.mapper.UdcMapper.codeNames    : <==      Total: 4
+2016-08-29 11:54:13.190 DEBUG 2327 --- [http-nio-9000-exec-6] c.e.s.c.m.FactoryMapper.totalFactory     : ==>  Preparing: SELECT COUNT(1) AS N FROM T_FACT_RELATE A INNER JOIN T_FACTORY B ON A.FACT_ID=B.ID INNER JOIN T_ADDRESS_BOOK C ON B.ADDR_NO=C.ADDR_NO LEFT OUTER JOIN (SELECT K.FACT_ID, COUNT(K.SO_ID) CNT1 FROM (SELECT DISTINCT FACT_ID,SO_ID FROM T_SO_MANU D WHERE D.MANU_STATUS = '01' AND EXISTS (SELECT 1 FROM T_SO WHERE OU_ID = 1 AND ID = D.SO_ID)) K GROUP BY K.FACT_ID) X ON X.FACT_ID = A.FACT_ID LEFT OUTER JOIN (SELECT L.FACT_ID, COUNT(L.SO_ID) CNT2 FROM (SELECT DISTINCT FACT_ID,SO_ID FROM T_SO_MANU D WHERE D.PAPER_READY_STATUS = '01' AND EXISTS (SELECT 1 FROM T_SO WHERE OU_ID = 1 AND ID = D.SO_ID)) L GROUP BY L.FACT_ID) Y ON Y.FACT_ID = A.FACT_ID LEFT OUTER JOIN (SELECT M.FACT_ID, COUNT(M.SO_ID) CNT3 FROM (SELECT FACT_ID,SO_ID FROM T_SO_MANU D WHERE D.PROD_INFO_STATUS = '01' AND EXISTS (SELECT 1 FROM T_SO WHERE OU_ID = 1 AND ID = D.SO_ID)) M GROUP BY M.FACT_ID ) Z ON Z.FACT_ID = A.FACT_ID WHERE (A.OU_ID=?) 
+2016-08-29 11:54:13.192 DEBUG 2327 --- [http-nio-9000-exec-6] c.e.s.c.m.FactoryMapper.totalFactory     : ==> Parameters: 1(Integer)
+2016-08-29 11:54:13.279 DEBUG 2327 --- [http-nio-9000-exec-6] c.e.s.c.m.FactoryMapper.totalFactory     : <==      Total: 1
+2016-08-29 11:54:13.282  INFO 2327 --- [http-nio-9000-exec-6] c.e.s.cm_ou.service.FactoryServiceImpl   : [sms] rowCount=132, pageIndex=0
+2016-08-29 11:54:13.282  INFO 2327 --- [http-nio-9000-exec-6] c.el.stp.cm_ou.domain.FactoryCondition   : [sms] rowCount=132, pageSize=10
+2016-08-29 11:54:13.282  INFO 2327 --- [http-nio-9000-exec-6] com.el.util.SqlDialectOracle             : [sms] paging rowIndex=0
+2016-08-29 11:54:13.282  INFO 2327 --- [http-nio-9000-exec-6] c.el.stp.cm_ou.domain.FactoryCondition   : [sms] rowCount=132, pageSize=10
+2016-08-29 11:54:13.284 DEBUG 2327 --- [http-nio-9000-exec-6] c.e.s.c.m.FactoryMapper.factoryInfo      : ==>  Preparing: SELECT * FROM (SELECT ROWNUM rn_, all_.* FROM (SELECT a.FACT_ID factId,B.ADDR_NO addrNo,C.ADDR_NAME addrName,A.ONTIME_RATE ontimeRate,A.QUALIFY_LEVEL qualifyLevel,A.PRINT_DIFF_LEVEL printDiffLevel,A.BIND_DIFF_LEVEL bindDiffLevel, A.VALID_FROM validFrom,A.VALID_TO validTo,NVL(X.CNT1, 0) manuNum,NVL(Y.CNT2, 0) paperReadyNum,NVL(Z.CNT3, 0) prodInfoNum FROM T_FACT_RELATE A INNER JOIN T_FACTORY B ON A.FACT_ID=B.ID INNER JOIN T_ADDRESS_BOOK C ON B.ADDR_NO=C.ADDR_NO LEFT OUTER JOIN (SELECT K.FACT_ID, COUNT(K.SO_ID) CNT1 FROM (SELECT DISTINCT FACT_ID,SO_ID FROM T_SO_MANU D WHERE D.MANU_STATUS = '01' AND EXISTS (SELECT 1 FROM T_SO WHERE OU_ID = 1 AND ID = D.SO_ID)) K GROUP BY K.FACT_ID) X ON X.FACT_ID = A.FACT_ID LEFT OUTER JOIN (SELECT L.FACT_ID, COUNT(L.SO_ID) CNT2 FROM (SELECT DISTINCT FACT_ID,SO_ID FROM T_SO_MANU D WHERE D.PAPER_READY_STATUS = '01' AND EXISTS (SELECT 1 FROM T_SO WHERE OU_ID = 1 AND ID = D.SO_ID)) L GROUP BY L.FACT_ID) Y ON Y.FACT_ID = A.FACT_ID LEFT OUTER JOIN (SELECT M.FACT_ID, COUNT(M.SO_ID) CNT3 FROM (SELECT FACT_ID,SO_ID FROM T_SO_MANU D WHERE D.PROD_INFO_STATUS = '01' AND EXISTS (SELECT 1 FROM T_SO WHERE OU_ID = 1 AND ID = D.SO_ID)) M GROUP BY M.FACT_ID ) Z ON Z.FACT_ID = A.FACT_ID WHERE (A.OU_ID=?)) all_) WHERE rn_ BETWEEN 1 AND 10 
+2016-08-29 11:54:13.284 DEBUG 2327 --- [http-nio-9000-exec-6] c.e.s.c.m.FactoryMapper.factoryInfo      : ==> Parameters: 1(Integer)
+2016-08-29 11:54:13.344 DEBUG 2327 --- [http-nio-9000-exec-6] c.e.s.c.m.FactoryMapper.factoryInfo      : <==      Total: 10
+2016-08-29 11:54:13.367  INFO 2327 --- [http-nio-9000-exec-6] c.el.stp.cm_ou.domain.FactoryCondition   : [sms] rowCount=132, pageSize=10
+2016-08-29 11:54:13.367  INFO 2327 --- [http-nio-9000-exec-6] c.el.stp.cm_ou.domain.FactoryCondition   : [sms] rowCount=132, pageSize=10
+2016-08-29 11:54:15.148 DEBUG 2327 --- [http-nio-9000-exec-7] c.e.s.c.mapper.FactoryMapper.headInfo    : ==>  Preparing: SELECT a.FACT_ID factId,B.ADDR_NO addrNo,C.ADDR_NAME addrName,A.ONTIME_RATE ontimeRate,A.QUALIFY_LEVEL qualifyLevel,A.PRINT_DIFF_LEVEL printDiffLevel,A.BIND_DIFF_LEVEL bindDiffLevel, A.VALID_FROM validFrom,A.VALID_TO validTo,NVL(X.CNT1, 0) manuNum,NVL(Y.CNT2, 0) paperReadyNum,NVL(Z.CNT3, 0) prodInfoNum FROM T_FACT_RELATE A INNER JOIN T_FACTORY B ON A.FACT_ID=B.ID INNER JOIN T_ADDRESS_BOOK C ON B.ADDR_NO=C.ADDR_NO LEFT OUTER JOIN (SELECT K.FACT_ID, COUNT(K.SO_ID) CNT1 FROM (SELECT DISTINCT FACT_ID,SO_ID FROM T_SO_MANU D WHERE D.MANU_STATUS = '01' AND EXISTS (SELECT 1 FROM T_SO WHERE OU_ID = 1 AND ID = D.SO_ID)) K GROUP BY K.FACT_ID) X ON X.FACT_ID = A.FACT_ID LEFT OUTER JOIN (SELECT L.FACT_ID, COUNT(L.SO_ID) CNT2 FROM (SELECT DISTINCT FACT_ID,SO_ID FROM T_SO_MANU D WHERE D.PAPER_READY_STATUS = '01' AND EXISTS (SELECT 1 FROM T_SO WHERE OU_ID = 1 AND ID = D.SO_ID)) L GROUP BY L.FACT_ID) Y ON Y.FACT_ID = A.FACT_ID LEFT OUTER JOIN (SELECT M.FACT_ID, COUNT(M.SO_ID) CNT3 FROM (SELECT FACT_ID,SO_ID FROM T_SO_MANU D WHERE D.PROD_INFO_STATUS = '01' AND EXISTS (SELECT 1 FROM T_SO WHERE OU_ID = 1 AND ID = D.SO_ID)) M GROUP BY M.FACT_ID ) Z ON Z.FACT_ID = A.FACT_ID WHERE (a.FACT_ID = ?) 
+2016-08-29 11:54:15.148 DEBUG 2327 --- [http-nio-9000-exec-7] c.e.s.c.mapper.FactoryMapper.headInfo    : ==> Parameters: 1(Integer)
+2016-08-29 11:54:15.382 DEBUG 2327 --- [http-nio-9000-exec-7] c.e.s.c.mapper.FactoryMapper.headInfo    : <==      Total: 132
+2016-08-29 11:54:15.453 DEBUG 2327 --- [http-nio-9000-exec-10] c.e.s.c.m.F.capacityTotal                : ==>  Preparing: SELECT COUNT(1) AS N FROM V_OCCUPY WHERE (FACT_ID=? AND OU_ID=?) 
+2016-08-29 11:54:15.453 DEBUG 2327 --- [http-nio-9000-exec-10] c.e.s.c.m.F.capacityTotal                : ==> Parameters: 1(Integer), 1(Integer)
+2016-08-29 11:54:15.460 DEBUG 2327 --- [http-nio-9000-exec-1] c.e.s.c.m.F.capacitys                    : ==>  Preparing: SELECT T.CAPA_TYPE capaType,T.DAILY_CAPA dailyCapa,T.UOM, O.OU_NAME as ouName FROM T_FACT_STDCAPA T LEFT JOIN T_OU O ON O.ID = T.OU_ID 
+2016-08-29 11:54:15.460 DEBUG 2327 --- [http-nio-9000-exec-1] c.e.s.c.m.F.capacitys                    : ==> Parameters: 
+2016-08-29 11:54:15.461 DEBUG 2327 --- [http-nio-9000-exec-4] c.e.s.c.m.F.processPriceIn               : ==>  Preparing: select p.PROCESS_CODE processCode,n.PROCESS_NAME processName,n.CAT1 cat1,n.CAT2 cat2,n.CAT3 cat3,p.PRICE price,p.PRICE_UOM priceUom FROM T_PROCESS_PRICE p JOIN T_PROCESS n ON n.id = p.id where p.ADDR_NO = ? 
+2016-08-29 11:54:15.462 DEBUG 2327 --- [http-nio-9000-exec-4] c.e.s.c.m.F.processPriceIn               : ==> Parameters: 100001(String)
+2016-08-29 11:54:15.464 DEBUG 2327 --- [http-nio-9000-exec-3] com.el.sys.mapper.UdcMapper.codeNames    : ==>  Preparing: SELECT UDC_CODE as code, VAL_DESC1 as name FROM T_UDC WHERE VAL_ENABLED = 1 AND DOMAIN_CODE = ? AND UDC_TYPE = ? ORDER BY UDC_CODE nulls first 
+2016-08-29 11:54:15.465 DEBUG 2327 --- [http-nio-9000-exec-3] com.el.sys.mapper.UdcMapper.codeNames    : ==> Parameters: E7(String), B6(String)
+2016-08-29 11:54:15.468 DEBUG 2327 --- [http-nio-9000-exec-2] c.e.s.c.m.F.printSoTotal                 : ==>  Preparing: SELECT COUNT(1) AS N FROM V_SO_MANU WHERE (FACT_ID=? AND OU_ID=?) 
+2016-08-29 11:54:15.469 DEBUG 2327 --- [http-nio-9000-exec-2] c.e.s.c.m.F.printSoTotal                 : ==> Parameters: 1(Integer), 1(Integer)
+2016-08-29 11:54:15.481 DEBUG 2327 --- [http-nio-9000-exec-10] c.e.s.c.m.F.capacityTotal                : <==      Total: 1
+2016-08-29 11:54:15.493 DEBUG 2327 --- [http-nio-9000-exec-3] com.el.sys.mapper.UdcMapper.codeNames    : <==      Total: 5
+2016-08-29 11:54:15.493  INFO 2327 --- [http-nio-9000-exec-10] c.e.s.c.s.FactoryCapacityServiceImpl     : [sms] rowCount=5, pageIndex=0
+2016-08-29 11:54:15.494  INFO 2327 --- [http-nio-9000-exec-10] com.el.stp.cm_ou.domain.DateCondition    : [sms] rowCount=5, pageSize=10
+2016-08-29 11:54:15.494  INFO 2327 --- [http-nio-9000-exec-10] com.el.util.SqlDialectOracle             : [sms] paging rowIndex=0
+2016-08-29 11:54:15.494  INFO 2327 --- [http-nio-9000-exec-10] com.el.stp.cm_ou.domain.DateCondition    : [sms] rowCount=5, pageSize=10
+2016-08-29 11:54:15.495 DEBUG 2327 --- [http-nio-9000-exec-10] c.e.s.c.m.F.capacityData                 : ==>  Preparing: SELECT * FROM (SELECT ROWNUM rn_, all_.* FROM (SELECT DT,CAPA_TYPE,CAPA,DAILY_CAPA,UOM FROM V_OCCUPY WHERE (FACT_ID=? AND OU_ID=?)) all_) WHERE rn_ BETWEEN 1 AND 10 
+2016-08-29 11:54:15.496 DEBUG 2327 --- [http-nio-9000-exec-10] c.e.s.c.m.F.capacityData                 : ==> Parameters: 1(Integer), 1(Integer)
+2016-08-29 11:54:15.499 DEBUG 2327 --- [http-nio-9000-exec-4] c.e.s.c.m.F.processPriceIn               : <==      Total: 0
+2016-08-29 11:54:15.500 DEBUG 2327 --- [http-nio-9000-exec-1] c.e.s.c.m.F.capacitys                    : <==      Total: 3
+2016-08-29 11:54:15.507 DEBUG 2327 --- [http-nio-9000-exec-2] c.e.s.c.m.F.printSoTotal                 : <==      Total: 1
+2016-08-29 11:54:15.511  INFO 2327 --- [http-nio-9000-exec-2] c.e.s.c.s.FactoryCapacityServiceImpl     : [sms] rowCount=3, pageIndex=0
+2016-08-29 11:54:15.511  INFO 2327 --- [http-nio-9000-exec-2] com.el.stp.cm_ou.domain.DateCondition    : [sms] rowCount=3, pageSize=10
+2016-08-29 11:54:15.511  INFO 2327 --- [http-nio-9000-exec-2] com.el.util.SqlDialectOracle             : [sms] paging rowIndex=0
+2016-08-29 11:54:15.512  INFO 2327 --- [http-nio-9000-exec-2] com.el.stp.cm_ou.domain.DateCondition    : [sms] rowCount=3, pageSize=10
+2016-08-29 11:54:15.513 DEBUG 2327 --- [http-nio-9000-exec-2] c.e.s.c.m.F.printSoData                  : ==>  Preparing: SELECT * FROM (SELECT ROWNUM rn_, all_.* FROM (SELECT SO_ID soId,CUST_CODE custCode,CUST_NAME custName,SO_NO soNo,AGENT_NAME agentName,SO_DATE soDate,DUE_DATE dueDate,ACPT_USER acptUser,ACPT_TIME acptTime,MANU_COMP_DATE manuCompDate,DIST_METHOD distMethod,DIST_QTY distQty,MANU_STATUS manuStatus,QUALITY_LEVEL qualityLevel,PRINT_DIFF_LEVEL printDiffLevel,BIND_DIFF_LEVEL bindDiffLevel,MANU_QTY manuQty,PROD_CODE prodCode,PROD_NAME prodName,PROD_TYPE prodType FROM V_SO_MANU WHERE (FACT_ID=? AND OU_ID=?)) all_) WHERE rn_ BETWEEN 1 AND 10 
+2016-08-29 11:54:15.514 DEBUG 2327 --- [http-nio-9000-exec-2] c.e.s.c.m.F.printSoData                  : ==> Parameters: 1(Integer), 1(Integer)
+2016-08-29 11:54:15.521 DEBUG 2327 --- [http-nio-9000-exec-10] c.e.s.c.m.F.capacityData                 : <==      Total: 5
+2016-08-29 11:54:15.545  INFO 2327 --- [http-nio-9000-exec-10] com.el.stp.cm_ou.domain.DateCondition    : [sms] rowCount=5, pageSize=10
+2016-08-29 11:54:15.552  INFO 2327 --- [http-nio-9000-exec-10] com.el.stp.cm_ou.domain.DateCondition    : [sms] rowCount=5, pageSize=10
+2016-08-29 11:54:15.594 DEBUG 2327 --- [http-nio-9000-exec-2] c.e.s.c.m.F.printSoData                  : <==      Total: 3
+2016-08-29 11:54:15.673  INFO 2327 --- [http-nio-9000-exec-2] com.el.stp.cm_ou.domain.DateCondition    : [sms] rowCount=3, pageSize=10
+2016-08-29 11:54:15.674  INFO 2327 --- [http-nio-9000-exec-2] com.el.stp.cm_ou.domain.DateCondition    : [sms] rowCount=3, pageSize=10
+2016-08-29 14:31:02.062 DEBUG 2327 --- [http-nio-9000-exec-8] c.e.c.s.f.MyFormAuthenticationFilter     : [APP-AUTH] this is PAGE request
+2016-08-29 14:31:02.063 DEBUG 2327 --- [http-nio-9000-exec-6] c.e.c.s.f.MyFormAuthenticationFilter     : [APP-AUTH] this is PAGE request
+2016-08-29 14:31:02.069 DEBUG 2327 --- [http-nio-9000-exec-8] c.e.c.s.f.MyFormAuthenticationFilter     : [APP-AUTH] this is PAGE request
+2016-08-29 14:31:02.071 DEBUG 2327 --- [http-nio-9000-exec-3] c.e.c.s.f.MyFormAuthenticationFilter     : [APP-AUTH] this is PAGE request
+2016-08-29 14:31:02.074 DEBUG 2327 --- [http-nio-9000-exec-4] c.e.c.s.f.MyFormAuthenticationFilter     : [APP-AUTH] this is PAGE request
+2016-08-29 14:31:02.278 DEBUG 2327 --- [http-nio-9000-exec-6] c.e.s.c.m.O.orderSearchNum               : ==>  Preparing: SELECT COUNT(1) AS VALUE FROM T_SO_PROD spod JOIN T_SO_MANU ma ON ma.SO_PROD_ID = spod.ID JOIN T_PROD pro ON spod.PROD_ID = pro.ID JOIN T_SO so ON ma.SO_ID = so.ID OR so.ID=spod.SO_ID JOIN T_CUST cu ON so.CUST_ID = cu.ID JOIN T_ADDRESS_BOOK adb ON so.AGENT_ID = adb.ID JOIN T_FACTORY fac ON ma.FACT_ID = fac.ID OR fac.ADDR_NO=adb.ADDR_NO JOIN T_PRODIN pin ON ma.ID = pin.WHIN_QTY JOIN T_MANUDIST_PROD mp ON pro.id=mp.prod_id OR SO.ID=MP.SOPROD_ID OR so.ID=mp.SO_ID JOIN T_MANUDIST_FACT maf ON maf.FACT_ID=fac.ID WHERE (spod.SO_STATUS=? AND ma.ACPT_STATUS=? AND ma.DIST_METHOD=? AND ma.PAPER_READY_STATUS=? AND ma.PROD_INFO_STATUS=? AND (ma.ACPT_STATUS='01' OR ma.ACPT_STATUS='02' OR maf.ACPT_STATUS='05' OR maf.ACPT_STATUS='06' OR maf.ACPT_STATUS='07')) 
+2016-08-29 14:31:02.279 DEBUG 2327 --- [http-nio-9000-exec-6] c.e.s.c.m.O.orderSearchNum               : ==> Parameters: undefined(String), undefined(String), undefined(String), undefined(String), undefined(String)
+2016-08-29 14:31:02.458 DEBUG 2327 --- [http-nio-9000-exec-6] c.e.s.c.m.O.orderSearchNum               : <==      Total: 1
+2016-08-29 14:31:02.469  INFO 2327 --- [http-nio-9000-exec-6] c.e.s.cm_ou.domain.OrderSearchCondition  : [sms] rowCount=0, pageSize=10
+2016-08-29 14:31:02.470  INFO 2327 --- [http-nio-9000-exec-6] c.e.s.cm_ou.domain.OrderSearchCondition  : [sms] rowCount=0, pageSize=10

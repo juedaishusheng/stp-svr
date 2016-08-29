@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class com.el.sys.mapper.StpUserMapperTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class com.el.sys.mapper.StpUserMapperTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.el.sys.mapper.html">com.el.sys.mapper</a> &gt; StpUserMapperTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">5</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.106s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">disableUser</td>
+<td>0.012s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">enableUser</td>
+<td>0.020s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">insertUser</td>
+<td>0.025s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">selectByUsernameLike</td>
+<td>0.019s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">updateUser</td>
+<td>0.030s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2016-08-01 11:04:46.578  INFO   --- [    Test worker] o.s.t.c.s.DefaultTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-08-01 11:04:46.579  INFO   --- [    Test worker] o.s.t.c.s.DefaultTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1cbd1408, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@481199b, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@6ab67029, org.springframework.test.context.support.DirtiesContextTestExecutionListener@56c130c3, org.springframework.test.context.transaction.TransactionalTestExecutionListener@22286347, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2e69eb58]
+2016-08-01 11:04:46.586  INFO   --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@281eedda testClass = StpUserMapperTest, testInstance = com.el.sys.mapper.StpUserMapperTest@605da29c, testMethod = updateUser@StpUserMapperTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7787e184 testClass = StpUserMapperTest, locations = '{}', classes = '{class com.el.test.TestRepositoryConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@5b5daccc]; rollback [true]
+2016-08-01 11:04:46.598 DEBUG   --- [    Test worker] c.e.sys.mapper.StpUserMapper.updateUser  : ==&gt;  Preparing: UPDATE s_users SET username = ?, password = ?, role = ?, profile = ?, audit_version = audit_version + 1, audit_user_id = ?, audit_time_at = SYSTIMESTAMP, audit_prog_id = ?, audit_node_id = ? WHERE (id = ? AND audit_version = ?) 
+2016-08-01 11:04:46.605 DEBUG   --- [    Test worker] c.e.sys.mapper.StpUserMapper.updateUser  : ==&gt; Parameters: guest(String), &lt;password&gt;(String), GUEST(String), {nickName: '^v^'}(String), 0(Long), TEST_PROG(String), TEST_NODE(String), 0(Long), 1(Long)
+2016-08-01 11:04:46.609 DEBUG   --- [    Test worker] c.e.sys.mapper.StpUserMapper.updateUser  : &lt;==    Updates: 1
+2016-08-01 11:04:46.614  INFO   --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test context [DefaultTestContext@281eedda testClass = StpUserMapperTest, testInstance = com.el.sys.mapper.StpUserMapperTest@605da29c, testMethod = updateUser@StpUserMapperTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7787e184 testClass = StpUserMapperTest, locations = '{}', classes = '{class com.el.test.TestRepositoryConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+2016-08-01 11:04:46.617  INFO   --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@281eedda testClass = StpUserMapperTest, testInstance = com.el.sys.mapper.StpUserMapperTest@2c69eaba, testMethod = selectByUsernameLike@StpUserMapperTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7787e184 testClass = StpUserMapperTest, locations = '{}', classes = '{class com.el.test.TestRepositoryConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@5b5daccc]; rollback [true]
+2016-08-01 11:04:46.623 DEBUG   --- [    Test worker] c.e.s.m.S.selectByUsernameLike           : ==&gt;  Preparing: SELECT id, enabled, username, password, role, profile, audit_version FROM s_users WHERE (username like'%m%') 
+2016-08-01 11:04:46.624 DEBUG   --- [    Test worker] c.e.s.m.S.selectByUsernameLike           : ==&gt; Parameters: 
+2016-08-01 11:04:46.629 DEBUG   --- [    Test worker] c.e.s.m.S.selectByUsernameLike           : &lt;==      Total: 6
+[APP-TEST] selectByUsernameLike: 6
+2016-08-01 11:04:46.634  INFO   --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test context [DefaultTestContext@281eedda testClass = StpUserMapperTest, testInstance = com.el.sys.mapper.StpUserMapperTest@2c69eaba, testMethod = selectByUsernameLike@StpUserMapperTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7787e184 testClass = StpUserMapperTest, locations = '{}', classes = '{class com.el.test.TestRepositoryConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+2016-08-01 11:04:46.638  INFO   --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@281eedda testClass = StpUserMapperTest, testInstance = com.el.sys.mapper.StpUserMapperTest@228e636f, testMethod = insertUser@StpUserMapperTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7787e184 testClass = StpUserMapperTest, locations = '{}', classes = '{class com.el.test.TestRepositoryConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@5b5daccc]; rollback [true]
+2016-08-01 11:04:46.644 DEBUG   --- [    Test worker] c.e.s.m.S.insertUser!selectKey           : ==&gt;  Executing: SELECT seq_s_users.NEXTVAL FROM DUAL 
+2016-08-01 11:04:46.649 DEBUG   --- [    Test worker] c.e.s.m.S.insertUser!selectKey           : &lt;==      Total: 1
+2016-08-01 11:04:46.649 DEBUG   --- [    Test worker] c.e.sys.mapper.StpUserMapper.insertUser  : ==&gt;  Preparing: INSERT INTO s_users (id, username, password, role, profile, audit_version, audit_user_id, audit_time_at, audit_prog_id, audit_node_id) VALUES (?, ?, ?, ?, ?, 1, ?, SYSTIMESTAMP, ?, ?) 
+2016-08-01 11:04:46.650 DEBUG   --- [    Test worker] c.e.sys.mapper.StpUserMapper.insertUser  : ==&gt; Parameters: 47(Long), guest(String), &lt;password&gt;(String), GUEST(String), {nickName: '^v^'}(String), 0(Long), TEST_PROG(String), TEST_NODE(String)
+2016-08-01 11:04:46.654 DEBUG   --- [    Test worker] c.e.sys.mapper.StpUserMapper.insertUser  : &lt;==    Updates: 1
+2016-08-01 11:04:46.660  INFO   --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test context [DefaultTestContext@281eedda testClass = StpUserMapperTest, testInstance = com.el.sys.mapper.StpUserMapperTest@228e636f, testMethod = insertUser@StpUserMapperTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7787e184 testClass = StpUserMapperTest, locations = '{}', classes = '{class com.el.test.TestRepositoryConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+2016-08-01 11:04:46.663  INFO   --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@281eedda testClass = StpUserMapperTest, testInstance = com.el.sys.mapper.StpUserMapperTest@968ce3b, testMethod = disableUser@StpUserMapperTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7787e184 testClass = StpUserMapperTest, locations = '{}', classes = '{class com.el.test.TestRepositoryConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@5b5daccc]; rollback [true]
+2016-08-01 11:04:46.664 DEBUG   --- [    Test worker] c.e.s.mapper.StpUserMapper.disableUser   : ==&gt;  Preparing: UPDATE s_users SET enabled = 0, audit_version = audit_version + 1, audit_user_id = ?, audit_time_at = SYSTIMESTAMP, audit_prog_id = ?, audit_node_id = ? WHERE (id = ? AND audit_version = ?) 
+2016-08-01 11:04:46.664 DEBUG   --- [    Test worker] c.e.s.mapper.StpUserMapper.disableUser   : ==&gt; Parameters: 0(Long), TEST_PROG(String), TEST_NODE(String), 0(Long), 1(Long)
+2016-08-01 11:04:46.668 DEBUG   --- [    Test worker] c.e.s.mapper.StpUserMapper.disableUser   : &lt;==    Updates: 1
+2016-08-01 11:04:46.673  INFO   --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test context [DefaultTestContext@281eedda testClass = StpUserMapperTest, testInstance = com.el.sys.mapper.StpUserMapperTest@968ce3b, testMethod = disableUser@StpUserMapperTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7787e184 testClass = StpUserMapperTest, locations = '{}', classes = '{class com.el.test.TestRepositoryConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+2016-08-01 11:04:46.680  INFO   --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@281eedda testClass = StpUserMapperTest, testInstance = com.el.sys.mapper.StpUserMapperTest@4ceb167c, testMethod = enableUser@StpUserMapperTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7787e184 testClass = StpUserMapperTest, locations = '{}', classes = '{class com.el.test.TestRepositoryConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@5b5daccc]; rollback [true]
+2016-08-01 11:04:46.685 DEBUG   --- [    Test worker] c.e.sys.mapper.StpUserMapper.enableUser  : ==&gt;  Preparing: UPDATE s_users SET enabled = 1, audit_version = audit_version + 1, audit_user_id = ?, audit_time_at = SYSTIMESTAMP, audit_prog_id = ?, audit_node_id = ? WHERE (id = ? AND audit_version = ?) 
+2016-08-01 11:04:46.686 DEBUG   --- [    Test worker] c.e.sys.mapper.StpUserMapper.enableUser  : ==&gt; Parameters: 0(Long), TEST_PROG(String), TEST_NODE(String), 0(Long), 1(Long)
+2016-08-01 11:04:46.691 DEBUG   --- [    Test worker] c.e.sys.mapper.StpUserMapper.enableUser  : &lt;==    Updates: 1
+2016-08-01 11:04:46.695  INFO   --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test context [DefaultTestContext@281eedda testClass = StpUserMapperTest, testInstance = com.el.sys.mapper.StpUserMapperTest@4ceb167c, testMethod = enableUser@StpUserMapperTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7787e184 testClass = StpUserMapperTest, locations = '{}', classes = '{class com.el.test.TestRepositoryConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 2.12</a> at 2016-8-1 11:04:48</p>
+</div>
+</div>
+</body>
+</html>

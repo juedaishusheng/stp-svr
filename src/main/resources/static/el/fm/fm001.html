@@ -1,0 +1,146 @@
+<div class="fm001">
+  <div class="view listView ">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <!-- search panel start -->
+        <div class="navbar-form ">
+          <div class="form-group el-mb-15 el-mr-15">
+            <label>结算公司</label>
+            <input type="text" class="form-control ouCode">
+          </div>
+          <div class="form-group el-mb-15 el-mr-15">
+            <label>订单编号</label>
+            <input type="text" class="form-control soNo">
+          </div>
+          <div class="form-group el-mb-15 el-mr-15">
+            <label>订单日期自</label>
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <input type="text" class="form-control pull-right el-dtp" data-date-format="yyyy-mm-dd">
+            </div>
+            <label>-</label>
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <input type="text" class="form-control pull-right el-dtp" data-date-format="yyyy-mm-dd">
+            </div>
+          </div>
+          <div class="form-group el-mb-15 ">
+            <button type="submit" class="btn btn-primary search-btn"><i class="fa fa-search"></i> 检索</button>
+          </div>
+        </div>
+        <div class="navbar-form ">
+          <div class="form-group el-mr-15">
+            <label>客户名称</label>
+            <input type="text" class="form-control custCode">
+          </div>
+          <div class="form-group el-mr-15">
+            <label>产品名称</label>
+            <input type="text" class="form-control prodCode">
+          </div>
+        </div>
+        <!-- search panel end  -->
+      </div>
+      <!-- Default panel contents end -->
+
+      <div class="navbarbtn navbar-form el-mb-15 el-mt-15">
+        <div class="form-group">
+          <button type="button" class="btn btn-primary" data-view-id="accountView">立账</button>
+        </div>
+      </div>
+
+      <div class="box-head table-master">
+        <table class="table table-bordered">
+          <thead>
+          <tr>
+            <th class="t1"></th>
+            <th class="t4">公司ID</th>
+            <th class="t4">公司名称</th>
+            <th class="t4">客户ID</th>
+            <th class="t4">客户名称</th>
+            <th class="t4">结算单号</th>
+            <th class="t4">结算日期</th>
+            <th class="t2">状态</th>
+            <th class="t6">销售订单ID</th>
+            <th class="t10">销售订单产品细表ID</th>
+            <th class="t4">产品ID</th>
+            <th class="t2">行号</th>
+            <th class="t2">单位</th>
+            <th class="t2">单价</th>
+            <th class="t4">订单数量</th>
+            <th class="t6">订单本币金额</th>
+            <th class="t6">本单结算数量</th>
+            <th class="t6">本单结算金额</th>
+            <th class="t4">立账日期</th>
+            <th class="t6">立账本币金额</th>
+            <th class="t4">立账标记</th>
+          </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="box-wrap antiscroll-wrap table-master">
+        <div class="box-inner">
+          <div class="antiscroll-inner">
+            <table class="table table-bordered table-striped table-hover stp-table-accountSettle">
+              <tbody class="listView-data">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="paging el-hide stp-fm001-list"></div>
+    </div>
+  </div>
+
+  <script class="hbs-listView" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="t1 el-center"><input type="radio" name="fm001_table" value="{{id}}" data-accountFlag="{{accountFlag}}"></td>
+      <td class="t4 el-left">{{ouId}}</td>
+      <td class="t4 el-left">{{ouName}}</td>
+      <td class="t4 el-left">{{custId}}</td>
+      <td class="t4 el-left">{{custName}}</td>
+      <td class="t4 el-left">{{docNo}}</td>
+      <td class="t4 el-left">{{settleDateYmd}}</td>
+      <td class="t2 el-left">{{docStatus}}</td>
+      <td class="t6 el-left">{{soId}}</td>
+      <td class="t10 el-left">{{soProdId}}</td>
+      <td class="t4 el-left">{{prodId}}</td>
+      <td class="t2 el-left">{{lineNo}}</td>
+      <td class="t2 el-center">{{uom}}</td>
+      <td class="t2 el-right">{{price}}</td>
+      <td class="t4 el-right">{{soQty}}</td>
+      <td class="t6 el-right">{{soAmt}}</td>
+      <td class="t6 el-right">{{settleQty}}</td>
+      <td class="t6 el-right">{{settleAmt}}</td>
+      <td class="t4 el-left">{{accountDateYmd}}</td>
+      <td class="t6 el-right">{{accountAmt}}</td>
+      <td class="t4 el-left">{{accountFlag}}</td>
+    </tr>
+    {{/each}}
+    <!-- <tr>
+       <td></td>
+       <td class="el-left">合计</td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td class="el-right">45000.00</td>
+       <td></td>
+       <td></td>
+       <td class="el-right">45000.00</td>
+       <td></td>
+       <td></td>
+     </tr>-->
+  </script>
+</div>

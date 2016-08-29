@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+
+  <title>STP Cloud</title>
+  <link rel="shortcut icon" data-th-href="@{/static/images/favicon.ico}"/>
+
+  <link rel="stylesheet" data-th-href="@{/static/css/ui.css}"/>
+  <link rel="stylesheet" data-th-href="@{/static/css/el.css}"/>
+  <link rel="stylesheet" data-th-href="@{/static/css/el_stp.css}"/>
+</head>
+<body class="hold-transition skin-stp sidebar-mini">
+
+<div class="wrapper">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a data-th-href="@{/}" class="logo">
+      <span class="logo-mini"><b>STP</b></span>
+      <span class="logo-lg"><b>STP</b> Cloud</span>
+    </a>
+    <nav class="navbar navbar-static-top">
+      <div class="el-warn el-hide"></div>
+      <div class="el-quit"><i class="fa fa-power-off fa-lg"></i></div>
+    </nav>
+  </header>
+
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <div class="user-panel">
+      <div class="info">
+        <i class="fa fa-user"></i>
+        <span data-shiro-account="Guest"></span>
+      </div>
+    </div>
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu"></ul>
+
+      <script id="el_menu" type="text/x-handlebars-template">
+        {{!-- MENU --}}
+        {{#each menus}}
+        {{#if subs}}
+
+          {{#with menu}}
+          <li class="treeview {{menuId}}" data-menu-fix="{{menuFix}}">
+            <a href="#">
+              <i class="fa fa-{{menuIco}}"></i>
+              <span>
+                {{#if ../../debug}}({{menuId}}){{/if}}
+                {{menuLbl}}
+              </span>
+              {{#if ../subs}}
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+              {{/if}}
+            </a>
+
+            {{#if ../subs}}
+            <ul class="treeview-menu">
+              {{#each ../subs}}
+              {{#with menu}}
+              <li class="menu-item"
+                  data-menu-id="{{menuId}}"
+                  data-menu-ico="{{../menuIco}}"
+                  data-menu-lbl="{{menuLbl}}"><a href="#">
+                <i class="fa fa-{{menuIco}}"></i>
+                {{#if ../../../../debug}}({{menuId}}){{/if}}
+                {{menuLbl}}</a>
+              </li>
+              {{/with}}
+              {{/each}}
+            </ul>
+            {{/if}}
+
+          </li>
+          {{/with}}
+
+        {{else}}
+
+          {{#with menu}}
+          <li class="treeview menu-item {{menuId}}" data-menu-fix="{{menuFix}}"
+              data-menu-id="{{menuId}}" data-menu-ico="{{menuIco}}" data-menu-lbl="{{menuLbl}}"
+          ><a href="#"><i class="fa fa-{{menuIco}}"></i> {{menuLbl}}</a></li>
+          {{/with}}
+
+        {{/if}}
+
+        {{/each}}
+      </script>
+
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <div data-layout-fragment="main"></div>
+
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 1.0.1
+    </div>
+    <strong>Copyright &copy; 2016 <a href="http://www.shengtongprint.com/">shengtongprint.com</a>.</strong>
+    All rights reserved.
+  </footer>
+
+</div>
+<!-- /.wrapper -->
+
+<div class="el-msg modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body"></div>
+      <div class="modal-footer">
+        <div data-dismiss="modal" class="btn btn-danger ok">OK</div>
+        <div data-dismiss="modal" class="btn btn-default cancel">Cancel</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /.el-msg -->
+
+<form method="post" id="el_csrf" class="el-hide" data-th-action="@{/}"></form>
+
+<script data-th-src="@{/static/js/ui.js}"></script>
+<script data-th-src="@{/static/js/el.js}"></script>
+<script data-th-src="@{/static/js/el_stp.js}"></script>
+<script data-th-src="@{/static/js/el_udc.js}"></script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+/*
+ * EL UI - 1.0.0
+ * http://www.elitesland.com/
+ *
+ * Copyright 2016 Elitesland.com
+ */
+
+.cm203 > .panel > .panel-heading {
+  background-color: #f4f4f4;
+}
+.cm203 > .listView > .panel > .panel-body {
+  background-color: #f4f4f4;
+}
+
+.cm203 > .panel > .tablelist {
+  width: 100%;
+}
+.cm203 > .navpage{
+  width: 100%;
+}
+/***面板左右  标题和返回按钮 布局***/
+.panel-heading { height: 50px;line-height: 50px;}
+.panel-heading h1{float: left; font-size: 20px;}
+.panel-heading .floatRight {
+  float: right;
+  margin-right: 15px;
+}
+
+.cm203 .page-container .fromFloatRight {
+  float: right;
+  margin-right: 15px;
+}
+

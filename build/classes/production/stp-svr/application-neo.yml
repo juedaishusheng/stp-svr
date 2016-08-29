@@ -1,0 +1,11 @@
+# Disable thymeleaf cache
+spring:
+  thymeleaf:
+    cache: false
+
+# JDBC (Oracle XE, UTF8)
+jdbc:
+  driver: oracle.jdbc.OracleDriver
+  url: jdbc:oracle:thin:@192.168.59.103:1521:xe
+  username: stp
+  password: stp

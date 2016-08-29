@@ -1,0 +1,188 @@
+<!-- Default panel contents start -->
+<div class="sm002">
+   <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="navbar-form navbar-left">
+        <div class="form-group  el-mr-15">
+          <label for="soNo">印刷订单号</label>
+          <input type="text" class="form-control" id="soNo">
+        </div>
+        <div class="form-group el-mr-15">
+          <label for="custName">客户名称</label>
+          <input type="text" class="form-control" id="custName">
+        </div>
+        <div class="form-group">
+          <label>发货日期</label>
+          <div class="input-group date">
+            <div class="input-group-addon">
+              <i class="fa fa-calendar"></i>
+            </div>
+            <input type="text" class="form-control el-dtp" data-date-format="yyyy-mm-dd" value="" id="demandDeliDateFrom">
+          </div>
+          <label>-</label>
+          <div class="input-group date">
+            <div class="input-group-addon">
+              <i class="fa fa-calendar"></i>
+            </div>
+            <input type="text" class="form-control el-dtp" data-date-format="yyyy-mm-dd" value="" id="demandDeliDateTo">
+        </div>
+      </div>
+      </div>
+
+	  <div class="navbar-form navbar-left">
+      <div class="form-group  el-mr-15">
+       <label for="prodName" class="el-ml-14">产品名称</label>
+       <input type="text" class="form-control" id="prodName">
+     </div>
+            <button type="submit" class="btn btn-primary sm002-listView-searchBtn"> <i class="fa fa-search"></i>&nbsp;检索</button>
+        </div>
+        <div style="clear: both;"></div>
+       <div class="navbar-form navbar-left">
+        <div class="form-group  el-mr-15">
+          <input type="checkbox"  name="lineStatus" value="1">新建
+          <input type="checkbox" name="lineStatus" value="2">部分发货
+          <input type="checkbox"  name="lineStatus" value="3">已完成
+          <input type="checkbox"  name="lineStatus" value="4">已关闭
+        </div>
+      </div>
+    </div>
+     <!-- search panel end  -->
+
+    <div class="navbarbtn navbar-form">
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">保存</button>
+      </div>
+    </div>
+
+    <div class="tablelist  table-responsive">
+      <table class="table table-bordered table-striped table-hover sm002-listView-table">
+        <thead>
+        <tr>
+          <th class="thW00"></th>
+          <th class="t3">行号</th>
+          <th class="t6">发货通知单号</th>
+          <th class="t6">结算公司</th>
+          <th class="t6">印刷订单号</th>
+          <th class="t6">客户编码</th>
+          <th class="t6">客户名称</th>
+          <th class="t6">产品编号</th>
+          <th class="t6">产品名称</th>
+          <th class="t6">订单正数</th>
+          <th class="t6">发货数量</th>
+          <th class="t6">赠送数量</th>
+          <th class="t7">累计发货数量</th>
+          <th class="t7">累计赠送数量</th>
+          <th class="t6">打包方式</th>
+		<th class="t6">每箱本数</th>
+		<th class="t6">箱数</th>
+		<th class="t6">余数</th>
+          <th class="t6">状态</th>
+          <th class="t6">单位重量</th>
+          <th class="t6">总重量</th>
+          <th class="t6">发货地址</th>
+          <th class="t6">联系人</th>
+          <th class="t6">电话</th>
+          <th class="t6">发货日期</th>
+          <th class="t6">备注</th>
+        </tr>
+      </thead>
+        <tbody class="sm002_data1">
+        </tbody>
+      </table>
+    </div>
+ <div class="paging el-hide stp-paging-sm002 el-mt-15"></div>
+  </div>
+
+  <fieldset>
+    <legend style="margin-bottom:0px;">物流信息</legend>
+    <div class="navbarbtn navbar-form .el-mt-5" >
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">保存</button>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">修改</button>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" id="sm002-2-removeBtn">删除</button>
+      </div>
+    </div>
+
+  <div class="tablelist  table-responsive">
+      <table class="table table-bordered table-striped table-hover sm002-editView-table">
+        <thead>
+        <tr>
+          <th></th>
+          <th>物流公司</th>
+          <th>车牌号</th>
+          <th>司机</th>
+          <th>装卸工</th>
+          <th>过路过桥费</th>
+          <th>物流费用</th>
+          <th>发货数量</th>
+          <th>赠送数量</th>
+          <th>发货日期</th>
+        </tr>
+        </thead>
+        <tbody class="sm002_data2">
+        </tbody>
+      </table>
+    </div>
+    </fieldset>
+
+</div>
+<script id="sm002_table1" type="text/x-handlebars-template">
+  {{#each this}}
+  <tr>
+    <td class="el-center"><input type="radio" name="delinoteProdId" value="{{id}}"></td>
+    <td class="el-center">{{inc @index}}</td>
+    <td class="el-center">{{note.docNo}}</td>
+    <td class="el-left">{{ou.ouName}}</td>
+    <td class="el-center">{{so.soNo}}</td>
+    <td class="el-center">{{cust.custCode}}</td>
+    <td class="el-left">{{cust.custName}}</td>
+    <td class="el-center">{{prod.prodCode}}</td>
+    <td class="el-left">{{prod.prodName}}</td>
+    <td class="el-right">{{soprodQty}}</td>
+    <td class="el-right">{{demandDeliQty}}</td>
+    <td class="el-right">{{demandGiftQty}}</td>
+    <td class="el-right">{{sumDeliQty}}</td>
+    <td class="el-right">{{sumGiftQty}}</td>
+<td class="el-center">
+              牛皮{{packageMethod}}</td>
+<td class="el-right">{{qtyPerpackage}}</td>
+<td class="el-right">{{packageQty}}</td>
+<td class="el-right">{{spareQty}}</td>
+
+    <td><select class="form-control" id="lineStatus" style="width:160px;">
+          <option value="部分发货">部分发货</option>
+          <option value="新建">新建</option>
+        </select></td>
+    <td class="el-right">{{uomWeight}}</td>
+    <td class="el-right">{{weight}}</td>
+    <td class="el-left">{{deliAddrNo}}</td>
+    <td class="el-left">{{contPerson}}</td>
+    <td class="el-center">{{contTel}}</td>
+    <td class="el-center">{{demandDeliDate}}</td>
+    <td class="el-left">{{remark}}</td>
+  </tr>
+    {{/each}}
+  </script>
+  <script id="sm002_table2" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td><input type="checkbox" name="checkItem"></td>
+      <td>  <select class="form-control" id="transCompanyAddrno" style="width:160px;">
+          <option value="圆通">圆通</option>
+        <option value="申通">申通</option>
+        </select></td>
+      <td><input type="text" value="{{cargoNo}}"></td>
+      <td><input type="text" value="{{cargoPic}}"></td>
+      <td><input type="text" value="{{cargoPerson}}"></td>
+      <td><input type="text" value="{{fee1}}"></td>
+      <td><input type="text" value="{{fee2}}"></td>
+<td><input type="text" value="{{deliQty}}"></td>
+<td><input type="text" value="{{giftQty}}"></td>
+<td><input type="text" value="{{deliDate}}" class="el-dtp"></td>
+    </tr>
+    {{/each}}
+  </script>

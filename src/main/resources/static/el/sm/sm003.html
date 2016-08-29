@@ -1,0 +1,99 @@
+<!-- Default panel contents start -->
+<div class="sm003">
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-body">
+      <button class="btn btn-box-tool pull-right search-toggle-btn" title="收缩" type="button"
+              data-original-title="Collapse" id="sm003-collapse-btn">
+        <i class="fa fa-minus"></i>
+      </button>
+      <!-- search panel start -->
+      <div class="navbar-form navbar-left search-toggle-content">
+        <div class="form-group el-mr-15 ">
+          <label >物流公司</label>
+          <div class="el-hbs-supp-select" data-select-class="form-control form-selection el-select" style="display: inline" id="sm003-transSelect"></div>
+        </div>
+        <div class="form-group  el-mr-15">
+          <label >司机</label>
+          <input type="text" class="form-control" id="sm003-cargoPic">
+        </div>
+        <div class="form-group date  el-mr-15">
+          <label>日期</label>
+          <div class="input-group date">
+            <div class="input-group-addon">
+              <i class="fa fa-calendar"></i>
+            </div>
+            <input type="text" class="form-control pull-right el-dtp" data-date-format="yyyy-mm-dd"
+                   id="sm003-demandDeliDateFrom">
+          </div>
+          <label>-</label>
+          <div class="input-group date">
+            <div class="input-group-addon">
+              <i class="fa fa-calendar"></i>
+            </div>
+            <input type="text" class="form-control pull-right el-dtp" data-date-format="yyyy-mm-dd"
+                   id="sm003-demandDeliDateTo">
+          </div>
+        </div>
+      </div>
+      <div class="navbar-form navbar-left search-toggle-content">
+        <div class="form-group el-mr-15 ">
+          <label class="el-ml-15">车牌号</label>
+          <input type="text" class="form-control" id="sm003-cargoNo">
+        </div>
+        <button type="submit" class="btn btn-primary search-btn"><i class="fa fa-search"></i>&nbsp;检索</button>
+      </div>
+    </div>
+    <!-- search panel end -->
+
+    <div class="box-head table-sm003">
+      <table class="table table-bordered stp-table-sm003">
+        <thead>
+        <tr>
+          <th class="t3">行号</th>
+          <th class="t10">结算公司</th>
+          <th class="t6">发货通知单号</th>
+          <th class="t6">印刷订单号</th>
+          <th class="t6">客户名称</th>
+          <th class="t6">物流公司</th>
+          <th class="t6">车牌号</th>
+          <th class="t6">司机</th>
+          <th class="t6">装卸工</th>
+          <th class="t6">过路过桥费</th>
+          <th class="t6">物流费用</th>
+        </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="box-wrap antiscroll-wrap table-sm003">
+      <div class="box-inner">
+        <div class="antiscroll-inner">
+          <table class="table table-bordered table-striped table-hover">
+            <tbody class="sm003_data">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="paging el-hide stp-paging-sm003 el-mt-15"></div>
+  </div>
+
+</div>
+
+<script class="hbs sm003_table" type="text/x-handlebars-template">
+  {{#each this}}
+  <tr>
+    <td class="t3 el-center">{{inc @index}}</td>
+    <td class="t10 el-left">{{ouName}}</td>
+    <td class="t6 el-center">{{docNo}}</td>
+    <td class="t6 el-center">{{soNo}}</td>
+    <td class="t6 el-left">{{custName}}</td>
+    <td class="t6 el-left">{{transCompanyAddrno}}</td>
+    <td class="t6 el-center">{{cargoNo}}</td>
+    <td class="t6 el-left">{{cargoPic}}</td>
+    <td class="t6 el-left">{{cargoPerson}}</td>
+    <td class="t6 el-right">{{fee1}}</td>
+    <td class="t6 el-right">{{fee2}}</td>
+  </tr>
+  {{/each}}
+</script>

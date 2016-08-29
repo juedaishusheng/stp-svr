@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.el.sys.mapper.DbSysMapperTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2016-08-01T03:04:46" hostname="CharlesdeMacBook-Air.local" time="0.068">
+  <properties/>
+  <testcase name="jdeNow" classname="com.el.sys.mapper.DbSysMapperTest" time="0.013"/>
+  <testcase name="yyyymmdd" classname="com.el.sys.mapper.DbSysMapperTest" time="0.014"/>
+  <testcase name="now" classname="com.el.sys.mapper.DbSysMapperTest" time="0.02"/>
+  <testcase name="yyyymmddNumber" classname="com.el.sys.mapper.DbSysMapperTest" time="0.017"/>
+  <system-out><![CDATA[2016-08-01 11:04:46.341  INFO   --- [    Test worker] o.s.t.c.s.DefaultTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-08-01 11:04:46.343  INFO   --- [    Test worker] o.s.t.c.s.DefaultTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@64e01f54, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@719c9c9, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@365a1dce, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1ecdac9c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7ab30aae, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@332dd3b0]
+2016-08-01 11:04:46.349 DEBUG   --- [    Test worker] com.el.sys.mapper.DbSysMapper.jdeNow     : ==>  Preparing: SELECT (TO_NUMBER(TO_CHAR(SYSDATE, 'YYYYDDD')) - 1900000) as jdeDate FROM DUAL 
+2016-08-01 11:04:46.349 DEBUG   --- [    Test worker] com.el.sys.mapper.DbSysMapper.jdeNow     : ==> Parameters: 
+2016-08-01 11:04:46.354 DEBUG   --- [    Test worker] com.el.sys.mapper.DbSysMapper.jdeNow     : <==      Total: 1
+[APP-TEST] jdeNow: 116214
+2016-08-01 11:04:46.365 DEBUG   --- [    Test worker] com.el.sys.mapper.DbSysMapper.yyyymmdd   : ==>  Preparing: SELECT TO_CHAR(SYSDATE, 'YYYYMMDD') AS YYYYMMDD FROM DUAL 
+2016-08-01 11:04:46.366 DEBUG   --- [    Test worker] com.el.sys.mapper.DbSysMapper.yyyymmdd   : ==> Parameters: 
+2016-08-01 11:04:46.372 DEBUG   --- [    Test worker] com.el.sys.mapper.DbSysMapper.yyyymmdd   : <==      Total: 1
+[APP-TEST] yyyymmdd: 20160801
+2016-08-01 11:04:46.382 DEBUG   --- [    Test worker] com.el.sys.mapper.DbSysMapper.now        : ==>  Preparing: SELECT SYSDATE FROM DUAL 
+2016-08-01 11:04:46.383 DEBUG   --- [    Test worker] com.el.sys.mapper.DbSysMapper.now        : ==> Parameters: 
+2016-08-01 11:04:46.392 DEBUG   --- [    Test worker] com.el.sys.mapper.DbSysMapper.now        : <==      Total: 1
+[APP-TEST] now: 2016-08-01 11:04:43.0
+2016-08-01 11:04:46.405 DEBUG   --- [    Test worker] c.e.s.mapper.DbSysMapper.yyyymmddNumber  : ==>  Preparing: SELECT TO_NUMBER(TO_CHAR(SYSDATE, 'YYYYMMDD')) AS YYYYMMDD FROM DUAL 
+2016-08-01 11:04:46.406 DEBUG   --- [    Test worker] c.e.s.mapper.DbSysMapper.yyyymmddNumber  : ==> Parameters: 
+2016-08-01 11:04:46.411 DEBUG   --- [    Test worker] c.e.s.mapper.DbSysMapper.yyyymmddNumber  : <==      Total: 1
+[APP-TEST] yyyymmddNumber: 20160801
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

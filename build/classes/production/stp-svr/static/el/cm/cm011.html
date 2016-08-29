@@ -1,0 +1,85 @@
+<!-- Default panel contents start -->
+<div class="cm011">
+
+  <!--初始化加载列表-->
+  <div class="view listView hide"></div>
+
+  <script class="hbs" data-view-id="listView" type="text/x-handlebars-template">
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-body">
+
+        <div class="navbarbtn navbar-form navbar-left">
+          <div class="form-group"><label>需要核价的订单列表:</label></div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary agreeBtn">同意</button>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary" data-view-id="cm011-returnBtn">退回</button>
+          </div>
+        </div>
+      </div>
+      <!-- Default panel contents end -->
+
+      <div class="tablelist table-responsive">
+        <table class="table table-bordered table-striped table-hover stp-cm011-table">
+          <thead>
+            <tr>
+              <th class="t3"></th>
+              <th class="t3">行号</th>
+              <th class="t6">工厂编号</th>
+              <th class="t6">工厂名称</th>
+              <th class="t7">上月交付准时率</th>
+              <th class="t6">质量等级</th>
+              <th class="t7">印刷难度等级</th>
+              <th class="t7">装订难度等级</th>
+              <th class="t6">产品编号</th>
+              <th class="t6">产品名称</th>
+              <th class="t6">产品总数</th>
+              <th class="t6">分单数量</th>
+              <th class="t6">产品总价</th>
+              <th class="t6">分单总价</th>
+              <th class="t8">变更后分单金额</th>
+              <th class="t6">变更原因</th>
+              <th class="t7">外发成本价</th>
+              <th class="t6">调度员</th>
+              <th class="t6">分单时间</th>
+           </tr>
+          </thead>
+          <tbody class="cm011_order_data">
+          {{#each this}}
+          <tr>
+            <td class="el-center"><input type="radio" name="cm011_table"></td>
+            <td class="el-center">{{inc @index}}</td>
+            <td class="el-left">{{addrNo}}</td>
+            <td class="el-left">{{addrName}}</td>
+            <td class="el-right">{{ontimeRate}}</td>
+            <td class="el-left">{{qualifyLevel}}</td>
+            <td class="el-left">{{printDiffLevel}}</td>
+            <td class="el-left">{{bindDiffLevel}}</td>
+            <td class="el-left">{{prodCode}}</td>
+            <td class="el-left">{{prodName}}</td>
+            <td class="el-right">{{manuQty}}</td>
+            <td class="el-right">{{distQty}}</td>
+            <td class="el-right">{{calcAmt}}</td>
+            <td class="el-right">{{distAmt}}</td>
+            <td class="el-right">{{arguedAmt}}</td>
+            <td class="el-left">{{argueDesc}}</td>
+            <td class="el-right">{{costAmt}}</td>
+            <td class="el-left">{{lockerId}}</td>
+            <td class="el-left">{{lockTs}}</td>
+          </tr>
+          {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- page panel start -->
+    <div class="navpage">
+      <div class="paging el-hide stp-cm011-orderPrice el-mt-10"></div>
+    </div>
+    <!-- page panel end -->
+  </script>
+
+</div>
+

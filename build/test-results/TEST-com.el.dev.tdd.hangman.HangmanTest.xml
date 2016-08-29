@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.el.dev.tdd.hangman.HangmanTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2016-08-01T03:04:41" hostname="CharlesdeMacBook-Air.local" time="0.001">
+  <properties/>
+  <testcase name="start_game" classname="com.el.dev.tdd.hangman.HangmanTest" time="0.0"/>
+  <testcase name="guest_all_letters" classname="com.el.dev.tdd.hangman.HangmanTest" time="0.0"/>
+  <testcase name="guest_a_right_letter_that_is_multiple" classname="com.el.dev.tdd.hangman.HangmanTest" time="0.0"/>
+  <testcase name="guest_a_right_letter" classname="com.el.dev.tdd.hangman.HangmanTest" time="0.0"/>
+  <testcase name="lost_all_chances" classname="com.el.dev.tdd.hangman.HangmanTest" time="0.0"/>
+  <testcase name="guest_a_wrong_letter" classname="com.el.dev.tdd.hangman.HangmanTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

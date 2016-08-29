@@ -1,0 +1,250 @@
+<!-- Default panel contents start -->
+<div class="fm001">
+  <div class="view listView hide"></div>
+
+  <div class="view editView hide"></div>
+
+  <div class="view dblView hide"></div>
+
+  <script class="hbs" data-view-id="listView" type="text/x-handlebars-template">
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-body">
+        <!-- search panel start -->
+        <div class="navbar-form ">
+          <div class="form-group el-mb-15 el-mr-15">
+            <label>结算公司</label>
+            <input type="text" class="form-control" data-input-id="compNo">
+          </div>
+          <div class="form-group el-mb-15 el-mr-15">
+            <label>订单编号</label>
+            <input type="text" class="form-control" data-input-id="docNo">
+          </div>
+          <div class="form-group date el-mb-15 el-mr-15">
+            <label>订单日期自</label>
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <input type="text" class="form-control pull-right el-dtp" data-date-format="yyyy-mm-dd" value="">
+            </div>
+            <label>-</label>
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <input type="text" class="form-control pull-right el-dtp" data-date-format="yyyy-mm-dd" value="">
+            </div>
+          </div>
+          <div class="form-group el-mb-15 ">
+            <button type="button" class="btn btn-primary"><i class="fa fa-search"></i> 检索</button>
+          </div>
+        </div>
+        <div class="navbar-form ">
+          <div class="form-group el-mr-15">
+            <label>客户名称</label>
+            <input type="text" class="form-control" data-input-id="customName">
+          </div>
+          <div class="form-group el-mr-15">
+            <label>产品名称</label>
+            <input type="text" class="form-control" data-input-id="productName">
+          </div>
+          <div class="form-group orderStatus el-mr-15">
+            <label class="el-ml-14">订单状态 </label>
+          </div>
+        </div>
+      </div>
+      <!-- search panel end  -->
+
+      <!-- Default panel contents end -->
+
+      <!-- client button panel start -->
+      <div class="navbarbtn navbar-form el-mt-15 el-mb-15">
+        <div class="form-group">
+          <button type="button" class="btn btn-primary" id="fm001_001">订单明细</button>
+        </div>
+        <div class="form-group">
+          <button type="button" class="btn btn-primary" id="fm001_002">发票查询</button>
+        </div>
+        <div class="form-group">
+          <button type="button" class="btn btn-primary" id="fm001_003">收款查询</button>
+        </div>
+      </div>
+      <!-- client button panel end -->
+
+      <div class="tablelist table-responsive">
+        <table class="table table-striped table-bordered table-hover">
+          <thead>
+          <tr>
+            <th class="thW01"></th>
+            <th class="thW03">结算公司编码</th>
+            <th class="thW03">结算公司名称</th>
+            <th class="thW02">客户编码</th>
+            <th class="thW02">客户名称</th>
+            <th class="thW02">订单编号</th>
+            <th class="thW02">产品编号</th>
+            <th class="thW02">产品名称</th>
+            <th class="thW02">订单日期</th>
+            <th class="thW02">单位</th>
+            <th class="thW02">订单数量</th>
+            <th class="thW03">订单原币单价</th>
+            <th class="thW03">订单原币金额</th>
+            <th class="thW02">币种</th>
+            <th class="thW02">汇率</th>
+            <th class="thW03">订单本币单价</th>
+            <th class="thW03">订单本币金额</th>
+            <th class="thW02 ">发货数量</th>
+            <th class="thW02">开票金额</th>
+            <th class="thW02">回款金额</th>
+            <th class="thW02">逾期款</th>
+            <th class="thW02 ">逾期天数</th>
+            <th class="thW02 ">订单状态</th>
+          </tr>
+          </thead>
+          <tbody>
+          {{#each this}}
+          <tr>
+            <td class="el-center"><input type="radio" name="fm001_table"></td>
+            <td class="el-left">{{code}}</td>
+            <td class="el-left">{{companyName}}</td>
+            <td class="el-left">{{custCode}}</td>
+            <td class="el-left">{{custName}}</td>
+            <td class="el-left">{{soNo}}</td>
+            <td class="el-left">{{prodCode}}</td>
+            <td class="el-left">{{prodName}}</td>
+            <td class="el-left">{{orderDate}}</td>
+            <td class="el-center">{{uom}}</td>
+            <td class="el-right">{{soQty}}</td>
+            <td class="el-right">{{price}}</td>
+            <td class="el-right">{{orderAmt}}</td>
+            <td class="el-center">{{curr}}</td>
+            <td class="el-right">{{currRate}}</td>
+            <td class="el-right">{{soPrice}}</td>
+            <td class="el-right">{{soAmt}}</td>
+            <td class="el-right">{{deliQty}}</td>
+            <td class="el-right">{{invAmt}}</td>
+            <td class="el-right">{{recvAmt}}</td>
+            <td class="el-right">{{overdueAmt}}</td>
+            <td class="el-right">{{overdueDays}}</td>
+            <td class="el-left">{{soStatus}}</td>
+          </tr>
+          {{/each}}
+          <tr>
+            <td></td>
+            <td class="el-left">合计</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="el-right">40000.00</td>
+            <td></td>
+            <td></td>
+            <td class="el-right">40000.00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- page panel start -->
+    <div class="navpage">
+      <nav>
+        <ul class="pagination pagination-sm">
+          <li>
+            <a href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li>
+            <a href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </script>
+  <!-- page panel end -->
+
+  <!-- Default panel end -->
+
+  <!-- showModal demo -->
+  <!--<script  class="hbs" data-view-id="myModal_fm001_001" type="text/x-handlebars-template">
+    <div class="box-body">
+      <div class="form-group">
+        <label for="inputEmail1" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-4">
+          <input type="email" class="form-control" id="inputEmail1" placeholder="Email" value="{{email}}">
+        </div>
+        <label for="inputPassword2" class="col-sm-2 control-label">Password</label>
+        <div class="col-sm-4">
+          <input type="password" class="form-control" id="inputPassword2" placeholder="Password" value="{{password}}">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">Email2</label>
+        <div class="col-sm-4">
+          <input type="email" class="form-control" id="inputEmail3" placeholder="Email" value="{{email}}">
+        </div>
+        <label for="inputPassword4" class="col-sm-2 control-label">Password2</label>
+        <div class="col-sm-4">
+          <input type="password" class="form-control" id="inputPassword4" placeholder="Password" value="{{password}}">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputEmail5" class="col-sm-2 control-label">Email2</label>
+        <div class="col-sm-4">
+          <input type="email" class="form-control" id="inputEmail5" placeholder="Email" value="{{email}}">
+        </div>
+        <label for="inputPassword6" class="col-sm-2 control-label">Password2</label>
+        <div class="col-sm-4">
+          <input type="password" class="form-control" id="inputPassword6" placeholder="Password" value="{{password}}">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputEmail6" class="col-sm-2 control-label">Email2</label>
+        <div class="col-sm-4">
+          <input type="email" class="form-control" id="inputEmail6" placeholder="Email" value="{{email}}">
+        </div>
+        <label for="inputPassword7" class="col-sm-2 control-label">Password2</label>
+        <div class="col-sm-4">
+          <input type="password" class="form-control" id="inputPassword7" placeholder="Password" value="{{password}}">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputEmail8" class="col-sm-2 control-label">Email2</label>
+        <div class="col-sm-4">
+          <input type="email" class="form-control" id="inputEmail8" placeholder="Email" value="{{email}}">
+        </div>
+        <label for="inputPassword9" class="col-sm-2 control-label">Password2</label>
+        <div class="col-sm-4">
+          <input type="password" class="form-control" id="inputPassword9" placeholder="Password" value="{{password}}">
+        </div>
+      </div>
+
+    </div>
+  </script>-->
+
+  <script class="hbs" data-view-id="orderStatus" type="text/x-handlebars-template">
+    <select class="form-control form-selection el-select" name="orderStatus">{{opt this}}</select>
+  </script>
+
+</div>

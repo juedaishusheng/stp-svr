@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html data-layout-decorator="cfg/pure">
+<head>
+  <link rel="stylesheet" data-th-href="@{/static/css/error.css}"/>
+</head>
+<body>
+
+<div class="container" data-layout-fragment="pure">
+
+  <div class="error">
+    <p data-th-text="${error}"></p>
+    <div class="contact">出错了,请联系<a
+      href="mailto:hjh@elitesland.com?subject=[HJH] 系统出错了,请及时对应!">管理员</a>.
+    </div>
+  </div>
+
+</div>
+<!-- /.container -->
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<included>
+
+  <appender name="FILE"
+            class="ch.qos.logback.core.FileAppender">
+    <encoder>
+      <pattern>${FILE_LOG_PATTERN}</pattern>
+    </encoder>
+    <file>${LOG_FILE}</file>
+    <append>false</append>
+  </appender>
+
+  <appender name="BATCH_FILE"
+            class="ch.qos.logback.core.FileAppender">
+    <encoder>
+      <pattern>${FILE_LOG_PATTERN}</pattern>
+    </encoder>
+    <file>${BATCH_LOG_FILE}</file>
+    <append>false</append>
+  </appender>
+
+  <appender name="MONITOR_FILE"
+            class="ch.qos.logback.core.FileAppender">
+    <encoder>
+      <pattern>${FILE_LOG_PATTERN}</pattern>
+    </encoder>
+    <file>${MONITOR_LOG_FILE}</file>
+    <append>false</append>
+  </appender>
+
+</included>

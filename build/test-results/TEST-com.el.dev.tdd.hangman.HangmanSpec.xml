@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.el.dev.tdd.hangman.HangmanSpec" tests="6" skipped="0" failures="0" errors="0" timestamp="2016-08-01T03:04:41" hostname="CharlesdeMacBook-Air.local" time="0.074">
+  <properties/>
+  <testcase name="开始游戏" classname="com.el.dev.tdd.hangman.HangmanSpec" time="0.011"/>
+  <testcase name="猜错了一个字母" classname="com.el.dev.tdd.hangman.HangmanSpec" time="0.011"/>
+  <testcase name="猜中了一个字母" classname="com.el.dev.tdd.hangman.HangmanSpec" time="0.0"/>
+  <testcase name="猜中了一个出现多次的字母" classname="com.el.dev.tdd.hangman.HangmanSpec" time="0.001"/>
+  <testcase name="10次机会都用掉了,失败:(" classname="com.el.dev.tdd.hangman.HangmanSpec" time="0.049"/>
+  <testcase name="全猜对了,成功:)" classname="com.el.dev.tdd.hangman.HangmanSpec" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

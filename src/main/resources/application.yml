@@ -1,0 +1,36 @@
+# (开发环境) 会话超时时间(秒): 默认30分钟, 最少1分钟
+server:
+  port: 9000
+  session:
+    timeout: 2400 # (生产环境) 会话超时时间(分): 默认30分钟, 配置位于: ${catalina.base}/conf/web.xml
+
+# @see http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+spring:
+  profiles:
+    active: ${STP_APP_PROFILE}
+
+# 审计信息
+audit:
+  progId: STPCloud
+  nodeId: ${STP_SVR_ID}
+
+# 认证授权
+realm:
+  type: JDBC # SIMPLE, JDBC, CAS
+  appServiceUrl: ${STP_SERVICE_URL}
+  cas:
+    casServiceUrl: ${SSO_SERVICE_URL}
+  simple:
+    accounts:
+      -
+        username: dev
+        password: password
+        role: DEV
+      -
+        username: admin
+        password: password
+        role: SYS
+
+# 压力测试
+bench:
+  load: false

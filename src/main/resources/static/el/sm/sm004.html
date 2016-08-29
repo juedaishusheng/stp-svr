@@ -1,0 +1,120 @@
+<!-- Default panel contents start -->
+<div class="sm004">
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-body">
+
+      <!-- search panel start -->
+      <div class="navbar-form navbar-left">
+        <div class="form-group el-mr-15">
+          <label for="soNo" class="el-ml-14">印刷订单号</label>
+          <input type="text" class="form-control" id="sm004-soNo">
+        </div>
+        <div class="form-group el-mr-15">
+          <label for="custName">客户名称</label>
+          <input type="text" class="form-control" id="sm004-custName">
+        </div>
+        <div class="form-group  el-mr-15">
+          <label for="prodName">产品名称</label>
+          <input type="text" class="form-control" id="sm004-prodName">
+        </div>
+        <button type="submit" class="btn btn-primary search-btn"><i class="fa fa-search"></i>&nbsp;检索</button>
+      </div>
+      <!-- search panel end -->
+      <div class="navbar-form navbar-left">
+        <div class="form-group el-mr-15">
+          <label>实际发货日期</label>
+          <div class="input-group date">
+            <div class="input-group-addon">
+              <i class="fa fa-calendar"></i>
+            </div>
+            <input type="text" class="form-control pull-right el-dtp" data-date-format="yyyy-mm-dd" id="sm004-demandDeliDateFrom">
+          </div>
+          <label>-</label>
+          <div class="input-group date">
+            <div class="input-group-addon">
+              <i class="fa fa-calendar"></i>
+            </div>
+            <input type="text" class="form-control pull-right el-dtp" data-date-format="yyyy-mm-dd" id="sm004-demandDeliDateTo">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box-head table-sm004">
+      <table class="table table-bordered stp-table-sm003 stp-table-sm004">
+        <thead>
+        <tr>
+          <th class="t3">行号</th>
+          <th class="t6">发货通知单号</th>
+          <th class="t10">结算公司</th>
+          <th class="t6">印刷订单号</th>
+          <th class="t6">客户编码</th>
+          <th class="t6">客户名称</th>
+          <th class="t6">产品编码</th>
+          <th class="t6">产品名称</th>
+          <th class="t6">订单正数</th>
+          <th class="t6">要求发货数量</th>
+          <th class="t6">要求赠送数量</th>
+          <th class="t6">本次送货数量</th>
+          <th class="t6">本次赠送数量</th>
+          <th class="t6">打包方式</th>
+          <th class="t6">每箱本数</th>
+          <th class="t6">箱数</th>
+          <th class="t6">余数</th>
+          <th class="t6">单位重量</th>
+          <th class="t6">总重量</th>
+          <th class="t6">发货地址</th>
+          <th class="t6">联系人</th>
+          <th class="t6">电话</th>
+          <th class="t6">要求发货日期</th>
+          <th class="t6">实际发货日期</th>
+          <th class="t6">备注</th>
+        </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="box-wrap antiscroll-wrap table-sm004">
+      <div class="box-inner">
+        <div class="antiscroll-inner">
+          <table class="table table-bordered table-striped table-hover">
+            <tbody class="sm004_data">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="paging el-hide stp-paging-sm004 el-mt-15"></div>
+  </div>
+
+</div>
+<script class="hbs hbs-tables" type="text/x-handlebars-template">
+  {{#each this}}
+  <tr>
+    <td class="t3 el-center">{{inc @index}}</td>
+    <td class="t6 el-center">{{docNo}}</td>
+    <td class="t10 el-left">{{ouName}}</td>
+    <td class="t6 el-center">{{soNo}}</td>
+    <td class="t6 el-center">{{custCode}}</td>
+    <td class="t6 el-left">{{custName}}</td>
+    <td class="t6 el-center">{{prodCode}}</td>
+    <td class="t6 el-left">{{prodName}}</td>
+    <td class="t6 el-right">{{soprodQty}}</td>
+    <td class="t6 el-right">{{demandDeliQty}}</td>
+    <td class="t6 el-right">{{demandGiftQty}}</td>
+    <td class="t6 el-right">{{deliQty}}</td>
+    <td class="t6 el-right">{{giftQty}}</td>
+    <td class="t6 el-center">{{packageMethod}}</td>
+    <td class="t6 el-right">{{QTY_PERPACKAGE}}</td>
+    <td class="t6 el-right">{{PACKAGE_QTY}}</td>
+    <td class="t6 el-right">{{SPARE_QTY}}</td>
+    <td class="t6 el-right">{{uomWeight}}</td>
+    <td class="t6 el-right">{{weight}}</td>
+    <td class="t6 el-left">{{deliAddrNo}}</td>
+    <td class="t6 el-left">{{contPerson}}</td>
+    <td class="t6 el-center">{{contTel}}</td>
+    <td class="t6 el-center">{{demandDeliDateYmd}}</td>
+    <td class="t6 el-center">{{deliDateYmd}}</td>
+    <td class="t6 el-left">{{remark}}</td>
+  </tr>
+  {{/each}}
+</script>

@@ -1,0 +1,109 @@
+<!-- Default panel contents start -->
+<div class="sm005">
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-body">
+<form id="sm005_serach_form" >
+      <!-- search panel start -->
+      <div class="navbar-form navbar-left">
+        <div class="form-group  el-mr-15">
+          <label for="soNo">印刷订单号</label>
+          <input type="text" class="form-control" id="soNo" >
+        </div>
+        <div class="form-group  el-mr-15">
+          <label for="custName">客户名称</label>
+          <input type="text" class="form-control" id="custName" >
+        </div>
+        <div class="form-group  el-mr-15">
+          <label for="outWhName">调出仓库</label>
+          <input type="text" class="form-control" id="outWhName" >
+        </div>
+ <button type="submit" class="btn btn-primary search-btn"> <i class="fa fa-search"></i>&nbsp;检索</button>
+
+      </div>
+      <!-- search panel end -->
+    <div class="navbar-form navbar-left">
+      <div class="form-group  el-mr-15">
+          <label for="inWhName" class="el-ml-12">调入仓库</label>
+          <input type="text" class="form-control" id="inWhName">
+        </div>
+      <div class="form-group date  el-mr-15">
+        <label for="docDateFrom">单据日期</label>
+        <div class="input-group date">
+          <div class="input-group-addon">
+            <i class="fa fa-calendar"></i>
+          </div>
+          <input type="text" class="form-control pull-right el-dtp" data-date-format="yyyy-mm-dd" value="" id="docDateFrom">
+        </div>
+        <label>-</label>
+        <div class="input-group date">
+          <div class="input-group-addon">
+            <i class="fa fa-calendar"></i>
+          </div>
+          <input type="text" class="form-control pull-right el-dtp" data-date-format="yyyy-mm-dd" value="" id="docDateTo">
+        </div>
+      </div>
+
+    </div>
+  <div class="navbar-form navbar-left">
+      <div class="el-hbs-udc-select" data-udc-name="DEMO"  data-udc-code="03" data-select-name="status"></div>
+    <div class="el-hbs-udc-select" data-udc-name="DEMO"  data-udc-code="01" data-select-name="status"></div>
+    <div class="el-hbs-udc-select" data-udc-name="DEMO"  data-udc-code="02" data-select-name="status"></div>
+    <div class="el-hbs-udc-select" data-udc-name="DEMO"  data-udc-code="" data-select-name="status"></div>
+    </div>
+</form>
+    </div>
+    <div class="tablelist table-responsive">
+      <table class="table table-bordered table-striped table-hover stp-table-sm005">
+        <thead>
+        <tr>
+          <th class="thW01">行号</th>
+          <th class="thW02">调拨单号</th>
+          <th class="thW02">单据日期</th>
+          <th class="thW02">印刷订单号</th>
+          <th class="thW02">客户编码</th>
+          <th class="thW02">客户名称</th>
+          <th class="thW02">纸张编码</th>
+          <th class="thW02">纸张名称</th>
+          <th class="thW02">纸张类型</th>
+          <th class="thW02">品牌</th>
+          <th class="thW02">厂家</th>
+          <th class="thW02">长</th>
+          <th class="thW02">宽</th>
+          <th class="thW02">克重</th>
+          <th class="thW02">调拨数量</th>
+          <th class="thW02">调出仓库</th>
+          <th class="thW02">调入仓库</th>
+        </tr>
+        </thead>
+        <tbody class="sm005_data">
+        </tbody>
+      </table>
+    </div>
+    <div class="paging el-hide stp-paging-sm005 el-mt-15"></div>
+  </div>
+</div>
+
+<script id="sm005_table" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="el-center">{{inc @index}}</td>
+      <td class="el-center">{{docNo}}</td>
+      <td class="el-center">{{docDate}}</td>
+<td class="el-center">{{so.soNo}}</td>
+<td class="el-center">{{cust.custCode}}</td>
+<td class="el-center">{{cust.custName}}</td>
+<td class="el-center">{{item.itemCode}}</td>
+<td class="el-center">{{item.itemName}}</td>
+<td class="el-center">{{item.cat3}}</td>
+<td class="el-center">{{item.prp2}}</td>
+<td class="el-center">{{item.prp1}}</td>
+<td class="el-center">{{item.cat7}}</td>
+<td class="el-center">{{item.cat8}}</td>
+<td class="el-center">{{item.cat9}}</td>
+<td class="el-center">{{planOutQty}}</td>
+<td class="el-center">{{outWh.whName}}</td>
+<td class="el-center">{{inWh.whName}}</td>
+    </tr>
+    {{/each}}
+</script>

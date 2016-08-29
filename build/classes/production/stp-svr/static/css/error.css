@@ -1,0 +1,19 @@
+/*
+ * EL UI - 1.0.0
+ * http://www.elitesland.com/
+ *
+ * Copyright 2016 Elitesland.com
+ */
+
+@charset "UTF-8";
+
+.error {
+  left: 0;
+  background: url("../images/error.png") no-repeat 50% 4em;
+}
+
+.contact {
+  text-align: center;
+  font-size: 3em;
+  margin-top: 8em;
+}

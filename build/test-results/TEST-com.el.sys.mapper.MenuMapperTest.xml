@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.el.sys.mapper.MenuMapperTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-08-01T03:04:46" hostname="CharlesdeMacBook-Air.local" time="0.028">
+  <properties/>
+  <testcase name="menus" classname="com.el.sys.mapper.MenuMapperTest" time="0.028"/>
+  <system-out><![CDATA[2016-08-01 11:04:46.540  INFO   --- [    Test worker] o.s.t.c.s.DefaultTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-08-01 11:04:46.540  INFO   --- [    Test worker] o.s.t.c.s.DefaultTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@f6eaec5, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@45074f3d, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@74695246, org.springframework.test.context.support.DirtiesContextTestExecutionListener@46445b74, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3c26ddff, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@432713e1]
+2016-08-01 11:04:46.547 DEBUG   --- [    Test worker] com.el.sys.mapper.MenuMapper.menus       : ==>  Preparing: select menu as menuId, menu_icon as menuIco, menu_label as menuLbl, menu_fixed as menuFix, menu_upper as upperId, menu_order as menuOrder, menu_roles as menuRoles from s_menus order by menu_upper, menu_order 
+2016-08-01 11:04:46.548 DEBUG   --- [    Test worker] com.el.sys.mapper.MenuMapper.menus       : ==> Parameters: 
+2016-08-01 11:04:46.570 DEBUG   --- [    Test worker] com.el.sys.mapper.MenuMapper.menus       : <==      Total: 27
+[APP-TEST] menus: 27
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

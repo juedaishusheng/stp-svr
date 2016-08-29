@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.el.util.DateUtilTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2016-08-01T03:04:46" hostname="CharlesdeMacBook-Air.local" time="0.002">
+  <properties/>
+  <testcase name="fromYmd" classname="com.el.util.DateUtilTest" time="0.002"/>
+  <testcase name="toYmd" classname="com.el.util.DateUtilTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

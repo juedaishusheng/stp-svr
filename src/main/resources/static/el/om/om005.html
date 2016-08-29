@@ -1,0 +1,133 @@
+<!-- Default panel contents start -->
+<div class="om005">
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-body">
+
+      <!-- search panel start -->
+      <div class="navbar-form navbar-left">
+        <div class="form-group el-mr-15">
+          <label for="soNo">印刷订单号</label>
+          <input type="text" class="form-control" id="om005-soNo">
+        </div>
+        <div class="form-group el-mr-15">
+          <label for="custName">&nbsp;&nbsp;&nbsp;&nbsp;客户名称</label>
+          <input type="text" class="form-control" id="om005-custName">
+        </div>
+        <div class="form-group el-mr-15">
+          <label for="prodName">&nbsp;&nbsp;&nbsp;&nbsp;产品名称</label>
+          <input type="text" class="form-control" id="om005-prodName">
+        </div>
+        <button type="submit" class="btn btn-primary search-btn"><i class="fa fa-search"></i>&nbsp;检索</button>
+      </div>
+
+      <div class="navbar-form navbar-left">
+
+        <div class="form-group el-mr-15">
+          <label for="datefrom">发货日期从</label>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+            <input type="text" class="form-control el-dtp" id="om005-demandDeliDateFrom">
+          </div>
+        </div>
+        <div class="form-group el-mr-15">
+          <label for="dateTo">发货日期至</label>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+            <input type="text" class="form-control el-dtp" id="om005-demandDeliDateTo">
+          </div>
+        </div>
+      </div>
+      <div style="clear:both;"></div>
+      <div class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="checkbox" name="check1">新建
+          <input type="checkbox" name="check2">部分发货
+          <input type="checkbox" name="check3">已完成
+          <input type="checkbox" name="check3">已关闭
+        </div>
+        <div class="form-group">
+
+        </div>
+      </div>
+      <!-- search panel end  -->
+
+    </div>
+
+
+    <div class="box-head table-om005">
+      <table class="table table-bordered om005-listView-table">
+        <thead>
+        <tr>
+          <th class="t3">行号</th>
+          <th class="t10">发货通知单号</th>
+          <th class="t10">结算公司</th>
+          <th class="t10">印刷订单号</th>
+          <th class="t10">客户编码</th>
+          <th class="t10">客户名称</th>
+          <th class="t10">产品编号</th>
+          <th class="t10">产品名称</th>
+          <th class="t10">订单正数</th>
+          <th class="t10">发货数量</th>
+          <th class="t10">赠送数量</th>
+          <th class="t10">累计发货数量</th>
+          <th class="t10">累计赠送数量</th>
+          <th class="t10">状态</th>
+          <th class="t10">单位重量</th>
+          <th class="t10">总重量</th>
+          <th class="t10">发货地址</th>
+          <th class="t10">联系人</th>
+          <th class="t10">电话</th>
+          <th class="t10">发货日期</th>
+          <th class="t10">备注</th>
+        </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="box-wrap antiscroll-wrap table-om005">
+      <div class="box-inner">
+        <div class="antiscroll-inner">
+          <table class="table table-bordered table-striped table-hover">
+            <tbody id="om005-listViewData">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- page panel start -->
+  <div class="paging el-hide om005-listView-paging el-mt-15"></div>
+  <!-- page panel end -->
+
+</div>
+<!-- Default panel end -->
+
+<script id="om005-listViewTpl" type="text/x-handlebars-template">
+  {{#each this}}
+  <tr>
+    <td class="t3 el-center">{{inc @index}}</td>
+    <td class="t10 el-center">{{docNo}}</td>
+    <td class="t10 el-center">{{ouName}}</td>
+    <td class="t10 el-center">{{soNo}}</td>
+    <td class="t10 el-center">{{custCode}}</td>
+    <td class="t10 el-center">{{custName}}</td>
+    <td class="t10 el-center">{{prodCode}}</td>
+    <td class="t10 el-center">{{prodName}}</td>
+    <td class="t10 el-center">{{fomanuQty}}</td>
+    <td class="t10 el-center">{{demandDeliQty}}</td>
+    <td class="t10 el-center">{{demandGiftQty}}</td>
+    <td class="t10 el-center">{{sumDeliQty}}</td>
+    <td class="t10 el-center">{{sumGiftQty}}</td>
+    <td class="t10 el-center">{{lineStatus}}</td>
+    <td class="t10 el-center">{{uomWeight}}</td>
+    <td class="t10 el-center">{{weight}}</td>
+    <td class="t10 el-center">{{deliAddrNo}}</td>
+    <td class="t10 el-center">{{contPerson}}</td>
+    <td class="t10 el-center">{{contTel}}</td>
+    <td class="t10 el-center">{{demandDeliDateYmd}}</td>
+    <td class="t10 el-center">{{remark}}</td>
+  </tr>
+  {{/each}}
+</script>

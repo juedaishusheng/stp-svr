@@ -1,0 +1,161 @@
+<!-- Default panel contents start -->
+<div class="fm005">
+
+    <div class="view listView hide"></div>
+
+
+  <script class="hbs" data-view-id="listView" type="text/x-handlebars-template">
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-body">
+
+      <!-- search panel start -->
+      <div class="navbar-form ">
+        <div class="form-group el-mb-15 el-mr-15">
+          <label for="compNo">结算公司</label>
+          <input type="text" class="form-control" id="compNo">
+        </div>
+        <div class="form-group el-mb-15 el-mr-15">
+          <label for="docNo">采购单编号</label>
+          <input type="text" class="form-control" id="docNo">
+        </div>
+        <div class="form-group el-mb-15 el-mr-15">
+          <label>采购日期自</label>
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="fa fa-calendar"></i>
+            </div>
+            <input type="text" class="form-control pull-right el-dtp" data-date-format="yyyy-mm-dd" value="">
+          </div>
+          <label>-</label>
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="fa fa-calendar"></i>
+            </div>
+            <input type="text" class="form-control pull-right el-dtp" data-date-format="yyyy-mm-dd" value="">
+          </div>
+        </div>
+        <div class="form-group el-mb-15 ">
+        <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> 检索</button>
+          </div>
+      </div>
+      <div class="navbar-form ">
+        <div class="form-group el-mr-15">
+          <label for="productName">产品名称</label>
+          <input type="text" class="form-control" id="productName">
+        </div>
+        <div class="form-group el-mr-15">
+          <label for="customName">供应商名称</label>
+          <input type="text" class="form-control" id="customName">
+        </div>
+
+      </div>
+      <!-- search panel end  -->
+
+    </div>
+    <!-- Default panel contents end -->
+
+    <div class="tablelist table-responsive">
+      <table class="table table-bordered table-striped table-hover">
+        <thead>
+        <tr>
+          <th class="thW03">结算公司编码</th>
+          <th class="thW03">结算公司名称</th>
+          <th class="thW03">供应商编码</th>
+          <th class="thW03">供应商名称</th>
+          <th class="thW03">采购单编号</th>
+          <th class="thW02">产品编号</th>
+          <th class="thW02">产品名称</th>
+          <th class="thW02">行号</th>
+          <th class="thW02">采购数量</th>
+          <th class="thW02">单位</th>
+          <th class="thW02">单价</th>
+          <th class="thW02">采购金额</th>
+          <th class="thW03">采购日期</th>
+          <th class="thW03">采购入库数量</th>
+          <th class="thW03">采购入库金额</th>
+          <th class="thW03">已开票金额</th>
+          <th class="thW03">未开票金额</th>
+          <th class="thW03">已付款金额</th>
+          <th class="thW03">未付款金额</th>
+          <th class="thW03">印刷订单编号</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each this}}
+        <tr>
+          <td class="el-left">{{ouId}}</td>
+          <td class="el-left">{{ouName}}</td>
+          <td class="el-left">{{suppCode}}</td>
+          <td class="el-left">{{suppName}}</td>
+          <td class="el-left">{{poNo}}</td>
+          <td class="el-left">{{prodCode}}</td>
+          <td class="el-left">{{prodName}}</td>
+          <td class="el-left">{{lineNo}}</td>
+          <td class="el-left">{{qty}}</td>
+          <td class="el-center">{{uom}}</td>
+          <td class="el-right">{{price}}</td>
+          <td class="el-right">{{amt}}</td>
+          <td class="el-left">{{validFromYmd}}</td>
+          <td class="el-right">{{whinQty}}</td>
+          <td class="el-right">{{whinAmt}}</td>
+          <td class="el-right">{{invAmt}}</td>
+          <td class="el-right">{{noinvAmt}}</td>
+          <td class="el-right">{{payAmt}}</td>
+          <td class="el-right">{{nopayAmt}}</td>
+          <td class="el-right">{{soNo}}</td>
+        </tr>
+        {{/each}}
+        <tr>
+          <td class="el-left">合计</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="el-right">33400.00</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="el-right">33400.00</td>
+          <td class="el-right">33000.00</td>
+          <td></td>
+          <td class="el-right">400.00</td>
+          <td></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- page panel start -->
+  <div class="navpage">
+    <nav>
+      <ul class="pagination pagination-sm">
+        <li>
+          <a href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li>
+          <a href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- page panel end -->
+</script>
+</div>
+<!-- Default panel end -->

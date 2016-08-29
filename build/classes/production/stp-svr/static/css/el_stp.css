@@ -1,0 +1,69 @@
+/*
+ * EL UI - 1.0.0
+ * http://www.elitesland.com/
+ *
+ * Copyright 2016 Elitesland.com
+ */
+table>thead>tr>th.sorting {
+  padding-right: 25px !important;
+}
+table>thead>tr>th, table>thead>tr>th.sorting {
+  text-align: center;
+}
+table>thead .sorting {
+  cursor: pointer !important;
+  position: relative;
+}
+table>thead .sorting:after {
+  content: "\e150";
+}
+table>thead .sorting.asc:after {
+  content: "\e155";
+}
+table>thead .sorting.desc:after {
+  content: "\e156";
+}
+table>thead .sorting:after,
+table>thead .sorting.asc:after,
+table>thead .sorting.desc:after {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-family: 'Glyphicons Halflings';
+  opacity: 0.5;
+}
+table.table {
+  margin-bottom: 10px;
+}
+
+.pagination {
+  margin-top: 0px;
+}
+ul.pagination>li>span {
+  width: 42px;
+  text-align: center;
+  cursor: pointer;
+}
+ul.pagination>li.previous>span,
+ul.pagination>li.next>span {
+  width: 68px;
+}
+
+.paging {
+  text-align: right;
+}
+.el-hide {
+  display: none;
+}
+.el-show {
+  display: block;
+}
+.el-left {
+  text-align: left;
+}
+.el-right {
+  text-align: right;
+}
+.el-center {
+  text-align: center;
+}

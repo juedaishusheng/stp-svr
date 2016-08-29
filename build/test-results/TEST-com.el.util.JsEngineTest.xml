@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.el.util.JsEngineTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2016-08-01T03:04:46" hostname="CharlesdeMacBook-Air.local" time="1.005">
+  <properties/>
+  <testcase name="eval" classname="com.el.util.JsEngineTest" time="0.924"/>
+  <testcase name="getFunctor" classname="com.el.util.JsEngineTest" time="0.079"/>
+  <testcase name="loadScripts" classname="com.el.util.JsEngineTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

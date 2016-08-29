@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.el.dev.validation.DevValidationServiceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-08-01T03:04:42" hostname="CharlesdeMacBook-Air.local" time="0.265">
+  <properties/>
+  <testcase name="throws_violation_exception_when_2_arguments_invalid" classname="com.el.dev.validation.DevValidationServiceTest" time="0.196"/>
+  <testcase name="throws_violation_exception_when_return_value_too_long" classname="com.el.dev.validation.DevValidationServiceTest" time="0.051"/>
+  <testcase name="throws_violation_exception_when_all_arguments_invalid" classname="com.el.dev.validation.DevValidationServiceTest" time="0.004"/>
+  <testcase name="creates_a_user" classname="com.el.dev.validation.DevValidationServiceTest" time="0.003"/>
+  <testcase name="throws_violation_exception_when_email_invalid_arguments_invalid" classname="com.el.dev.validation.DevValidationServiceTest" time="0.005"/>
+  <system-out><![CDATA[2016-08-01 11:04:41.812  INFO   --- [    Test worker] o.s.t.c.s.DefaultTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-08-01 11:04:41.832  INFO   --- [    Test worker] o.s.t.c.s.DefaultTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7832d512, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7e39c0b1, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@512562a1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@65cb792b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@b3faac5, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3bb3df5b]
+2016-08-01 11:04:41.938  INFO   --- [    Test worker] o.s.c.support.GenericApplicationContext  : Refreshing org.springframework.context.support.GenericApplicationContext@422866fb: startup date [Mon Aug 01 11:04:41 CST 2016]; root of context hierarchy
+2016-08-01 11:04:42.239  INFO   --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'devValidationServiceTest.Config' of type [class com.el.dev.validation.DevValidationServiceTest$Config$$EnhancerBySpringCGLIB$$3aa45b81] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-01 11:04:42.663 DEBUG   --- [    Test worker] c.e.dev.validation.DevValidationService  : [SMS] validated: too_long_username:valid@user@domain.com
+2016-08-01 11:04:42.686 DEBUG   --- [    Test worker] c.e.dev.validation.DevValidationService  : [SMS] validated: valid:valid@user@domain.com
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

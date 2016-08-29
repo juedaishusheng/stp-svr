@@ -1,0 +1,9 @@
+2016-08-29 10:28:53.452  INFO 2327 --- [localhost-startStop-1] com.el.cfg.SessionMonitor                : [APP-SESS] session monitor created.
+2016-08-29 10:29:11.388  INFO 2327 --- [http-nio-9000-exec-5] com.el.cfg.SessionMonitor                : [APP-SESS] sessionCreated: ED2687D0C09946F3FAF6766020092948 - 2400s
+2016-08-29 11:10:53.925  INFO 2327 --- [ContainerBackgroundProcessor[StandardEngine[Tomcat].StandardHost[localhost].StandardContext[]]] com.el.cfg.SessionMonitor                : [APP-SESS] sessionDestroyed: ED2687D0C09946F3FAF6766020092948
+2016-08-29 11:26:28.247  INFO 2327 --- [http-nio-9000-exec-10] com.el.cfg.SessionMonitor                : [APP-SESS] sessionCreated: C2A48AB61C90DBA1A4804D358E219A37 - 2400s
+2016-08-29 12:37:51.464  INFO 2327 --- [ContainerBackgroundProcessor[StandardEngine[Tomcat].StandardHost[localhost].StandardContext[]]] com.el.cfg.SessionMonitor                : [APP-SESS] sessionDestroyed: C2A48AB61C90DBA1A4804D358E219A37
+2016-08-29 14:31:02.062  INFO 2327 --- [http-nio-9000-exec-8] com.el.cfg.SessionMonitor                : [APP-SESS] sessionCreated: 9C9E5D24573ADD17EFBE6BA71985245A - 2400s
+2016-08-29 14:31:02.062  INFO 2327 --- [http-nio-9000-exec-6] com.el.cfg.SessionMonitor                : [APP-SESS] sessionCreated: EBAD5E00726FC74CDF47E8E805721963 - 2400s
+2016-08-29 14:31:02.069  INFO 2327 --- [http-nio-9000-exec-8] com.el.cfg.SessionMonitor                : [APP-SESS] sessionCreated: 3378DED3EA08229C83FDF74770771E6F - 2400s
+2016-08-29 14:31:02.070  INFO 2327 --- [http-nio-9000-exec-3] com.el.cfg.SessionMonitor                : [APP-SESS] sessionCreated: F17EE2EE8CF3F02CCB5CEBE5B5DC06D1 - 2400s

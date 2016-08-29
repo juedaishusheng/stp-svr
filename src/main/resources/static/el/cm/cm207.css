@@ -1,0 +1,75 @@
+/*
+ * EL UI - 1.0.0
+ * http://www.elitesland.com/
+ *
+ * Copyright 2016 Elitesland.com
+ */
+.cm207 {
+}
+
+.cm207 > .panel > .panel-heading {
+  background-color: #f4f4f4;
+}
+
+/***面板左右  标题和返回按钮 布局***/
+.panel-heading { height: 50px;line-height: 50px;}
+.panel-heading h1{float: left; font-size: 20px;}
+.panel-heading .floatRight {
+  float: right;
+  margin-right: 15px;
+}
+
+.cm207-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+
+.cm207 > .panel > .tablelist {
+  width: 100%;
+}
+.cm207 > .navpage{
+  width: 100%;
+}
+
+.cm207 > .view > .panel  .selection-wd01 {
+  min-width: 196px;
+}
+
+.cm207 >.panel >.panel-body > .navbar-form > .form-group {
+  margin: auto 18px;
+}
+
+.tablelist > .table > thead > tr > .t3 {
+  min-width: 61px;
+}
+.tablelist > .table > thead > tr > .t6 {
+  min-width: 100px;
+}
+.tablelist > .table > thead > tr > .t7 {
+  min-width: 120px;
+}
+.tablelist > .table > thead > tr > .t8 {
+  min-width: 140px;
+}
+.tablelist > .table > thead > tr > .t10 {
+  min-width: 160px;
+}
+
+.tablelist > .table > thead > tr > .t11 {
+  min-width: 180px;
+}
+.cm207 > .listView > .panel > .panel-body {
+  background-color: #f4f4f4;
+}
+
+.cm207 .navbar-form .form-group {
+  padding-right: 40px;
+  padding-bottom: 20px;
+}
+
+.cm207 .w5 {
+  width: 70px;
+}

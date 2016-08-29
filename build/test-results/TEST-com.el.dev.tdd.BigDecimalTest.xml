@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.el.dev.tdd.BigDecimalTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-08-01T03:04:41" hostname="CharlesdeMacBook-Air.local" time="0.003">
+  <properties/>
+  <testcase name="movePoint" classname="com.el.dev.tdd.BigDecimalTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

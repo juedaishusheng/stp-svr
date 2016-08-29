@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<!--
+防止当前 DB 连接用户访问其他 SCHEMA 的同名表:
+
+1. 查看当前用户权限
+
+```sql
+SELECT * FROM USER_SYS_PRIVS;
+SELECT * FROM USER_TAB_PRIVS;
+SELECT * FROM USER_ROLE_PRIVS;
+```
+
+2. 如发现有任何`ANY`系统权限, 可以使用一下SQL生成REVOKE语句, 并用`system`用户执行以收回当前用户**任意**访问权限。
+
+```sql
+SELECT 'REVOKE ' || PRIVILEGE || ' FROM ' || USERNAME || ';'
+  FROM USER_SYS_PRIVS WHERE PRIVILEGE LIKE '%ANY%';
+```
+-->
+
+<!-- @see http://www.mybatis.org/generator/configreference/xmlconfig.html -->
+<generatorConfiguration>
+
+  <classPathEntry location="${jdbc.jar}"/>
+
+  <context id="MySqlDomain" targetRuntime="MyBatis3Simple">
+
+    <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
+    <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>
+    <plugin type="com.el.mybatis.plugins.DbCommentPlugin"/>
+    <plugin type="com.el.mybatis.plugins.DbAuditPlugin"/>
+
+    <commentGenerator>
+      <property name="suppressAllComments" value="true"/>
+    </commentGenerator>
+
+    <jdbcConnection driverClass="${jdbc.driverClassName}"
+                    connectionURL="${jdbc.url}"
+                    userId="${jdbc.username}"
+                    password="${jdbc.password}">
+      <property name="remarks" value="true"/>
+    </jdbcConnection>
+
+    <javaTypeResolver type="${gen.jtresolver}">
+      <property name="forceBigDecimals" value="false"/> <!-- default -->
+    </javaTypeResolver>
+
+    <javaModelGenerator
+      targetPackage="${gen.pkg.domain}"
+      targetProject="${gen.src.dir}/java">
+      <property name="enableSubPackages" value="false"/> <!-- default -->
+    </javaModelGenerator>
+
+    <sqlMapGenerator
+      targetPackage="${gen.pkg.mapper}"
+      targetProject="${gen.src.dir}/resources">
+      <property name="enableSubPackages" value="false"/> <!-- default -->
+    </sqlMapGenerator>
+
+    <javaClientGenerator type="ANNOTATEDMAPPER"
+                         targetPackage="${gen.pkg.mapper}"
+                         targetProject="${gen.src.dir}/java">
+      <property name="enableSubPackages" value="false"/> <!-- default -->
+    </javaClientGenerator>
+
+    <!--
+  SELECT (   '<table tableName="'
+          || table_name
+          || '" domainObjectName="'
+          || REPLACE (INITCAP (table_name), '_')
+          || '" enableInsert="false" enableDeleteByPrimaryKey="false" enableUpdateByPrimaryKey="false"/>') AS mapper
+    FROM user_tables
+   WHERE table_name LIKE 'F_%'
+ORDER BY table_name;
+    -->
+    <table tableName="F41021" domainObjectName="F41021" enableInsert="false" enableDeleteByPrimaryKey="false"
+           enableUpdateByPrimaryKey="false"/>
+    <table tableName="F4211" domainObjectName="F4211" enableInsert="false" enableDeleteByPrimaryKey="false"
+           enableUpdateByPrimaryKey="false"/>
+
+    <!--
+  SELECT (   '<table tableName="'
+          || table_name
+          || '" domainObjectName="'
+          || REPLACE (INITCAP (table_name), '_')
+          || '"><generatedKey column="ID" sqlStatement="SELECT SEQ_'
+          || table_name
+          || '.NEXTVAL FROM DUAL"/></table>') AS mapper
+    FROM user_tables
+   WHERE table_name LIKE 'T_%'
+ORDER BY table_name;
+    -->
+    <table tableName="T_ADDRESS" domainObjectName="TAddress">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_ADDRESS.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_ADDRESS_BOOK" domainObjectName="TAddressBook">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_ADDRESS_BOOK.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_ADDRNO_STRUCTURE" domainObjectName="TAddrnoStructure">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_ADDRNO_STRUCTURE.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_CONTTEL" domainObjectName="TConttel">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_CONTTEL.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_CURR_CODE" domainObjectName="TCurrCode">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_CURR_CODE.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_CURR_RATE" domainObjectName="TCurrRate">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_CURR_RATE.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_CUST" domainObjectName="TCust">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_CUST.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_CUSTINV_RECV" domainObjectName="TCustinvRecv">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_CUSTINV_RECV.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_CUSTSETTLE_INV" domainObjectName="TCustsettleInv">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_CUSTSETTLE_INV.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_CUST_SETTLE" domainObjectName="TCustSettle">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_CUST_SETTLE.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_DELINOTE" domainObjectName="TDelinote">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_DELINOTE.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_DELINOTE_DELI" domainObjectName="TDelinoteDeli">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_DELINOTE_DELI.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_DELINOTE_PROD" domainObjectName="TDelinoteProd">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_DELINOTE_PROD.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_FACTORY" domainObjectName="TFactory">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_FACTORY.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_FACT_RELATE" domainObjectName="TFactRelate">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_FACT_RELATE.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_FACT_STDCAPA" domainObjectName="TFactStdcapa">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_FACT_STDCAPA.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_ITEM" domainObjectName="TItem">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_ITEM.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_MANUDIST_FACT" domainObjectName="TManudistFact">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_MANUDIST_FACT.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_MANUDIST_PROD" domainObjectName="TManudistProd">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_MANUDIST_PROD.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_MANU_BATCH" domainObjectName="TManuBatch">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_MANU_BATCH.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_MCU" domainObjectName="TMcu">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_MCU.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_OCCUPY" domainObjectName="TOccupy">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_OCCUPY.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_ORG_PART" domainObjectName="TOrgPart">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_ORG_PART.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_ORG_PROD" domainObjectName="TOrgProd">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_ORG_PROD.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_ORG_PROD_PROCESS" domainObjectName="TOrgProdProcess">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_ORG_PROD_PROCESS.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_ORG_PROD_SET_DTL" domainObjectName="TOrgProdSetDtl">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_ORG_PROD_SET_DTL.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_OU" domainObjectName="TOu">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_OU.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_PAPERTRANS" domainObjectName="TPapertrans">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_PAPERTRANS.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_PAPER_PRICE" domainObjectName="TPaperPrice">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_PAPER_PRICE.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_PAPER_SPEC" domainObjectName="TPaperSpec">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_PAPER_SPEC.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_PART" domainObjectName="TPart">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_PART.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_PAYMENT_TERMS" domainObjectName="TPaymentTerms">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_PAYMENT_TERMS.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_PO_PAY" domainObjectName="TPoPay">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_PO_PAY.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_PRINT_PO" domainObjectName="TPrintPo">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_PRINT_PO.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_PROCESS" domainObjectName="TProcess">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_PROCESS.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_PROCESS_DIFFLEVEL" domainObjectName="TProcessDifflevel">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_PROCESS_DIFFLEVEL.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_PROCESS_PRICE" domainObjectName="TProcessPrice">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_PROCESS_PRICE.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_PROD" domainObjectName="TProd">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_PROD.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_PRODIN" domainObjectName="TProdin">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_PRODIN.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_PROD_HISTORY" domainObjectName="TProdHistory">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_PROD_HISTORY.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_PROD_MODIFY" domainObjectName="TProdModify">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_PROD_MODIFY.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_PROD_PAPER" domainObjectName="TProdPaper">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_PROD_PAPER.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_PROD_PROCESS" domainObjectName="TProdProcess">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_PROD_PROCESS.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_PROD_ROUTE" domainObjectName="TProdRoute">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_PROD_ROUTE.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_PROD_SET_DTL" domainObjectName="TProdSetDtl">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_PROD_SET_DTL.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_PUR_PRICE" domainObjectName="TPurPrice">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_PUR_PRICE.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_QUOTE" domainObjectName="TQuote">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_QUOTE.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_QUOTE_DETAIL" domainObjectName="TQuoteDetail">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_QUOTE_DETAIL.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_QUOTE_PAPER" domainObjectName="TQuotePaper">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_QUOTE_PAPER.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_QUOTE_PRICE_APPR" domainObjectName="TQuotePriceAppr">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_QUOTE_PRICE_APPR.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_QUOTE_PROCESS" domainObjectName="TQuoteProcess">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_QUOTE_PROCESS.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_QUOTE_PROD" domainObjectName="TQuoteProd">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_QUOTE_PROD.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_ROUTE" domainObjectName="TRoute">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_ROUTE.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_ROUTE_PROCESS" domainObjectName="TRouteProcess">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_ROUTE_PROCESS.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_SALE_PRICE" domainObjectName="TSalePrice">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_SALE_PRICE.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_SIGNSETTING_AVAILABLE" domainObjectName="TSignsettingAvailable">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_SIGNSETTING_AVAILABLE.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_SO" domainObjectName="TSo">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_SO.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_SONOTE_ITEM" domainObjectName="TSonoteItem">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_SONOTE_ITEM.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_SORPT" domainObjectName="TSorpt">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_SORPT.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_SO_AUTH_FILE" domainObjectName="TSoAuthFile">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_SO_AUTH_FILE.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_SO_CALC" domainObjectName="TSoCalc">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_SO_CALC.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_SO_DISC" domainObjectName="TSoDisc">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_SO_DISC.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_SO_FACTGROUP" domainObjectName="TSoFactgroup">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_SO_FACTGROUP.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_SO_LOGIS" domainObjectName="TSoLogis">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_SO_LOGIS.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_SO_MANU" domainObjectName="TSoManu">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_SO_MANU.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_SO_MANUPAPER" domainObjectName="TSoManupaper">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_SO_MANUPAPER.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_SO_PACKAGE" domainObjectName="TSoPackage">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_SO_PACKAGE.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_SO_PAPER" domainObjectName="TSoPaper">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_SO_PAPER.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_SO_PRE" domainObjectName="TSoPre">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_SO_PRE.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_SO_PRINT" domainObjectName="TSoPrint">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_SO_PRINT.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_SO_PROCESS" domainObjectName="TSoProcess">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_SO_PROCESS.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_SO_PROD" domainObjectName="TSoProd">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_SO_PROD.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_SO_ROUTE" domainObjectName="TSoRoute">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_SO_ROUTE.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_STDUOM_RATE" domainObjectName="TStduomRate">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_STDUOM_RATE.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_SUPP" domainObjectName="TSupp">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_SUPP.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_SYSCONFIG" domainObjectName="TSysconfig">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_SYSCONFIG.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_TAX_RATE" domainObjectName="TTaxRate">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_TAX_RATE.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_UDC" domainObjectName="TUdc">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_UDC.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_UDC_TYPE" domainObjectName="TUdcType">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_UDC_TYPE.NEXTVAL FROM DUAL"/>
+    </table>
+    <table tableName="T_WH" domainObjectName="TWh">
+      <generatedKey column="ID" sqlStatement="SELECT SEQ_T_WH.NEXTVAL FROM DUAL"/>
+    </table>
+
+  </context>
+
+</generatorConfiguration>

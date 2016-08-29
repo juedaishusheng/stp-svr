@@ -1,0 +1,110 @@
+<!-- Default panel contents start -->
+<div class="cm011">
+
+  <!--初始化加载列表-->
+  <div class="view listView">
+    <!-- Default panel contents start-->
+    <div class="panel panel-default">
+      <!-- panel-body start-->
+      <div class="panel-body">
+        <div class="navbarbtn navbar-form navbar-left">
+          <div class="form-group"><label>需要核价的订单列表:</label></div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary" data-view-id="cm011-agreeBtn">同意</button>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary" data-view-id="cm011-returnBtn">退回</button>
+          </div>
+        </div>
+      </div>
+      <!-- panel-body end-->
+
+      <!--table content start-->
+      <div class="box-head table-listView table-responsive">
+        <table class="table  table-bordered table-striped table-hover stp-cm011-table">
+          <thead>
+          <tr>
+            <th class="t3"></th>
+            <th class="t3">行号</th>
+            <th class="t6">工厂编号</th>
+            <th class="t6">工厂名称</th>
+            <th class="t8 sorting" data-field="ontimeRate">上月交付准时率</th>
+            <th class="t6">质量等级</th>
+            <th class="t7">印刷难度等级</th>
+            <th class="t7">装订难度等级</th>
+            <th class="t6">产品编号</th>
+            <th class="t6">产品名称</th>
+            <th class="t6">产品总数</th>
+            <th class="t8">分单数量</th>
+            <th class="t6">产品总价</th>
+            <th class="t6">分单总价</th>
+            <th class="t8">变更后分单金额</th>
+            <th class="t6">变更原因</th>
+            <th class="t7">外发成本价</th>
+            <th class="t6">调度员</th>
+            <th class="t6">分单时间</th>
+          </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="box-wrap antiscroll-wrap table-listView">
+        <div class="box-inner">
+          <div class="antiscroll-inner">
+            <table class="table table-bordered table-striped table-hover">
+              <tbody class="listView-data">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="paging el-hide paging-listView"></div>
+      <!--table content end-->
+    </div>
+    <!-- Default panel contents end-->
+  </div>
+
+
+  <div class="el-msg-returnBtn modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">请填写退回原因</h4>
+        </div>
+        <div class="modal-body"><textarea rows='3' class='orderPriceBackTextarea' name="cm011-reason" style='width:100%'></textarea></div>
+        <div class="modal-footer">
+          <div data-dismiss="modal" class="btn btn-danger ok">确认</div>
+          <div data-dismiss="modal" class="btn btn-default cancel">取消</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="el-msg-tip el-hide"  style="color:#F00">请填写退回原因</div>
+
+  <script class="hbs" data-view-id="listView" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+      <td class="el-center t3"><input type="radio" name="cm011_table" value="{{tid}}"></td>
+      <td class="el-center t3">{{inc @index}}</td>
+      <td class="el-left t6">{{addrNo}}</td>
+      <td class="el-left t6">{{addrName}}</td>
+      <td class="el-right t8">{{ontimeRate}}</td>
+      <td class="el-left t6">{{qualifyLevel}}</td>
+      <td class="el-left t7">{{printDiffLevel}}</td>
+      <td class="el-left t7">{{bindDiffLevel}}</td>
+      <td class="el-left t6">{{prodCode}}</td>
+      <td class="el-left t6">{{prodName}}</td>
+      <td class="el-right t6">{{manuQty}}</td>
+      <td class="el-right t8"><input type="text" class="el-right t7" value="{{distQty}}"></td>
+      <td class="el-right t6">{{calcAmt}}</td>
+      <td class="el-right t6">{{distAmt}}</td>
+      <td class="el-right t8">{{arguedAmt}}</td>
+      <td class="el-left t6">{{argueDesc}}</td>
+      <td class="el-right t7">{{costAmt}}</td>
+      <td class="el-left t6">{{lockerId}}</td>
+      <td class="el-left t6">{{lockTsYmd}}</td>
+    </tr>
+    {{/each}}
+  </script>
+
+</div>
+

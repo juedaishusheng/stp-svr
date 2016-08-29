@@ -1,0 +1,4 @@
+============================================================
+[APP] active logging profile     :: ${STP_LOG_PROFILE}
+[APP] active spring profiles     :: ${spring.profiles.active}
+============================================================
